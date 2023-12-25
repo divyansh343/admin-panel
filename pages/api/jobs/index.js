@@ -56,6 +56,11 @@ export default async function handler(req, res) {
         currentPage: page,
         totalPages: Math.ceil(totalJobs / itemsPerPage),
         response: jobs,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        }
       });
     } catch (error) {
       res.status(500).json({

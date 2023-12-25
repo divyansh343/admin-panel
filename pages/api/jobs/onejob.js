@@ -16,6 +16,11 @@ export default function handler(req, res) {
             status: 200,
             sucess: true,
             response: response,
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+              'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+            }
           });
         
       }

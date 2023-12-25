@@ -17,7 +17,7 @@ export async function getServerSideProps(context) {
 
 
   const result = await axios.get(
-    `${process.env.NEXT_PUBLIC_HOST}api/jobs/onejob?job=${jobid}`
+    `${process.env.HOST}api/jobs/onejob?job=${jobid}`
   );
   const jobx = result.data.response
 
