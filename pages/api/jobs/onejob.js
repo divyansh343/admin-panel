@@ -22,7 +22,6 @@ export default function handler(req, res) {
               'Access-Control-Allow-Headers': 'Content-Type, Authorization',
             }
           });
-        
       }
     ).catch(
       (error) => {
