@@ -29,12 +29,12 @@ const Flex = () => {
     },
   ]
   return (
-    <section className="pb-12 bg-base-100">
+    <section className="py-3 bg-accent mb-10">
       <div className="container max-w-sm md:max-w-7xl px-4 mx-auto">
         <div className="flex flex-wrap items-center">
           {
             cli.map(item => (
-              <div key={item.id} className="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-10">
+              <div key={item.id} className="w-1/2 md:w-1/3 lg:w-1/5 px-4 ">
                 <Image priority className="block mx-auto" src={item.url} alt="logo" />
               </div>
             ))

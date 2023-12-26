@@ -2,9 +2,9 @@ const Hero = () => {
   return (
     <div>
       <div className="relative max-w-lg pt-10 md:max-w-3xl mx-auto text-center">
-        <h1 className="tracking-tight text-4xl xs:text-5xl md:text-5xl lg:text-8xl font-bold text-white mb-6">
+        <h1 className="tracking-tight text-4xl xs:text-5xl md:text-5xl lg:text-8xl font-bold mb-6">
           <span className="leading-none">Frontend Jobs,</span>
-          <span className="text-gray-400"><br />with a <span className="underline">twist</span>.</span></h1><p className="md:max-w-md lg:max-w-lg mx-auto text-lg text-gray-400 mb-10">We hired the top 1% of writers so you dont have to. Get high quality articles &amp; posts in just 3 days.</p>
+          <span className="text-primary"><br />with a <span className="underline">twist</span>.</span></h1><p className="md:max-w-md lg:max-w-lg mx-auto text-lg  mb-10">We hired the top 1% of writers so you dont have to. Get high quality articles &amp; posts in just 3 days.</p>
 
         {/* <div className="xs:flex items-center max-w-md mx-auto mb-6">
           <input className="w-full h-12 mb-3 xs:mb-0 xs:mr-3 p-3 text-gray-400 placeholder-gray-500 bg-gray-800 outline-none ring ring-transparent focus:ring-yellowGreen-700 rounded-lg" type="email" placeholder="Your email" id="email" />

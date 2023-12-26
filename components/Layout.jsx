@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   const [theme, settheme] = useState("oneSecond")
 
   return (
-    <div data-theme="oneSecond" lang="en"
+    <div data-theme="coda" lang="en"
       className={` bg-base-100  ${myFont.className}`}>
       <Navbar />
       <div className="">

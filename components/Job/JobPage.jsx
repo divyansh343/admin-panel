@@ -1,6 +1,11 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { MdArrowForward, MdLocationCity, MdLocationPin } from 'react-icons/md'
+import { MdArrowForward, MdCardTravel, MdLocationCity, MdLocationPin } from 'react-icons/md'
+import { FaMapLocationDot } from "react-icons/fa6";
+
+import { FaExternalLinkAlt } from "react-icons/fa";
+
+
 import Image from 'next/image'
 import { ImCross } from "react-icons/im";
 import {
@@ -27,9 +32,8 @@ import Head from 'next/head';
 
 
 const JobPage = ({ jobx }) => {
+  console.log(jobx)
   const router = useRouter()
-
-
   const shareUrl = `${process.env.NEXT_PUBLIC_HOST}jobs/${router.query.job}`;
   const title = `Apply for ${jobx.job_title} position at ${jobx.business_name || ""} `;
 
@@ -43,27 +47,33 @@ const JobPage = ({ jobx }) => {
         <div className="container mt-10">
           <div className="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
             <div className="lg:col-span-8 md:col-span-6">
-              <div className="md:flex items-center p-6 shadow bg-secondary rounded-md ">
-                {/* <img src="assets/images/company/lenovo-logo.png" class="rounded-full h-28 w-28 p-4  shadow dark:shadow-gray-700" alt=""> */}
-                <Image className='rounded-full h-28 w-28 p-4  shadow dark:shadow-gray-700' height={60} width={60} src="https://shreethemes.in/jobstack/layouts/assets/images/company/lenovo-logo.png" alt={jobx.business_name} />
+              <div className="md:flex items-center p-2  bg-secondary rounded-2xl ">
+                <Image className='rounded-full h-22 w-22 p-2  ' height={100} width={100} src="https://shreethemes.in/jobstack/layouts/assets/images/company/lenovo-logo.png" alt={jobx.business_name} />
                 <div className="md:ml-4 md:mt-0 mt-6">
                   <h5 className="text-xl font-semibold">{jobx.job_title}</h5>
+                  <div className="">
+                  {/* <CiTempHigh className='inline-block text-[#000000] ' /> */}
+                    {jobx.category.map(item => (<>
+                    <span className=" text-md font-medium mx-1 inline-block">{item},</span>
+                    </>))}
+                 
+                  </div>
                   <div className="mt-2">
-                    <span className="text-[#9caba2] text-lg font-medium me-2 inline-block"><MdLocationCity className='inline-block text-primary mx-1' />{jobx.business_name}</span>
-                    <span className="text-[#9caba2] font-medium me-2 inline-block"><i className="uil uil-map-marker text-[18px]  mx-1"></i><MdLocationPin className='inline-block text-primary' /> {jobx.location}</span>
+                    <span className=" text-lg font-medium me-2 inline-block"><MdLocationCity className='inline-block text-primary mx-1' />{jobx.business_name}</span>
+                    <span className=" font-medium me-2 inline-block"><i className="uil uil-map-marker text-[18px]  mx-1"></i><FaMapLocationDot  className='inline-block text-primary' /> {jobx.location}</span>
                   </div>
                 </div>
               </div>
 
               <h5 className="text-lg font-semibold mt-6">Job Description:</h5>
 
-              <p className="text-[#9caba2] mt-4">{jobx.job_description}</p>
+              <p className=" mt-4">{jobx.job_description}</p>
 
 
               <div className="mt-5 ">
                 {/* <a className="xs:flex-shrink-0 group relative w-full xs:w-auto flex xs:inline-flex items-center justify-center h-10 px-4 py-px font-bold text-gray-900 bg-primary rounded-lg transition-all duration-300 focus:outline-none" href="/contact"><div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
           <span className="ml-2">Apply now </span></a> */}
-                <a href={`${jobx.apply_link}?ref=frontendjobs`} target='_blank' rel='noreferrer' className="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white md:ms-2 w-full md:px-24 ">Apply Now<MdArrowForward className='inline-block' /></a>
+                <a href={`${jobx.apply_link}?ref=frontendjobs`} target='_blank' rel='noreferrer' className="btn rounded-md bg-primary hover:bg-[#1d4ed8] border-primary hover:border-emerald-700 text-white md:ms-2 w-full md:px-24 text-lg ">Apply Now<FaExternalLinkAlt  className='inline-block' /></a>
               </div>
 
               {/* share button */}
@@ -174,17 +184,17 @@ const JobPage = ({ jobx }) => {
               {/* share button */}
 
               <ul className='hidden md:block list pt-10'>
-                <li className="text-[#9caba2] text center mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
+                <li className=" text center mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
                   When applying for jobs, you should NEVER have to pay to apply. </li>
-                <li className="text-[#9caba2] mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
+                <li className=" mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
                   You should also NEVER have to pay to buy equipment which they then pay you back for later.</li>
-                <li className="text-[#9caba2] mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
+                <li className=" mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
                   Also never pay for trainings you have to do. Those are scams! NEVER PAY FOR ANYTHING! </li>
               </ul>
             </div>
 
             <div className="lg:col-span-4 md:col-span-6">
-              <div className="shadow bg-secondary rounded-md  sticky top-20">
+              <div className="shadow bg-secondary rounded-2xl  sticky top-20">
                 <div className="p-6">
                   <h5 className="text-lg font-semibold">Job Information</h5>
                 </div>
@@ -257,11 +267,11 @@ const JobPage = ({ jobx }) => {
               </div>
             </div>
             <ul className='block md:hidden list pt-10'>
-              <li className="text-[#9caba2] text center mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
+              <li className=" text center mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
                 When applying for jobs, you should NEVER have to pay to apply. </li>
-              <li className="text-[#9caba2] mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
+              <li className=" mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
                 You should also NEVER have to pay to buy equipment which they then pay you back for later.</li>
-              <li className="text-[#9caba2] mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
+              <li className=" mt-4 list-item"><ImCross className='inline-block mr-2 text-warning' />
                 Also never pay for trainings you have to do. Those are scams! NEVER PAY FOR ANYTHING! </li>
             </ul>
           </div>

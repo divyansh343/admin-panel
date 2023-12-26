@@ -11,17 +11,14 @@ const Navbar = () => {
             <div className="flex flex-wrap justify-between h-full">
               <div className="w-full">
                 <div className="flex items-center justify-between -m-2">
-                  <div className="w-auto p-2"><a className="flex space-x-4 items-center" href="#">
-                    {/* <img src="/1secondcopy_icon.png" alt="" class="w-9 ring-2 ring-white rounded-lg  "> */}
-                    <span className="text-white font-bold text-xl">1SecondCopy</span>
-                  </a>
+                  <div className="w-auto p-2"><p><span className="normal-case">Frontend</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
                   </div>
-                  <div className="w-auto p-2">
+                  <div className="w-auto p-2 bg-accent">
                     <button onClick={() => setNav(false)} className="inline-block navbar-burger"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6L18 18" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path></svg></button>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center py-8 w-full"><ul className="flex flex-col space-y-8"><li className="mr-9"><a className="inline-block text-sm font-medium text-gray-100 text-opacity-80 hover:text-gray-200" href="#how-it-works">How it works</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-gray-100 text-opacity-80 hover:text-gray-200" href="#pricing">Pricing</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-gray-100 text-opacity-80 hover:text-gray-200" href="/blog">Blog</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-gray-100 text-opacity-80 hover:text-gray-200" href="/contact">Contact Sales</a></li><li><a className="inline-block text-sm font-medium text-gray-100 text-opacity-80 hover:text-gray-200" href="https://app.1secondcopy.com/login">Login</a></li></ul>
+              <div className="flex flex-col justify-center py-8 w-full"><ul className="flex flex-col space-y-8"><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="#how-it-works">How it works</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="#pricing">Pricing</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="/blog">Blog</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="/contact">Contact Sales</a></li><li><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="https://app.1secondcopy.com/login">Login</a></li></ul>
               </div>
               <div className="flex flex-col justify-end w-full pb-8">
                 <div className="flex flex-wrap -m-2"><a href="https://app.1secondcopy.com/" className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold text-gray-900 bg-primary rounded-lg transition-all duration-300 focus:outline-none">
@@ -48,7 +45,7 @@ const Navbar = () => {
                 </div>
               </Link>
 
-              <button onClick={() => setNav(true)} className="lg:hidden navbar-burger flex items-center justify-center h-10 w-10 ml-auto border border-teal-900 bg-teal-200 bg-opacity-30 hover:bg-teal-700 rounded-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 12H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 19H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
+              <button onClick={() => setNav(true)} className="lg:hidden navbar-burger flex items-center justify-center h-10 w-10 ml-auto border border-teal-900 bg-accent bg-opacity-80 hover:bg-teal-700 rounded-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 12H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 19H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
               </button>
 
               <div className="hidden lg:flex ml-auto items-center">
@@ -59,9 +56,9 @@ const Navbar = () => {
 
               <div className="hidden lg:block ml-12"><a className="inline-flex items-center justify-center h-10 mr-4 px-4 text-center text-sm  font-text-primary-gray-800 hover:bg-gray-900 rounded-lg" href="https://app.1secondcopy.com/login/">Login</a><a className="group inline-block justify-center p-1 text-center text-sm  font-text-primary" href="https://app.1secondcopy.com/">
 
-                <div className="inline-flex items-stretch h-10 p-0.5 rounded-lg bg-gradient-to-b from-gray-500 via-gray-700 to-gray-700 hover:to-primary">
+                <div className="inline-flex items-stretch h-10 p-0.5 rounded-lg bg-gradient-to-b from-primary to-[#dbeafe] hover:text-white hover:to-primary ">
 
-                  <div className="flex items-center px-4 bg-gray-700 group-hover:bg-opacity-40 rounded-md transition duration-300"><span>Get Started</span>
+                  <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md transition duration-300"><span>Get Started</span>
 
                   </div>
                 </div></a>

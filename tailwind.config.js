@@ -54,7 +54,7 @@ module.exports = {
         },
         oneSecond: {
           "primary": "#a3e33a",
-          "secondary": "#19251d",
+          "secondary": "#000000",
           "accent": "#9caba2",
           "neutral": "#171926",
           "base-100": "#000000",
@@ -75,11 +75,11 @@ module.exports = {
           "error": "#f77064",
         },
         coda: {
-          "primary": "#ffc600",
+          "primary": "#0d51ff",
           "secondary": "#f3f4f6",
-          "accent": "#9caba2",
+          "accent": "#000000",
           "neutral": "#171926",
-          "base-100": "#fff6ec",
+          "base-100": "#ffffff",
           "info": "#768ed6",
           "success": "#31c484",
           "warning": "#f4992a",

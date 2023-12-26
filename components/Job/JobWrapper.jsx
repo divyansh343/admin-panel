@@ -3,6 +3,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import JobPage from './JobPage'
+import { Watch } from 'react-loader-spinner'
 
 const JobWrapper = () => {
   const router = useRouter()
@@ -18,7 +19,18 @@ const JobWrapper = () => {
         setLoading(false)
       })
   }, [router])
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) return <div><div className='grid justify-center'>
+  <Watch
+    visible={true}
+    height="80"
+    width="80"
+    radius="48"
+    color="#0d51ff"
+    ariaLabel="watch-loading"
+    wrapperStyle={{}}
+    wrapperClass=""
+  />
+</div></div>
   if (!jobx) return <p>No profile data</p>
   return (
     <div>
