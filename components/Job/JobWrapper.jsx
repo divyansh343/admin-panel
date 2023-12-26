@@ -19,7 +19,7 @@ const JobWrapper = () => {
         setLoading(false)
       })
   }, [router])
-  if (isLoading) return <div><div className='grid justify-center'>
+  if (isLoading) return <div className='grid justify-center'>
   <Watch
     visible={true}
     height="80"
@@ -30,7 +30,8 @@ const JobWrapper = () => {
     wrapperStyle={{}}
     wrapperClass=""
   />
-</div></div>
+  <p className='m-2 text-xl font-semibold'>Loading...</p>
+</div>
   if (!jobx) return <p>No profile data</p>
   return (
     <div>

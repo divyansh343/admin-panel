@@ -2,9 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
 import { MdArrowForward,  MdLocationCity, MdLocationPin } from 'react-icons/md';
-import { HiCurrencyDollar } from "react-icons/hi";
+import { FaMapLocationDot } from "react-icons/fa6";
 
 const JobCard = ({ item }) => {
+
   return (
     <Link href={`/jobs/${item._id}`}>
       <div className={`mx-3 px-2 md:mx-36 rounded-xl ${item.isInternship ? "bg-[#fde047]" : "bg-[#bfdbfe]"} border-primary border-dashed  cursor-pointer  hover:scale-[1.02]" hover:border-primary  border-2 border-transparent focus:outline-none transition duration-100`}>
@@ -25,19 +26,18 @@ const JobCard = ({ item }) => {
             <div className="lg:block flex justify-between lg:mt-0 mt-4">
               <div className='grid grid-flow-col'>
                 {item.isRemote ? <><span className="block"><span className="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">Remote</span>
-                </span></> : null}
+                </span></> : <><span className="block"><span className="bg-secondary inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">Full Time</span>
+                </span></>}
                 {item.isInternship ? <><span className="block"><span className="bg-emerald-600/10 ml-2 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">Intern</span>
                 </span></> : null}
               </div>
 
-              {/* <span className="block"><span className="bg-emerald-600/10 inline-block text-emerald-600 text-xs px-2.5 py-0.5 font-semibold rounded-full">Full Time</span>
-              </span> */}
-              <span className="block  text-sm md:mt-1 mt-0"><i className="uil uil-clock"></i> 2 day ago</span>
+              <span className="block  text-sm md:mt-1 mt-0"><i className="uil uil-clock"></i>{item.category.map(item => {item})}</span>
             </div>
 
             <div className="lg:block flex justify-between lg:mt-0 mt-2">
-              <span className=""><i className="uil uil-map-marker"></i><MdLocationPin className='inline-block text-primary' /> {item.location}</span>
-              <span className="block font-semibold lg:mt-1 mt-0"><HiCurrencyDollar  className='inline-block text-lg' /> {item.salary.value}</span>
+              <span className=""><i className="uil uil-map-marker"></i><FaMapLocationDot className='inline-block text-primary' /> {item.location}</span>
+              <span className="block font-semibold lg:mt-1 mt-0"> {item.salary.value} $/yr</span>
             </div>
 
             <div className="lg:mt-0 mt-4">
