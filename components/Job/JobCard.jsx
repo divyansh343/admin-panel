@@ -12,8 +12,9 @@ const JobCard = ({ item }) => {
         <div className='lg:col-span-8 md:col-span-6'>
           <div className="group relative overflow-hidden lg:flex justify-between items-center rounded  py-3">
             <div className="flex items-center">
-              <div className="w-22 h-22 flex items-center justify-center rounded-md">
-                <Image height={50} width={50} src="https://shreethemes.in/jobstack/layouts/assets/images/company/lenovo-logo.png" alt={item.business_name} />
+              <div className="w-22 h-22 flex items-center justify-center">
+                <Image height={50} width={50} className='rounded-xl' src={item.business_image} alt={item.business_name} />
+                {/* <Image height={50} width={50} src="https://shreethemes.in/jobstack/layouts/assets/images/company/lenovo-logo.png" alt={item.business_name} /> */}
                 {/* <img src="assets/images/company/facebook-logo.png" class="h-8 w-8" alt=""> */}
               </div>
               <div>

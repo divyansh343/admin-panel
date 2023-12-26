@@ -62,7 +62,8 @@ const JobPage = ({ jobx }) => {
           <div className="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
             <div className="lg:col-span-8 md:col-span-6">
               <div className="md:flex items-center p-2  bg-secondary rounded-2xl ">
-                <Image className='rounded-full h-22 w-22 p-2  ' height={100} width={100} src="https://shreethemes.in/jobstack/layouts/assets/images/company/lenovo-logo.png" alt={jobx.business_name} />
+                <Image className='rounded-3xl h-15 w-15 p-2' height={80} width={80} src={jobx.business_image} alt={jobx.business_name} />
+                {/* <Image className='rounded-full h-22 w-22 p-2  ' height={100} width={100} src="https://shreethemes.in/jobstack/layouts/assets/images/company/lenovo-logo.png" alt={jobx.business_name} /> */}
                 <div className="md:ml-4 md:mt-0 mt-6">
                   <h5 className="text-xl font-semibold">{jobx.job_title}</h5>
                   <div className="">
@@ -238,7 +239,7 @@ const JobPage = ({ jobx }) => {
                       <li className="flex items-center mt-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-monitor h-5 w-5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                         <div className="ml-4">
-                          <p className="font-medium">Job Type:</p>
+                          <p className="font-medium">Skills:</p>
                           <span className=" font-medium text-sm">{jobx.category.map(item => (`${item},`))}</span>
                         </div>
                       </li>
@@ -284,7 +285,9 @@ const JobPage = ({ jobx }) => {
                       <MdTimelapse className='text-xl text-warning animate-pulse' />
 
                       <div className="ml-4">
+                        {daysDifference === 0 ? "Today" : 
                         <p className=" font-medium ">  {daysDifference} Days ago</p>
+                        }
                       </div>
                     </li>
                   </ul>

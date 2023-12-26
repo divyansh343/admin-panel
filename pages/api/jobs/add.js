@@ -1,12 +1,13 @@
 import Job from "@/models/Job";
+import mongoConnect from "@/utils/mongodb";
 
 export default async function handler(req, res) {
-  // mongoConnect()
+  mongoConnect()
   if (req.method === 'POST') {
     const job = new Job(req.body);
     job.save().then(
       (response) => {
-        res.status(201).json({
+       return res.status(201).json({
           status: 201,
           sucess: true,
           message: `job created sucessfully`,
@@ -15,7 +16,7 @@ export default async function handler(req, res) {
       }
     ).catch(
       (error) => {
-        res.status(401).json({
+       return res.status(401).json({
           status: 401,
           sucess: false,
           error: error
