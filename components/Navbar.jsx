@@ -21,9 +21,9 @@ const Navbar = () => {
               <div className="flex flex-col justify-center py-8 w-full"><ul className="flex flex-col space-y-8"><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="#how-it-works">How it works</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="#pricing">Pricing</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="/blog">Blog</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="/contact">Contact Sales</a></li><li><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="https://app.1secondcopy.com/login">Login</a></li></ul>
               </div>
               <div className="flex flex-col justify-end w-full pb-8">
-                <div className="flex flex-wrap -m-2"><a href="https://app.1secondcopy.com/" className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold text-gray-900 bg-primary rounded-lg transition-all duration-300 focus:outline-none">
+                <div className="flex flex-wrap -m-2 text-base-100"><a href="" className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  bg-primary rounded-lg transition-all duration-300 focus:outline-none">
                   <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300">
-                  </div><span>Get Started</span></a>
+                  </div><span>Post Jobs Openings</span></a>
                 </div>
               </div>
             </div>
@@ -54,14 +54,18 @@ const Navbar = () => {
 
               </div>
 
-              <div className="hidden lg:block ml-12"><a className="inline-flex items-center justify-center h-10 mr-4 px-4 text-center text-sm  font-text-primary-gray-800 hover:bg-gray-900 rounded-lg" href="https://app.1secondcopy.com/login/">Login</a><a className="group inline-block justify-center p-1 text-center text-sm  font-text-primary" href="https://app.1secondcopy.com/">
+              <div className="hidden lg:block ml-12"><a className="inline-flex items-center justify-center h-10 mr-4 px-4 text-center text-sm  font-text-primary-gray-800 hover:bg-gray-900 rounded-lg" href="">Login</a>
+              
+              
+              <Link className="group inline-block justify-center p-1 text-center text-sm  font-text-primary" href="/admin/post">
 
                 <div className="inline-flex items-stretch h-10 p-0.5 rounded-lg bg-gradient-to-b from-primary to-[#dbeafe] hover:text-white hover:to-primary ">
 
-                  <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md transition duration-300"><span>Get Started</span>
+                  <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span>✨ Post a Job</span>
 
                   </div>
-                </div></a>
+                </div>
+              </Link>
               </div>
             </div>
           </div>

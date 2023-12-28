@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import localFont from 'next/font/local'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
+import Cta from "./home/Cta"
 
 const myFont = localFont({ src: '../assets/fonts/gelion/Gelion Regular.ttf' })
 const Layout = ({ children }) => {
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <Footer />
+      {/* <Cta /> */}
     </div>
   )
 }

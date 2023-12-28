@@ -1,6 +1,5 @@
 import React from 'react'
-import { useRouter } from 'next/router'
-import { MdArrowForward, MdCardTravel, MdLocationCity, MdLocationPin, MdTimelapse, MdWatchLater } from 'react-icons/md'
+import {  MdLocationCity, MdTimelapse } from 'react-icons/md'
 import { FaMapLocationDot } from "react-icons/fa6";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -33,8 +32,7 @@ import Head from 'next/head';
 
 const JobPage = ({ jobx }) => {
   console.log(jobx)
-  const router = useRouter()
-  const shareUrl = `${process.env.NEXT_PUBLIC_HOST}jobs/${router.query.job}`;
+  const shareUrl = `${process.env.NEXT_PUBLIC_HOST}jobs/${jobx._id}`;
   const title = `Apply for ${jobx.job_title} position at ${jobx.business_name || ""} `;
 
   const givenDate = new Date(jobx.posted_on);

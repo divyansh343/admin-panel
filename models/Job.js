@@ -17,7 +17,7 @@ const jobSchema = new mongoose.Schema({
   },
 
   salary: {
-    value : {
+    value: {
       type: Number
     },
     currency: {
@@ -29,7 +29,10 @@ const jobSchema = new mongoose.Schema({
       enum: ['year', 'month']
     }
   },
-
+  positions: {
+    type: Number,
+    default: 0
+  },
   isRemote: {
     type: Boolean,
     default: false
