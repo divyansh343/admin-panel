@@ -24,14 +24,14 @@ const PostJob = () => {
     "Web", "Testing", "Mobile", "Accessibility", "Performance", "Architecture", "Cross-Browser"
   ];
 
-  const currenciesArray = ["US Dollar", "Euro", "Indian Rupee", "British Pound", "crypto"];
+  const currenciesArray = ['INR', 'USD', 'EUR', 'GBP', 'Crypto'];
 
-  const frequencyOptions = ["monthly", "yearly"];
-
-
+  const frequencyOptions = ["month", "year"];
 
 
-  let data = JSON.stringify({
+
+console.log(salary.per)
+  let data = {
     "job_title": jobTitle,
     "job_description": jobDescription,
     "location": location,
@@ -45,7 +45,7 @@ const PostJob = () => {
     "business_name": businessName,
     "business_image": businessImage,
     "apply_link": applyLink
-  });
+  }
 
   let config = {
     method: 'post',
@@ -82,10 +82,9 @@ const PostJob = () => {
     resetForm()
     axios.request(config)
       .then((response) => {
-        console.log(JSON.stringify(response.data));
+        alert("done")
       })
       .catch((error) => {
-        console.log(error);
       });
     console.log(data)
   }
@@ -106,8 +105,8 @@ const PostJob = () => {
     <div className='w-screen grid justify-center'>
       <section className="bg-base-100 lg:py-24 py-16">
         <div className="container">
-          <div className="lg:flex justify-center">
-            <div className="lg:w-3/3">
+          <div className="lg:flex">
+            <div className="">
               <div className="p-5 bg-secondary rounded-md">
                 <form className="text-left">
                   <div className="grid grid-cols-1">
@@ -134,7 +133,7 @@ const PostJob = () => {
                     </div>
 
 
-                    <div className="col-span-12">
+                    {/* <div className="col-span-12">
                       <label htmlFor="comments" className="font-semibold">Country:</label>
                       <select className="select select-primary w-full max-w-xs select-sm block" value={location} onChange={(e) => setLocation(e.target.value)}>
                         <option value="" disabled>Select a country</option>
@@ -144,13 +143,13 @@ const PostJob = () => {
                           </option>
                         ))}
                       </select>
-                    </div>
+                    </div> */}
 
                     <div className="col-span-12">
                       <div className="label">
-                        <label htmlFor="comments" className="font-semibold">City:</label>
+                        <label htmlFor="comments" className="font-semibold">Location:</label>
                       </div>
-                      <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="City Name" className="input input-sm w-full max-w-xs" />
+                      <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="City Name" className="input input-sm w-full max-w-xs" />
                     </div>
                     {/* salary */}
                     <div className="md:col-span-6 col-span-12">
@@ -173,10 +172,10 @@ const PostJob = () => {
 
                     <div className="md:col-span-3 col-span-12">
                       <label className="font-semibold md:invisible md:block hidden">Per:</label>
-                      <select className="select select-primary w-full max-w-xs select-sm ml-2" value={salary.frequency} onChange={(e) => setSalary({ ...salary, frequency: e.target.value })}>
+                      <select className="select select-primary w-full max-w-xs select-sm ml-2" value={salary.per} onChange={(e) => setSalary({ ...salary, per: e.target.value })}>
                         {frequencyOptions.map((freq, index) => (
                           <option key={index} value={freq}>
-                            {freq === "monthly" ? "Monthly" : "Yearly"}
+                            {freq === "month" ? "month" : "year"}
                           </option>
                         ))}
                       </select>
@@ -246,7 +245,7 @@ const PostJob = () => {
 
                   <div className="grid grid-cols-1 gap-4 mt-4">
                     <div>
-                      <a onClick={handleSubmit} className="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Post Now</a>
+                      <a onClick={  handleSubmit} className="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Post Now</a>
                     </div>
                   </div>
                 </form>

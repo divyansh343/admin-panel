@@ -1,5 +1,5 @@
 import React from 'react'
-import {  MdLocationCity, MdTimelapse } from 'react-icons/md'
+import { MdLocationCity, MdTimelapse } from 'react-icons/md'
 import { FaMapLocationDot } from "react-icons/fa6";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -42,7 +42,7 @@ const JobPage = ({ jobx }) => {
 
 
 
-  const monthNames =  ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const monthName = monthNames[givenDate.getMonth()];
   const formattedDate = `${givenDate.getDate()}/${givenDate.getMonth() + 1}/${givenDate.getFullYear()}`;
 
@@ -55,11 +55,11 @@ const JobPage = ({ jobx }) => {
         <title>{jobx.job_title}</title>
         <meta name="description" content={jobx.job_description} />
       </Head>
-      <div className='max-w-7xl  md:py-12 px-3 lg:px-10 '>
+      <div className='grid justify-center  md:py-12 px-3 lg:px-10 '>
         <div className="container mt-10">
           <div className="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
             <div className="lg:col-span-8 md:col-span-6">
-              <div className="md:flex items-center p-2  bg-secondary rounded-2xl ">
+              <div className={`md:flex items-center p-2 ${jobx.isInternship ? "bg-[#fde047]" : "bg-secondary"}  rounded-2xl `}>
                 <Image className='rounded-3xl h-15 w-15 p-2' height={80} width={80} src={jobx.business_image} alt={jobx.business_name} />
                 {/* <Image className='rounded-full h-22 w-22 p-2  ' height={100} width={100} src="https://shreethemes.in/jobstack/layouts/assets/images/company/lenovo-logo.png" alt={jobx.business_name} /> */}
                 <div className="md:ml-4 md:mt-0 mt-6">
@@ -77,7 +77,11 @@ const JobPage = ({ jobx }) => {
                   </div>
                 </div>
               </div>
+              <div className='grid justify-start pt-10 pb-5'>
+              <h2 className='text-3xl '>{jobx.business_name} is hiring a</h2>
 
+              <h2 className='text-4xl pt-4 font-bold'>{!jobx.isRemote ? "Full Time" : "Remote"} {jobx.job_title}</h2>
+              </div>
               <h5 className="text-lg font-bold mt-6">Job Description</h5>
               <h5 className="text-lg font-semibold ">About {jobx.business_name}:</h5>
 
@@ -208,11 +212,11 @@ const JobPage = ({ jobx }) => {
             </div>
 
             <div className="lg:col-span-4 md:col-span-6">
-              <div className="shadow bg-secondary rounded-2xl  sticky top-20">
+              <div className={`shadow  bg-secondary rounded-2xl  sticky top-20`}>
                 <div className="p-6">
                   <h5 className="text-lg font-semibold">Job Information</h5>
                 </div>
-                <div className="p-6 border-t border-slate-100 dark:border-t-gray-700">
+                <div className="p-6 border-t-2 border-slate-300">
                   <ul className="list-none">
                     <li className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user-check h-5 w-5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
@@ -280,11 +284,13 @@ const JobPage = ({ jobx }) => {
                       </div>
                     </li>
                     <li className="flex items-center mt-3">
-                      <MdTimelapse className='text-xl text-warning animate-pulse' />
+                      <span className='animate-spin text-warning'>
 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-clock h-5 w-5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                      </span>
                       <div className="ml-4">
-                        {daysDifference === 0 ? "Today" : 
-                        <p className=" font-medium ">  {daysDifference} Days ago</p>
+                        {daysDifference === 0 ? "Today" :
+                          <p className=" font-medium ">  {daysDifference} Days ago</p>
                         }
                       </div>
                     </li>

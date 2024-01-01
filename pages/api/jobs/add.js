@@ -16,6 +16,7 @@ export default async function handler(req, res) {
       }
     ).catch(
       (error) => {
+        console.log(error)
        return res.status(401).json({
           status: 401,
           sucess: false,

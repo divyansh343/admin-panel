@@ -41,7 +41,7 @@ const Navbar = () => {
               <Link href="/">
                 <div className="flex space-x-2 items-center text-xl font-bold md:text-2xl" href="#">
                   {/* <img class="h-9 rounded-lg ring-2 ring-white mr-2" src="/1secondcopy_icon.png" alt=""> */}
-                  <p><span className="normal-case">Frontend</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
+                  <p><span className="normal-case">WorkFrom</span> <span className="normal-case text-primary -ml-1">Anywhere.</span></p>
                 </div>
               </Link>
 
@@ -50,18 +50,18 @@ const Navbar = () => {
 
               <div className="hidden lg:flex ml-auto items-center">
 
-                <a className="inline-block  hover:text-primary mr-10" href="#how-it-works">How it works</a><a className="inline-block  hover:text-primary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-primary mr-10" href="/blog">Blog</a><a className="inline-block  hover:text-primary" href="/contact">Contact Sales</a>
+                {/* <a className="inline-block  hover:text-primary mr-10" href="#how-it-works">How it works</a><a className="inline-block  hover:text-primary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-primary mr-10" href="/blog">Blog</a> */}
+                <Link className="inline-block  hover:text-primary" href="/partner">Advertise</Link>
 
               </div>
 
-              <div className="hidden lg:block ml-12"><a className="inline-flex items-center justify-center h-10 mr-4 px-4 text-center text-sm  font-text-primary-gray-800 hover:bg-gray-900 rounded-lg" href="">Login</a>
-              
+              <div className="hidden lg:block ml-12">
               
               <Link className="group inline-block justify-center p-1 text-center text-sm  font-text-primary" href="/admin/post">
 
-                <div className="inline-flex items-stretch h-10 p-0.5 rounded-lg bg-gradient-to-b from-primary to-[#dbeafe] hover:text-white hover:to-primary ">
+                <div className="inline-flex items-stretch h-10 p-0.5 text-white rounded-lg bg-gray-900 ">
 
-                  <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span>✨ Post a Job</span>
+                  <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Post a Job - 49$</span>
 
                   </div>
                 </div>

@@ -22,7 +22,6 @@ const jobSchema = new mongoose.Schema({
     },
     currency: {
       type: String,
-      enum: ['INR', 'USD', 'EUR', 'GBP']
     },
     per: {
       type: String,
