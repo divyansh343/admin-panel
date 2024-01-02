@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react'
 import JobCard from './JobCard'
 import { Watch } from 'react-loader-spinner'
 import { CgCardClubs } from "react-icons/cg";
+import Leads from '../home/Leads';
 
 const JobContainer = () => {
   const [data, setData] = useState([])
@@ -21,8 +22,6 @@ const JobContainer = () => {
         setLoading(false)
       })
   }, [])
-
-
   if (isLoading) return <div className='grid justify-center'>
     <Watch
       visible={true}
@@ -46,17 +45,15 @@ const JobContainer = () => {
           <p disabled={currentPage === totalPages} className="tab tab-lg tab-bordered tab-active text-primary flex-1  " ><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>Next </p>
         </div>
         </div>
-
         <div className='btn btn-sm m-3  btn-secondary'><CgCardClubs /> Page <span className='text-primary'>{currentPage}</span>  of {totalPages}</div>
         {
           data.map((item) => (
-
             <div key={item._id} className='my-3' >
               <JobCard item={item} />
             </div>
           ))
-
         }
+        <Leads />
       </div>
     </div>
   )

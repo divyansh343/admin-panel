@@ -66,6 +66,7 @@ const JobPage = ({ jobx }) => {
                   <h5 className="text-xl font-semibold">{jobx.job_title}</h5>
                   <div className="">
                     {/* <CiTempHigh className='inline-block text-[#000000] ' /> */}
+                    
                     {jobx.category.map(item => (<>
                       <span className=" text-md font-medium mx-1 inline-block">{item},</span>
                     </>))}
