@@ -16,21 +16,15 @@ const PostJob = () => {
   const [businessName, setBusinessName] = useState("");
   const [businessImage, setBusinessImage] = useState("");
   const [applyLink, setApplyLink] = useState("");
-
-  const [countries, setCountries] = useState([]);
-  const [category, setCategory] = useState("");
-  const categoriesArray = [
-    "UI", "UX", "React", "Angular", "Vue.js", "JS", "HTML/CSS",
-    "Web", "Testing", "Mobile", "Accessibility", "Performance", "Architecture", "Cross-Browser"
-  ];
-
+  const [categories, setCategories] = useState(['', '', '']);
   const currenciesArray = ['INR', 'USD', 'EUR', 'GBP', 'Crypto'];
-
   const frequencyOptions = ["month", "year"];
+  const handleInputChange = (index, value) => {
+    const updatedCategories = [...categories];
+    updatedCategories[index] = value;
+    setCategories(updatedCategories);
+  };
 
-
-
-console.log(salary.per)
   let data = {
     "job_title": jobTitle,
     "job_description": jobDescription,
@@ -41,6 +35,7 @@ console.log(salary.per)
       "per": salary.per
     },
     "isRemote": isRemote,
+    "categories": categories,
     "isInternship": isInternship,
     "business_name": businessName,
     "business_image": businessImage,
@@ -73,33 +68,22 @@ console.log(salary.per)
     setBusinessName("");
     setBusinessImage("");
     setApplyLink("");
-    setCountries([]);
-    setCategory("");
+    setCategories(['', '', ''])
   };
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    resetForm()
     axios.request(config)
       .then((response) => {
         alert("done")
       })
       .catch((error) => {
       });
+    resetForm()
     console.log(data)
   }
 
 
-  useEffect(() => {
-    // Fetch countries from the Restcountries API
-    fetch("https://restcountries.com/v3.1/all")
-      .then(response => response.json())
-      .then(data => {
-        const countryNames = data.map(country => country.name.common);
-        setCountries(countryNames);
-      })
-      .catch(error => console.error('Error fetching countries:', error));
-  }, []);
 
   return (
     <div className='w-screen grid justify-center'>
@@ -184,15 +168,18 @@ console.log(salary.per)
                     {/* salary */}
 
                     <div className="md:col-span-6 col-span-12">
+                      <div className='grid grid-flow-row gap-2'>
                       <label className="font-semibold">Job Categories:</label>
-                      <select className="select select-primary w-full max-w-xs select-sm" value={category} onChange={(e) => setCategory(e.target.value)}>
-                        <option value="" disabled>Select a category</option>
-                        {categoriesArray.map((cat, index) => (
-                          <option key={index} value={cat}>
-                            {cat}
-                          </option>
-                        ))}
-                      </select>
+                      <input type="text"
+                        value={categories[0]}
+                        onChange={(e) => handleInputChange(0, e.target.value)} placeholder="category 1" className="input input-sm w-full max-w-xs" />
+                      <input type="text"
+                        value={categories[1]}
+                        onChange={(e) => handleInputChange(1, e.target.value)} placeholder="category 2" className="input input-sm w-full max-w-xs" />
+                      <input type="text"
+                        value={categories[2]}
+                        onChange={(e) => handleInputChange(2, e.target.value)} placeholder="category 3" className="input input-sm w-full max-w-xs" />
+                      </div>
                     </div>
 
                     <div className="md:col-span-6 col-span-12">
@@ -245,7 +232,7 @@ console.log(salary.per)
 
                   <div className="grid grid-cols-1 gap-4 mt-4">
                     <div>
-                      <a onClick={  handleSubmit} className="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Post Now</a>
+                      <a onClick={handleSubmit} className="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Post Now</a>
                     </div>
                   </div>
                 </form>

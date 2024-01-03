@@ -11,7 +11,6 @@ export default function Home() {
       <Hero />
       {/* <Test /> */}
       <Flex />
-      
       <JobContainer />
       <Testimonials />
     </main>

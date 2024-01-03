@@ -2,7 +2,6 @@ import PostJob from '@/components/Job/PostJob'
 import { useState } from 'react'
 
 const Post = () => {
-
   const [mode, setMode] = useState(false);
   const [pass, setPass] = useState("");
   const handleAuth = () => {
@@ -31,16 +30,13 @@ const Post = () => {
                   <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
                   <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" name="password"  placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primaryfocus:border-primaryblock w-full p-2.5 dark:bg-gray-700 dark:border-graydark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" />
                 </div>
-
                 <p onClick={handleAuth} className="btn btn-primary btn-wide text-sm normal-case">Sign in</p>
-
               </form>
             </div>
           </div>
         </div>
       </section> : <PostJob />
       }
-
     </div>
   )
 }
