@@ -6,6 +6,7 @@ const PostJob = () => {
   const [jobTitle, setJobTitle] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [location, setLocation] = useState("");
+  const [city, setCity] = useState("");
   const [salary, setSalary] = useState({
     value: 0,
     currency: "",

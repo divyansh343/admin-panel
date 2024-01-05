@@ -5,7 +5,7 @@ const Hero = () => {
         <h1 className="tracking-tight text-3xl xs:text-5xl md:text-5xl lg:text-5xl font-bold mb-6">
           <span className="leading-none">True Location Independent</span>
           <span className="text-primary mt-2  text-5xl xs:text-5xl md:text-5xl lg:text-6xl"><br />Work from <span className="">Anywhere Jobs</span>.</span></h1>
-          <p className="md:max-w-md lg:max-w-lg mx-auto text-lg  "> The only true location independent job board.</p>
+          {/* <p className="md:max-w-md lg:max-w-lg mx-auto text-lg  "> The only true location independent job board.</p> */}
           <p className="md:max-w-md lg:max-w-lg mx-auto text-lg  mb-10">  We hand pick every job on this site so you don&apos;t have to. Live and work anywhere.</p>
         
 

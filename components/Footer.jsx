@@ -13,10 +13,10 @@ const Footer = () => {
                   <Link href="/">
                     <div className="flex space-x-2 items-center text-xl font-bold" href="">
                       {/* <img class="h-9 rounded-lg ring-2 ring-white mr-2" src="/1secondcopy_icon.png" alt=""> */}
-                      <p><span className="normal-case">Frontend</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
+                      <p><span className="normal-case">Nomad</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
                     </div>
                   </Link>
-                  <span className="block text-lg  max-w-xs mt-6">We hired the top 1% of writers so you don&apos;t have to. Get high quality articles &amp; posts in just 3 days.</span>
+                  <span className="block text-lg  max-w-xs mt-6">We hand pick every job on this site so you don&apos;t have to. Live and work anywhere.</span>
                 </div>
               </div>
               <div className="w-full lg:w-1/2 ml-auto px-4">

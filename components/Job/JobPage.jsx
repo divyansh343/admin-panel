@@ -94,7 +94,7 @@ const JobPage = ({ jobx }) => {
               <div className="mt-5 ">
                 {/* <a className="xs:flex-shrink-0 group relative w-full xs:w-auto flex xs:inline-flex items-center justify-center h-10 px-4 py-px font-bold text-gray-900 bg-primary rounded-lg transition-all duration-300 focus:outline-none" href="/contact"><div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
           <span className="ml-2">Apply now </span></a> */}
-                <a href={`${jobx.apply_link}?ref=frontendjobs`} target='_blank' rel='noreferrer' className="btn rounded-md bg-primary hover:bg-[#1d4ed8] border-primary hover:border-emerald-700 text-white md:ms-2 w-full md:px-24 text-lg ">Apply Now<FaExternalLinkAlt className='inline-block' /></a>
+                <a href={`${jobx.apply_link}?ref=frontendjobs`} target='_blank' rel='noreferrer' className="btn rounded-md bg-primary hover:bg-[#1d4ed8] border-primary hover:border-emerald-700 text-white md:ms-2 w-full md:px-24 text-lg ">Quick Apply <FaExternalLinkAlt className='inline-block' /></a>
               </div>
 
               {/* share button */}

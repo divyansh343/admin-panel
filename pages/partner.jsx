@@ -29,7 +29,7 @@ const partner = () => {
 
 
               <p class="mt-12">Here is a sample preview:</p>
-
+<div className='mx-4'>
 
               <div class="flex flex-col m-auto mt-2 w-full sm:w-[85%]">
                 <div class="text-xs ml-auto text-gray-500">
@@ -81,6 +81,8 @@ const partner = () => {
                   </div></a>
                 </div>
               </div>
+</div>
+
 
 
               <p class="max-w-sm text-[15px] -rotate-3 mt-4"><span class=" text-violet-500 font-bold text-[42px]">$499</span> for 90 days</p>

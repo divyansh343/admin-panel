@@ -46,6 +46,7 @@ const JobContainer = () => {
         </div>
         </div>
         <div className='btn btn-sm m-3  btn-secondary'><CgCardClubs /> Page <span className='text-primary'>{currentPage}</span>  of {totalPages}</div>
+        <div className='btn btn-sm m-3  btn-secondary'><CgCardClubs />  <span className='text-primary'>15</span> jobs in this page</div>
         {
           data.map((item) => (
             <div key={item._id} className='my-3' >
