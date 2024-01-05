@@ -14,7 +14,6 @@ const JobWrapper = () => {
     axios.get(`${process.env.NEXT_PUBLIC_HOST}api/jobs/onejob?job=${router.query.jobid}`)
       .then((res) => res)
       .then((data) => {
-        console.log(data)
         setData(data.data.response)
         setLoading(false)
       })

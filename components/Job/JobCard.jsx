@@ -35,17 +35,15 @@ const JobCard = ({ item }) => {
 
             <div className="lg:block flex justify-between lg:mt-0 mt-4">
               <div className='grid grid-flow-col'>
-                {item.isRemote ? <><span className="block"><span className="bg-base-100 ml-2 inline-block text-accent text-xs px-2.5 py-0.5 font-semibold rounded-full">Remote</span>
-                </span></> : <><span className="block"><span className="bg-base-100 ml-2 inline-block text-accent text-xs px-2.5 py-0.5 font-semibold rounded-full">Full Time</span>
-                </span></>}
+              <span className="block  text-sm md:mt-1 mt-0"><i className="uil uil-clock"></i>{item.category.map(item => {item})}</span>
+               
                 {item.isInternship ? <><span className="block"><span className="bg-base-100 ml-2 inline-block text-accent text-xs px-2.5 py-0.5 font-semibold rounded-full">Intern</span>
                 </span></> : null}
               </div>
 
-              {/* <span className="block  text-sm md:mt-1 mt-0"><i className="uil uil-clock"></i>{item.category.map(item => {item})}</span> */}
             </div>
 
-            <div className="lg:block flex justify-between lg:mt-0 mt-2">
+            <div className="lg:block flex justify-start lg:mt-0 mt-2">
               <span className=""><i className="uil uil-map-marker"></i><FaMapLocationDot className='inline-block text-accent' /> {item.location}</span>
               {/* <span className="block font-semibold lg:mt-1 mt-0"> {item.salary.value} $/yr</span> */}
             </div>

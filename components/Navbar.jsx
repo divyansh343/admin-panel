@@ -54,9 +54,9 @@ const Navbar = () => {
               </div>
 
               <div className=" ml-12">
-                <Link className="group inline-block justify-center ml-5 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/admin/post">
+                <Link className="group inline-block justify-center ml-2 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/admin/post">
                   <div className="inline-flex items-stretch h-10 p-0.5 text-white rounded-lg bg-gray-900 ">
-                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Post a Job - 49$</span>
+                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Post a Job</span>
                     </div>
                   </div>
                 </Link>

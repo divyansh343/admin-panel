@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import toast from 'react-hot-toast';
 const axios = require('axios');
 
 const PostJob = () => {
   const [jobTitle, setJobTitle] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [location, setLocation] = useState("");
-  const [city, setCity] = useState("");
   const [salary, setSalary] = useState({
     value: 0,
     currency: "",
@@ -18,7 +18,7 @@ const PostJob = () => {
   const [applyLink, setApplyLink] = useState("");
   const [categories, setCategories] = useState(['', '', '']);
   const currenciesArray = ['INR', 'USD', 'EUR', 'GBP', 'Crypto'];
-  const frequencyOptions = ["month", "year"];
+  const frequencyOptions = ["month", "year", "hour"];
   const handleInputChange = (index, value) => {
     const updatedCategories = [...categories];
     updatedCategories[index] = value;
@@ -45,7 +45,7 @@ const PostJob = () => {
   let config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: 'http://localhost:3000/api/jobs/add',
+    url: `${process.env.NEXT_PUBLIC_HOST}api/jobs/add`,
     headers: {
       'Content-Type': 'application/json'
     },
@@ -75,9 +75,12 @@ const PostJob = () => {
     e.preventDefault()
     axios.request(config)
       .then((response) => {
-        alert("done")
+       console.log()
+       response.data.sucess === true ? toast.success("Job listed Sucessful")
+       : toast.error("Error")
       })
       .catch((error) => {
+        console.log(error)
       });
     resetForm()
     console.log(data)
@@ -159,7 +162,7 @@ const PostJob = () => {
                       <select className="select select-primary w-full max-w-xs select-sm ml-2" value={salary.per} onChange={(e) => setSalary({ ...salary, per: e.target.value })}>
                         {frequencyOptions.map((freq, index) => (
                           <option key={index} value={freq}>
-                            {freq === "month" ? "month" : "year"}
+                            {freq === "month" ? "month" : <>{freq === "year" ? "year" : "hour"  }</>}
                           </option>
                         ))}
                       </select>

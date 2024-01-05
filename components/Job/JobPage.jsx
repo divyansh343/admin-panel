@@ -31,7 +31,6 @@ import Head from 'next/head';
 
 
 const JobPage = ({ jobx }) => {
-  console.log(jobx)
   const shareUrl = `${process.env.NEXT_PUBLIC_HOST}jobs/${jobx._id}`;
   const title = `Apply for ${jobx.job_title} position at ${jobx.business_name || ""} `;
 
@@ -66,10 +65,7 @@ const JobPage = ({ jobx }) => {
                   <h5 className="text-xl font-semibold">{jobx.job_title}</h5>
                   <div className="">
                     {/* <CiTempHigh className='inline-block text-[#000000] ' /> */}
-                    
-                    {jobx.category.map(item => (<>
-                      <span className=" text-md font-medium mx-1 inline-block">{item},</span>
-                    </>))}
+
 
                   </div>
                   <div className="mt-2">
@@ -78,10 +74,16 @@ const JobPage = ({ jobx }) => {
                   </div>
                 </div>
               </div>
+              <div className='grid gap-2 m-4 grid-cols-2 md:grid-cols-3'>
+                {jobx.category.map(item => (<>
+                  <span class="bg-blue-100 text-blue-800 text-md font-medium me-2 px-2.5 py-0.5 rounded-2xl
+                  text-center">{item}</span>
+                </>))}
+              </div>
               <div className='grid justify-start pt-10 pb-5'>
-              <h2 className='text-3xl '>{jobx.business_name} is hiring a</h2>
+                <h2 className='text-3xl '>{jobx.business_name} is hiring a</h2>
 
-              <h2 className='text-4xl pt-4 font-bold'>{!jobx.isRemote ? "Full Time" : "Remote"} {jobx.job_title}</h2>
+                <h2 className='text-4xl pt-4 font-bold'>{!jobx.isRemote ? "Full Time" : "Remote"} {jobx.job_title}</h2>
               </div>
               <h5 className="text-lg font-bold mt-6">Job Description</h5>
               <h5 className="text-lg font-semibold ">About {jobx.business_name}:</h5>
@@ -287,7 +289,7 @@ const JobPage = ({ jobx }) => {
                     <li className="flex items-center mt-3">
                       <span className='animate-spin text-warning'>
 
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-clock h-5 w-5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-clock h-5 w-5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                       </span>
                       <div className="ml-4">
                         {daysDifference === 0 ? "Today" :

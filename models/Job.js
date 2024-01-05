@@ -25,7 +25,7 @@ const jobSchema = new mongoose.Schema({
     },
     per: {
       type: String,
-      enum: ['year', 'month']
+      enum: ['year', 'month','hour']
     }
   },
   positions: {
