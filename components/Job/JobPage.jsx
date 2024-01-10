@@ -54,15 +54,28 @@ const JobPage = ({ jobx }) => {
         <title>{jobx.job_title}</title>
         <meta name="description" content={jobx.job_description} />
       </Head>
-      <div className='grid justify-center  md:py-12 px-3 lg:px-10 '>
+
+
+      {/* <div class="mx-auto px-8 md:px-32 py-12 max-w-7xl"> <div class="border-b pb-12"> <div class="max-w-2xl md:inline-flex md:items-center gap-3"> <div class="h-12 w-12 flex-none">
+
+        <Image class="inset-0 h-full w-full rounded-full object-cover" height={80} width={80} src={jobx.business_image} alt={jobx.business_name} />
+
+      </div><h2 class="text-slate-900 text-3xl font-normal tracking-tight font-display lg:text-4xl mt-8 md:mt-0">
+         {jobx.job_title} at <span class="italic font-bold">{jobx.business_name}</span> </h2> </div>
+
+      </div>
+
+
+      </div> */}
+      <div className='grid justify-center pt-2 pb-8 px-3 lg:px-10 '>
         <div className="container mt-10">
           <div className="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
             <div className="lg:col-span-8 md:col-span-6">
-              <div className={`md:flex items-center p-2 ${jobx.isInternship ? "bg-[#fde047]" : "bg-secondary"}  rounded-2xl `}>
-                <Image className='rounded-3xl h-15 w-15 p-2' height={80} width={80} src={jobx.business_image} alt={jobx.business_name} />
+              <div className={`md:flex items-center p-2 bg-blue-50 rounded-2xl `}>
+                <Image className='rounded-full h-15 w-15 p-2' height={80} width={80} src={jobx.business_image} alt={jobx.business_name} />
                 {/* <Image className='rounded-full h-22 w-22 p-2  ' height={100} width={100} src="https://shreethemes.in/jobstack/layouts/assets/images/company/lenovo-logo.png" alt={jobx.business_name} /> */}
                 <div className="md:ml-4 md:mt-0 mt-6">
-                  <h5 className="text-xl font-semibold">{jobx.job_title}</h5>
+                  <h5 className="text-2xl font-semibold">{jobx.job_title}</h5>
                   <div className="">
                     {/* <CiTempHigh className='inline-block text-[#000000] ' /> */}
 
@@ -74,12 +87,13 @@ const JobPage = ({ jobx }) => {
                   </div>
                 </div>
               </div>
-              <div className='grid gap-2 m-4 grid-cols-2 md:grid-cols-3'>
+              <div className='grid gap-2 m-4 grid-cols-2 md:grid-cols-4'>
                 {jobx.category.map(item => (<>
-                  <span class="bg-blue-100 text-blue-800 text-md font-medium me-2 px-2.5 py-0.5 rounded-2xl
-                  text-center">{item}</span>
+
+                  <span class="text-center bg-[#ECEEFF] text-[#1A247A] border-0 pl-2 pr-2.5 py-1 rounded-xl text-sm ">{item}</span>
                 </>))}
               </div>
+
               <div className='grid justify-start pt-10 pb-5'>
                 <h2 className='text-3xl '>{jobx.business_name} is hiring a</h2>
 
@@ -88,7 +102,7 @@ const JobPage = ({ jobx }) => {
               <h5 className="text-lg font-bold mt-6">Job Description</h5>
               <h5 className="text-lg font-semibold ">About {jobx.business_name}:</h5>
 
-              <p className=" mt-4">{jobx.job_description}</p>
+              <p className="text-lg text-slate-500 mt-4">{jobx.job_description}</p>
 
 
               <div className="mt-5 ">
@@ -215,7 +229,7 @@ const JobPage = ({ jobx }) => {
             </div>
 
             <div className="lg:col-span-4 md:col-span-6">
-              <div className={`shadow  bg-secondary rounded-2xl  sticky top-20`}>
+              <div className={`shadow  bg-blue-50 rounded-2xl  sticky top-20`}>
                 <div className="p-6">
                   <h5 className="text-lg font-semibold">Job Information</h5>
                 </div>

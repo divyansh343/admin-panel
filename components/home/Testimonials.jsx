@@ -7,7 +7,7 @@ const Testimonials = () => {
       <section className="py-12 md:py-24 ">
         <div className="container mx-auto">
           <div className="max-w-sm md:max-w-6xl mx-auto">
-            <div className="max-w-2xl mx-auto mb-20 text-center"><span className="inline-flex items-center h-6 mb-4 px-2 text-xs uppercase font-medium text-teal-50 bg-gray-800 rounded-full">Nomad</span><h1 className="tracking-tight text-4xl sm:text-5xl font-bold ">No Register, No Login Only Real deal</h1></div>
+            <div className="max-w-2xl mx-auto mb-20 text-center"><span className="inline-flex items-center h-6 mb-4 px-2 text-xs uppercase font-medium text-teal-50 bg-gray-800 rounded-full">#1 Nomad Jobs</span><h1 className="tracking-tight text-4xl sm:text-5xl font-bold ">No Register, No Login, just Apply </h1></div>
             <div className="flex flex-wrap">
               <div className="w-full md:w-1/2 lg:w-1/3">
                 <div className="pt-10 px-6 xs:px-10 pb-14 bg-gray-800 rounded-t-xl md:rounded-none md:rounded-tl-xl">

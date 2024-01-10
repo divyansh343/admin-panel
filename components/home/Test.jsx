@@ -24,16 +24,9 @@ const Test = () => {
 
                 </div>
               </div> */}
-              <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Boilerplate Code for <br /><span class="text-primary">NextJs Saa</span></h1><p class="mt-8 text-gray-700 dark:text-gray-300 text-3xl">Ship your <span class="font-bold text-primary underline">SaaS</span> Super Fast</p>
-              <div class="mt-12 flex flex-wrap justify-center gap-y-4 pb-8 gap-x-4">
-                <a href="#features" class="relative flex h-9 w-full items-center justify-center px-8 before:absolute 
-                              before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 
-                              hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
-                  <span class="relative text-sm font-semibold text-white">Explore Boilerplates</span></a><a href="/blog/nextjs-saas" class="relative flex h-9 w-full items-center justify-center px-8 before:absolute 
-                              before:inset-0 before:rounded-full before:bg-gray-500 before:transition before:duration-300 
-                              hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"><span class="relative text-sm font-semibold text-white">View Documentation</span>
-                </a>
-              </div>
+              <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">For Digital Nomads <br /><span class="text-primary">NextJs Saa</span></h1>
+              
+              <p className="md:max-w-md lg:max-w-lg mx-auto text-lg  mt-5 mb-10">  We hand pick every job on this site so you don&apos;t have to. Live and work anywhere.</p>
               {/* <div class="py-8 mt-16 border-y border-gray-800 sm:flex flex-col sm:flex-row justify-between items-center">
                 <div class="text-center flex-1 mb-4 sm:mb-0"><h6 class="text-lg font-semibold text-gray-700 dark:text-white">User Auth</h6><p class="mt-2 text-gray-500">User Auth including <span class="text-primary">Social Login</span> and <span class="text-primary">Magic Link Login</span></p>
                 </div>
@@ -41,8 +34,8 @@ const Test = () => {
                 </div>
                 <div class="text-center flex-1"><h6 class="text-lg font-semibold text-gray-700 dark:text-white">SEO First</h6><p class="mt-2 text-gray-500">Manage your SEO super easy by a config file</p>
                 </div>
-              </div>
-              <div class="mt-12 flex flex-wrap justify-center gap-x-4">
+              </div> */}
+              {/* <div class="mt-12 flex flex-wrap justify-center gap-x-4">
                 <div class="p-4 transition duration-200 flex flex-col items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-gray-800 dark:text-white mb-2" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993"></path><path d="M15 12v-3"></path></svg><p class="text-gray-700 text-sm">NextJs</p>
                 </div>
                 <div class="p-4 transition duration-200 flex flex-col items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-gray-800 dark:text-white mb-2" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-10 0a10 10 0 1 0 20 0a10 10 0 1 0 -20 0"></path><path d="M12.556 6c.65 0 1.235 .373 1.508 .947l2.839 7.848a1.646 1.646 0 0 1 -1.01 2.108a1.673 1.673 0 0 1 -2.068 -.851l-.46 -1.052h-2.73l-.398 .905a1.67 1.67 0 0 1 -1.977 1.045l-.153 -.047a1.647 1.647 0 0 1 -1.056 -1.956l2.824 -7.852a1.664 1.664 0 0 1 1.409 -1.087l1.272 -.008z"></path></svg><p class="text-gray-700 text-sm">User Auth</p>

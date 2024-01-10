@@ -5,7 +5,7 @@ import { MdLocationCity } from 'react-icons/md';
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoTimeOutline } from "react-icons/io5";
 
-const JobCard = ({ item }) => {
+const JobCard = ({item}) => {
   const givenDate = new Date(item.posted_on);
   const currentDate = new Date();
   const timeDifference = currentDate - givenDate;

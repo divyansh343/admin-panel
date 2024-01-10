@@ -29,7 +29,7 @@ const Flex = () => {
     },
   ]
   return (
-    <section className="py-3 bg-accent mb-10">
+    <section className="py-3 bg-blue-950 my-10">
       <div className="container max-w-sm md:max-w-7xl px-4 mx-auto">
         <div className="flex flex-wrap items-center">
           {
@@ -38,7 +38,7 @@ const Flex = () => {
                 <Image priority className="block mx-auto" src={item.url} alt="logo" />
               </div>
             ))
-          }
+          }1
         </div>
       </div>
     </section>

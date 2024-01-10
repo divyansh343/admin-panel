@@ -48,14 +48,14 @@ const Navbar = () => {
               {/* <button onClick={() => setNav(true)} className="hidden navbar-burger flex items-center justify-center h-10 w-10 ml-auto border border-teal-900 bg-accent bg-opacity-80 hover:bg-teal-700 rounded-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 12H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 19H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
               </button> */}
 
-              <div className=" ml-auto items-end">
+              <div className="hidden md:block ml-auto items-end">
                 {/* <a className="inline-block  hover:text-primary mr-10" href="#how-it-works">How it works</a><a className="inline-block  hover:text-primary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-primary mr-10" href="/blog">Blog</a> */}
                 <Link className="inline-block  hover:text-primary" href="/partner">Advertise</Link>
               </div>
 
-              <div className=" ml-12">
+              <div className=" ml-24 md:ml-12">
                 <Link className="group inline-block justify-center ml-4 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/admin/post">
-                  <div className="inline-flex items-stretch h-10 p-0.5 text-white rounded-lg bg-gray-900 ">
+                  <div className="inline-flex items-stretch h-10 p-0.5 text-white rounded-lg bg-primary">
                     <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Post a Job</span>
                     </div>
                   </div>
