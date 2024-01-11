@@ -5,18 +5,18 @@ import Footer from "./Footer"
 import Cta from "./home/Cta"
 
 const myFont = localFont({ src: '../assets/fonts/gelion/Gelion Regular.ttf' })
-// import { Urbanist } from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'
 
-// const openSans = Urbanist({
-//   subsets: ['latin'],
-//   display: 'swap',
-// })
+const openSans = Nunito_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 const Layout = ({ children }) => {
   const [theme, settheme] = useState("oneSecond")
   return (
     <div data-theme="coda" lang="en"
-      className={` bg-base-100  ${myFont.className}`}>
+      className={` bg-base-100  ${openSans.className}`}>
       <Navbar />
       <div className="">
         {children}
