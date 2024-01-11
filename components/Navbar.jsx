@@ -1,18 +1,24 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import nomad from "../assets/images/nomad.png"
 const Navbar = () => {
   const [navON, setNav] = useState(false)
   const PhoneNav = () => {
     return (
       <>
         <div className="navbar-menu fixed top-0 left-0 bottom-0 w-full sm:max-w-xs z-50">
-          <div className="navbar-backdrop fixed inset-0 bg-base-100 opacity-80">
-          </div><nav className="relative z-10 px-8 pt-8 -mt-0.5 bg-base-100 h-full overflow-y-auto ">
+          <div className="navbar-backdrop fixed inset-0 bg-gradient-to-br to-purple-200 from-white ">
+          </div><nav className="relative z-10 px-8 pt-8 -mt-0.5  h-full overflow-y-auto ">
             <div className="flex flex-wrap justify-between h-full">
               <div className="w-full">
                 <div className="flex items-center justify-between -m-2">
-                  <div className="w-auto p-2"><p><span className="normal-case">Frontend</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
-                  </div>
+                  <Link href="/">
+                    <div className="flex space-x-2 items-center text-xl font-bold md:text-2xl" href="#">
+                      <Image height={60} width={60} class="h-10 w-10 rounded-lg ring-2 ring-white mr-1" src={nomad} alt="" />
+                      <p><span className="normal-case">Nomad</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
+                    </div>
+                  </Link>
                   <div className="w-auto p-2 bg-accent">
                     <button onClick={() => setNav(false)} className="inline-block navbar-burger"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6L18 18" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path></svg></button>
                   </div>
@@ -40,23 +46,23 @@ const Navbar = () => {
             <div className="relative flex h-24 items-center">
               <Link href="/">
                 <div className="flex space-x-2 items-center text-xl font-bold md:text-2xl" href="#">
-                  {/* <img class="h-9 rounded-lg ring-2 ring-white mr-2" src="/1secondcopy_icon.png" alt=""> */}
+                  <Image height={60} width={60} class="h-10 w-10 rounded-lg ring-2 ring-white mr-1" src={nomad} alt="" />
                   <p><span className="normal-case">Nomad</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
                 </div>
               </Link>
 
-              {/* <button onClick={() => setNav(true)} className="hidden navbar-burger flex items-center justify-center h-10 w-10 ml-auto border border-teal-900 bg-accent bg-opacity-80 hover:bg-teal-700 rounded-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 12H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 19H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
-              </button> */}
+              <button onClick={() => setNav(true)} className="flex md:hidden navbar-burger  items-center justify-center h-10 w-10 ml-auto border border-teal-900 bg-accent bg-opacity-80 hover:bg-teal-700 rounded-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 12H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 19H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
+              </button>
 
               <div className="hidden md:block ml-auto items-end">
                 {/* <a className="inline-block  hover:text-primary mr-10" href="#how-it-works">How it works</a><a className="inline-block  hover:text-primary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-primary mr-10" href="/blog">Blog</a> */}
                 <Link className="inline-block  hover:text-primary" href="/partner">Advertise</Link>
               </div>
 
-              <div className=" ml-24 md:ml-12">
+              <div className="hidden md:flex ml-24 md:ml-12">
                 <Link className="group inline-block justify-center ml-4 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/admin/post">
                   <div className="inline-flex items-stretch h-10 p-0.5 text-white rounded-lg bg-primary">
-                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Post a Job</span>
+                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Post a Job - 49$</span>
                     </div>
                   </div>
                 </Link>

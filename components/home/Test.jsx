@@ -8,7 +8,6 @@ const Test = () => {
       <div class="relative">
         <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-20">
           <div class="blur-[106px] h-20 bg-gradient-to-br to-purple-400 from-blue-700">
-
           </div>
           <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-indigo-600">
           </div>
@@ -24,8 +23,8 @@ const Test = () => {
 
                 </div>
               </div> */}
-              <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">For Digital Nomads <br /><span class="text-primary">NextJs Saa</span></h1>
-              
+              <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">For Digital Nomads <br /><span class="text-primary text-4xl">Work From Anywhere Jobs</span></h1>
+
               <p className="md:max-w-md lg:max-w-lg mx-auto text-lg  mt-5 mb-10">  We hand pick every job on this site so you don&apos;t have to. Live and work anywhere.</p>
               {/* <div class="py-8 mt-16 border-y border-gray-800 sm:flex flex-col sm:flex-row justify-between items-center">
                 <div class="text-center flex-1 mb-4 sm:mb-0"><h6 class="text-lg font-semibold text-gray-700 dark:text-white">User Auth</h6><p class="mt-2 text-gray-500">User Auth including <span class="text-primary">Social Login</span> and <span class="text-primary">Magic Link Login</span></p>

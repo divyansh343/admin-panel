@@ -5,6 +5,7 @@ import Faq from "@/components/home/Faq";
 import Feat from "@/components/home/Feat";
 import Flex from "@/components/home/Flex";
 import Hero from "@/components/home/Hero";
+import Mode from "@/components/home/Mode";
 import Test from "@/components/home/Test";
 import Testimonials from "@/components/home/Testimonials";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Flex />
       <JobContainer />
       <Feat />
+      {/* <Mode /> */}
       {/* <Testimonials /> */}
       <Faq />
     </main>
