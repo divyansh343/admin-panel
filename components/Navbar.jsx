@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between -m-2">
                   <Link href="/">
                     <div className="flex space-x-2 items-center text-xl font-bold md:text-2xl" href="#">
-                      <Image height={60} width={60} class="h-10 w-10 rounded-lg ring-2 ring-white mr-1" src={nomad} alt="" />
+                      <Image height={60} width={60} class="h-12 w-12 rounded-lg ring-2 ring-white mr-1" src={nomad} alt="" />
                       <p><span className="normal-case">Nomad</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
                     </div>
                   </Link>

@@ -1,102 +1,57 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { GiLoveHowl } from 'react-icons/gi'
+import nomad from "../../assets/images/nomad.png"
 
 const Cta = () => {
   return (
 
-    <div>
-      <div className="container mx-auto">
-        <div className="bg-[#F2F2F8] rounded-[20px] p-[30px] md:p-[80px] lg:p-[100px]">
-          <div className="grid gap-[25px] grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
-            <div data-aos="fade-in" data-aos-delay="100" data-aos-duration="600" data-aos-once="true" className="aos-init aos-animate">
-              <h3 className="text-black font-semibold text-[20px] md:text-[22px] mb-[20px]">Solutions</h3>
-              <ul className="list-none space-y-[12px]">
-                <li>
-                  <a className="hover:text-[#EF4335]" href="/services/service-details/">Google Ads</a>
-                  </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="/services/service-details/">Social Media Ads</a>
-                </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="/services/service-details/">Amazon Shopping</a>
-                </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="/services/service-details/">Email Marketing</a>
-                </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="/services/service-details/">Microsoft Ads</a>
-                </li></ul>
-            </div>
-            <div data-aos="fade-in" data-aos-delay="200" data-aos-duration="600" data-aos-once="true" className="aos-init aos-animate">
-              <h3 className="text-black font-semibold text-[20px] md:text-[22px] mb-[20px]">Resources</h3>
-              <ul className="list-none space-y-[12px]">
-                <li>
-                  <a className="hover:text-[#EF4335]" href="/blog/">Our Blog</a>
-                  </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="/success-stories/">Success Stories</a>
-                </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="#">Customers Review</a>
-                </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="/contact-us/">Contact Us</a>
-                </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="/about-us/">About Us</a>
-                </li></ul>
-            </div>
-            <div data-aos="fade-in" data-aos-delay="300" data-aos-duration="600" data-aos-once="true" className="aos-init aos-animate">
-              <h3 className="text-black font-semibold text-[20px] md:text-[22px] mb-[20px]">Opportunities</h3>
-              <ul className="list-none space-y-[12px]">
-                <li>
-                  <a className="hover:text-[#EF4335]" href="/careers/">Careers</a>
-                  </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="#">Partnerships</a>
-                </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="#">Awards</a>
-                </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="/contact-us/">Get A Proposal</a>
-                </li>
-              <li>
-                <a className="hover:text-[#EF4335]" href="/contact-us/">Free Audit</a>
-                </li></ul>
-            </div>
-            <div data-aos="fade-in" data-aos-delay="400" data-aos-duration="600" data-aos-once="true" className="aos-init aos-animate">
-              <h3 className="text-black font-semibold text-[20px] md:text-[22px] mb-[20px]">Signup Newsletter</h3>
-              <form className="mb-[20px]">
-                <input type="email" placeholder="Email Address" className="block w-full px-[30px] py-[15px] bg-white border-0 rounded-[50px] placeholder-[#4C4C4C]   focus:outline-none  " />
-                  
-                  <button type="submit" className="bg-primary text-white text-[14px] font-medium block w-full uppercase rounded-full py-[15px] px-[15px] mt-[15px] transition duration-500 ease-in-out hover:bg-[#EF4335]">Signup Now <svg className="inline-block relative -top-[2px]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M8.91 19.92l6.52-6.52c.77-.77.77-2.03 0-2.8L8.91 4.08"></path></svg>
-                </button>
-                </form>
+    <footer class="bg-blue-50 border-t border-base-content/10">
+      <div class="max-w-7xl mx-auto px-8 py-24">
+        <div class=" flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+          <div class="w-80 max-w-full flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <Link href="/">
 
-              <ul className="list-none space-x-[5px] md:space-x-[9px]"><li className="inline-block"><a href="https://www.facebook.com/" target="_blank" className="bg-[#161519] text-white text-[20px] inline-block w-[30px] h-[30px] text-center rounded-full leading-[34px] hover:bg-[#EF4335] transition delay-100 duration-300 ease-in-out"><i className="bx bxl-facebook"></i></a>
-              </li><li className="inline-block"><a href="https://www.linkedin.com/" target="_blank" className="bg-[#161519] text-white text-[20px] inline-block w-[30px] h-[30px] text-center rounded-full leading-[34px] hover:bg-[#EF4335] transition delay-100 duration-300 ease-in-out"><i className="bx bxl-linkedin"></i></a>
-              </li><li className="inline-block"><a href="https://www.twitter.com/" target="_blank" className="bg-[#161519] text-white text-[20px] inline-block w-[30px] h-[30px] text-center rounded-full leading-[34px] hover:bg-[#EF4335] transition delay-100 duration-300 ease-in-out"><i className="bx bxl-twitter"></i></a>
-              </li><li className="inline-block"><a href="https://www.instagram.com/" target="_blank" className="bg-[#161519] text-white text-[20px] inline-block w-[30px] h-[30px] text-center rounded-full leading-[34px] hover:bg-[#EF4335] transition delay-100 duration-300 ease-in-out"><i className="bx bxl-instagram"></i></a>
-              </li><li className="inline-block"><a href="https://www.youtube.com/" target="_blank" className="bg-[#161519] text-white text-[20px] inline-block w-[30px] h-[30px] text-center rounded-full leading-[34px] hover:bg-[#EF4335] transition delay-100 duration-300 ease-in-out"><i className="bx bxl-youtube"></i></a>
-              </li></ul>
+              <div className="flex space-x-2 items-center text-xl font-bold md:text-2xl" >
+                <Image height={60} width={60} class="h-12 w-12 rounded-lg  mr-1" src={nomad} alt="" />
+                <p><span className="normal-case">Nomad</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
+
+              </div>
+            </Link><p class="mt-3 text-base text-base-content/80 leading-relaxed">Ship your startup in days, not weeks<br />Copyright © 2024 - All rights reserved</p>
+
+
+
+         
+            <div class="mt-8 space-y-2 md:hidden"><p class="font-medium text-base">We build together on Discord!</p><button class="btn text-white bg-[#7289da] hover:bg-[#596dac] active:bg-[#596dac] btn-sm" title="Join Discord community">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-[16px] h-[16px]" fill="currentColor" viewBox="0 0 16 16"><path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"></path></svg>Join us</button>
+            </div>
+          </div>
+          <div class="flex-grow flex flex-wrap md:pl-24 -mb-10 md:mt-0 mt-10 text-center md:text-left">
+            <div class="lg:w-1/3 md:w-1/2 w-full px-4">
+              <div class="footer-title font-semibold text-base-content tracking-widest text-base md:text-left mb-3">Creative
+              </div>
+              <div class="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-base">
+
+                <p class="link link-hover" >Pricing</p><a class="link link-hover" href="/license">Licenses</a><a class="link link-hover" href="/docs">Documentation</a><a href="mailto:marc@shipfa.st" target="_blank" class="link link-hover">Support</a><a class="link link-hover" href="/affiliates">Affiliates — Earn up to $99 per sale</a><button class="hidden md:inline cursor-pointer hover:underline text-[#7289da] hover:text-[#596dac] text-left" title="Go to ShipFast Discord server">Build with us on Discord</button>
+              </div>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 w-full px-4">
+              <div class="footer-title font-semibold text-base-content tracking-widest text-base md:text-left mb-3">Remote
+              </div>
+              <div class="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-base"><a class="link link-hover" href="/tos">Terms of services</a><a class="link link-hover" href="/privacy-policy">Privacy policy</a>
+              </div>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 w-full px-4">
+              <div class="footer-title font-semibold text-base-content tracking-widest text-base md:text-left mb-3">Marketing
+              </div>
+              <div class="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-base"><a href="https://marclou.beehiiv.com/" target="_blank" class="link link-hover">Newsletter for makers</a><a href="https://byedispute.com/" target="_blank" class="link link-hover">ByeDispute</a><a href="https://indiepa.ge/" target="_blank" class="link link-hover">IndiePage</a><a class="link link-hover" href="/tools/fake-it-till-you-make-it">Fake It Till You Make It</a><a class="link link-hover" href="/tools/logo-fast">LogoFast</a>
+              </div>
             </div>
           </div>
         </div>
-        <div className="py-[30px]">
-          <div className="grid items-center gap-[15px] md:gap-[25px] grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-            <div className="text-center md:text-left"><p className=" ml-5 mb-10 md:mb-0">Made with love <GiLoveHowl className="inline-block text-xl text-red-500" /> © 2023 Nomad Jobs. All rights reserved.</p>
-            </div>
-            <div className="text-center mr-2 md:text-end">
-              <ul><li className="inline-block mr-[30px] last:mr-[0px] relative before:content-[''] before:absolute before:right-[-15px] before:bg-[#000] before:h-[15px] before:w-[1px] before:top-[6px] before:hidden lg:before:block last-of-type:before:hidden"><a className="text-black hover:text-[#EF4335]" href="/privacy-policy/">Privacy &amp; Policy</a>
-              </li><li className="inline-block mr-[30px] last:mr-[0px] relative before:content-[''] before:absolute before:right-[-15px] before:bg-[#000] before:h-[15px] before:w-[1px] before:top-[6px] before:hidden lg:before:block last-of-type:before:hidden"><a className="text-black hover:text-[#EF4335]" href="/terms-conditions/">Terms &amp; Conditions</a>
-              </li></ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      </div></footer>
 
-    </div>
   )
 }
 
