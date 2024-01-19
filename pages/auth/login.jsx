@@ -8,11 +8,11 @@ const login = () => {
   return (
     <div>
       <div className="lg:h-screen md:flex ">
-        <div className="relative bg-primary overflow-hidden md:flex w-1/2 bg-accent-focus i justify-around items-center hidden">
+        <div className="relative bg-blue-300 overflow-hidden md:flex w-1/2 bg-accent-focus i justify-around items-center hidden">
           <div>
             <h1 className="font-bold text-4xl ">User Login</h1>
             <Link href='/'>
-              <button type="submit" className="block w-28  text-secondary mt-4 py-2 rounded-2xl font-bold mb-2"> <span className='inline-block'><MdArrowBackIos /></span> Go Back</button>
+              <button type="submit" className="block w-28  mt-4 py-2 rounded-2xl font-bold mb-2"> <span className='inline-block'><MdArrowBackIos /></span> Go Back</button>
               </Link>
           </div>
 

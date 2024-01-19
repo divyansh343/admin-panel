@@ -20,8 +20,7 @@ const Layout = ({ children }) => {
       <div className="">
         {children}
       </div>
-      {/* <Footer /> */}
-      {/* <Cta /> */}
+      <Footer />
     </div>
   )
 }
