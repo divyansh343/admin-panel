@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 // mongo
 const mongoConnect = () => {
-    const Uri = `mongodb+srv://divyansh:amapirate@testcluster.ywjkt.mongodb.net/jobsy?retryWrites=true&w=majority`
+    const Uri = `mongodb+srv://divyansh:amapirate@testcluster.ywjkt.mongodb.net/webyy?retryWrites=true&w=majority`
     
     mongoose.connect(Uri);
     mongoose.set('strictQuery', false);

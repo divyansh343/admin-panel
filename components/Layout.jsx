@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import localFont from 'next/font/local'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
-import Cta from "./home/Cta"
 
 const myFont = localFont({ src: '../assets/fonts/gelion/Gelion Regular.ttf' })
 import { Nunito_Sans } from 'next/font/google'
@@ -13,7 +12,7 @@ const openSans = Nunito_Sans({
 })
 
 const Layout = ({ children }) => {
-  const [theme, settheme] = useState("oneSecond")
+  const [theme, settheme] = useState("light")
   return (
     <div data-theme="coda" lang="en"
       className={` bg-base-100  ${openSans.className}`}>
@@ -21,7 +20,7 @@ const Layout = ({ children }) => {
       <div className="">
         {children}
       </div>
-      <Footer />
+      {/* <Footer /> */}
       {/* <Cta /> */}
     </div>
   )

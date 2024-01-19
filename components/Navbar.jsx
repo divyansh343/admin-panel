@@ -8,35 +8,83 @@ const Navbar = () => {
     return (
       <>
         <div className="navbar-menu fixed top-0 left-0 bottom-0 w-full sm:max-w-xs z-50">
-          <div className="navbar-backdrop fixed inset-0 bg-gradient-to-br to-purple-200 from-white ">
-          </div><nav className="relative z-10 px-8 pt-8 -mt-0.5  h-full overflow-y-auto ">
+          <div className="navbar-backdrop fixed inset-0 bg-gradient-to-br to-purple-200 from-white "></div>
+          <nav className="relative z-10 px-8 pt-8 -mt-0.5  h-full overflow-y-auto ">
             <div className="flex flex-wrap justify-between h-full">
               <div className="w-full">
                 <div className="flex items-center justify-between -m-2">
                   <Link href="/">
-                    <div className="flex space-x-2 items-center text-xl font-bold md:text-2xl" href="#">
-                      <Image height={60} width={60} class="h-12 w-12 rounded-lg ring-2 ring-white mr-1" src={nomad} alt="" />
-                      <p><span className="normal-case">Nomad</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
+                    <div
+                      className="flex space-x-2 items-center text-xl font-bold md:text-2xl"
+                      href="#"
+                    >
+                      <Image
+                        height={60}
+                        width={60}
+                        className="h-12 w-12 rounded-lg ring-2 ring-white mr-1"
+                        src={nomad}
+                        alt=""
+                      />
+                      <p>
+                        <span className="normal-case">Admin</span>{" "}
+                        <span className="normal-case text-primary -ml-1">
+                          Panel.
+                        </span>
+                      </p>
                     </div>
                   </Link>
                   <div className="w-auto p-2 bg-accent">
-                    <button onClick={() => setNav(false)} className="inline-block navbar-burger"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6L18 18" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path></svg></button>
+                    <button
+                      onClick={() => setNav(false)}
+                      className="inline-block navbar-burger"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 18L18 6M6 6L18 18"
+                          stroke="#ffffff"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center py-8 w-full"><ul className="flex flex-col space-y-8"><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="#how-it-works">How it works</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="#pricing">Pricing</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="/blog">Blog</a></li><li className="mr-9"><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="/contact">Contact Sales</a></li><li><a className="inline-block text-sm font-medium text-opacity-80 hover:text-gray-200" href="https://app.1secondcopy.com/login">Login</a></li></ul>
+              <div className="flex flex-col justify-center py-8 w-full">
+              
               </div>
               <div className="flex flex-col justify-end w-full pb-8">
-                <div className="flex flex-wrap -m-2 text-base-100"><a href="" className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  bg-primary rounded-lg transition-all duration-300 focus:outline-none">
-                  <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300">
-                  </div><span>Post Jobs Openings</span></a>
+                <div className="flex flex-wrap -m-2 text-base-100">
+                  <Link
+                    href="/auth/user"
+                    className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  bg-primary rounded-lg transition-all duration-300 focus:outline-none"
+                  >
+                    <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
+                    <span>User Login</span>
+                  </Link>
+                  <Link
+                    href="/admin/login"
+                    className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  bg-primary rounded-lg transition-all duration-300 focus:outline-none"
+                  >
+                    <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
+                    <span>Admin Login</span>
+                  </Link>
                 </div>
               </div>
             </div>
           </nav>
-        </div></>
-    )
-  }
+        </div>
+      </>
+    );
+  };
+  
 
   return (
     <>
@@ -46,8 +94,8 @@ const Navbar = () => {
             <div className="relative flex h-24 items-center">
               <Link href="/">
                 <div className="flex space-x-2 items-center text-xl font-bold md:text-2xl" href="#">
-                  <Image height={60} width={60} class="h-10 w-10 rounded-lg ring-2 ring-white mr-1" src={nomad} alt="" />
-                  <p><span className="normal-case">Nomad</span> <span className="normal-case text-primary -ml-1">Jobs.</span></p>
+                  <Image height={60} width={60} className="h-10 w-10 rounded-lg ring-2 ring-white mr-1" src={nomad} alt="" />
+                  <p><span className="normal-case">Admin </span> <span className="normal-case text-primary -ml-1">Panel</span></p>
                 </div>
               </Link>
 
@@ -56,13 +104,13 @@ const Navbar = () => {
 
               <div className="hidden md:block ml-auto items-end">
                 {/* <a className="inline-block  hover:text-primary mr-10" href="#how-it-works">How it works</a><a className="inline-block  hover:text-primary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-primary mr-10" href="/blog">Blog</a> */}
-                <Link className="inline-block  hover:text-primary" href="/partner">Advertise</Link>
+                <Link className="inline-block  hover:text-primary" href="/auth/login">Login User</Link>
               </div>
 
               <div className="hidden md:flex ml-24 md:ml-12">
-                <Link className="group inline-block justify-center ml-4 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/admin/post">
+                <Link className="group inline-block justify-center ml-4 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/admin/login">
                   <div className="inline-flex items-stretch h-10 p-0.5 text-white rounded-lg bg-primary">
-                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Post a Job - 49$</span>
+                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Login admin</span>
                     </div>
                   </div>
                 </Link>
