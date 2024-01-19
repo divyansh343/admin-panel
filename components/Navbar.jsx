@@ -63,7 +63,7 @@ const Navbar = () => {
               <div className="flex flex-col justify-end w-full pb-8">
                 <div className="flex flex-wrap -m-2 text-base-100">
                   <Link
-                    href="/auth/user"
+                    href="/auth/login"
                     className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  bg-primary rounded-lg transition-all duration-300 focus:outline-none"
                   >
                     <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
