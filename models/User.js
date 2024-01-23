@@ -10,18 +10,10 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true // unique validator works on unique fields.
     },
-    usertype: {
+    role: {
         type: String,
         enum: ['user', 'admin'],
         default: "user" 
-    },
-    image: {
-        public_id: {
-            type: String,
-        },
-        url: {
-            type: String
-        }
     },
     password: {
         type: String,

@@ -1,29 +1,24 @@
 import LoginContainer from '@/components/auth/LoginContainer'
-import UserLoginContainer from '@/components/auth/UserLoginContainer'
 import Link from 'next/link'
 import React from 'react'
-import { MdArrowBackIos } from 'react-icons/md'
 
 const login = () => {
   return (
-    <div>
-      <div className="lg:h-screen md:flex ">
-        <div className="relative bg-blue-300 overflow-hidden md:flex w-1/2 bg-accent-focus i justify-around items-center hidden">
-          <div>
-            <h1 className="font-bold text-4xl ">User Login</h1>
-            <Link href='/'>
-              <button type="submit" className="block w-28  mt-4 py-2 rounded-2xl font-bold mb-2"> <span className='inline-block'><MdArrowBackIos /></span> Go Back</button>
-              </Link>
-          </div>
+    <div class="p-6" x-data="app">
 
-          <div className="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-          <div className="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-          <div className="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-          <div className="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+
+      <div class=" mx-auto my-20 max-w-sm transform space-y-4 text-center">
+        <LoginContainer />
+
+
+        <div class="flex items-center space-x-4">
+          <hr class="w-full border border-gray-300" />
+          <div class="font-semibold text-gray-400">OR</div>
+          <hr class="w-full border border-gray-300" />
         </div>
-        <div className="flex md:w-1/2  justify-center py-10 items-center  ">
-          <UserLoginContainer />
-        </div>
+        <Link href="/auth/register">
+        <button class="w-full rounded-2xl mt-2 border-b-4 border-b-blue-600 bg-blue-500 py-3 font-bold text-white hover:bg-blue-400 active:translate-y-[0.125rem] active:border-b-blue-400">CREATE ACCOUNT</button>
+        </Link>
       </div>
     </div>
   )

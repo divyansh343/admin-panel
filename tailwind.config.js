@@ -63,6 +63,17 @@ module.exports = {
           "warning": "#f4992a",
           "error": "#f77064",
         },
+        ticker: {
+          "primary": "#151e28",
+          "secondary": "#ffffff",
+          "accent": "#9caba2",
+          "neutral": "#171926",
+          "base-100": "#151e28",
+          "info": "#768ed6",
+          "success": "#31c484",
+          "warning": "#f4992a",
+          "error": "#f77064",
+        },
         sloped: {
           "primary": "#25d366",
           "secondary": "#f3f4f6",

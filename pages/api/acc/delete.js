@@ -1,6 +1,8 @@
 import User from '@/models/User';
-import mongoConnect from '../../../utils/mongodb'
 const jwt = require('jsonwebtoken');
+import bcrypt from 'bcrypt'
+import mongoConnect from '../../../utils/mongodb'
+import Account from '@/models/Account';
 
 export const config = {
   api: {
@@ -10,29 +12,26 @@ export const config = {
 
 export default async function handler(req, res) {
   mongoConnect()
-  if (req.method === 'GET') {
+  if (req.method === 'DELETE') {
     const token = req.headers.authorization.split(' ')[1];
     const decodedToken = jwt.verify(token, process.env.PUBLIC_NEXT_SECRET_KEY);
     const userId = decodedToken.userId;
     if (!userId) {
       return res.json('Invalid token!');
     }
-    User.findOne({_id : userId}).then(
-      (data) => {
-        res.status(200).json({
+    Account.deleteOne({
+      _id: req.body.accid
+    }).then(
+      () => {
+        return res.status(200).json({
           status: 200,
-          data: {
-            username : data.username,
-            email : data.email,
-            id : data._id,
-          },
           sucess: true,
-          message: `welcome admin`,
+          message: `Account deleted sucessfully`,
         });
       }
     ).catch(
       (error) => {
-        res.status(400).json({
+        return res.status(400).json({
           status: 400,
           sucess: false,
           error: error

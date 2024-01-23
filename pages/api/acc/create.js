@@ -2,8 +2,7 @@ import User from '@/models/User';
 const jwt = require('jsonwebtoken');
 import bcrypt from 'bcrypt'
 import mongoConnect from '../../../utils/mongodb'
-import cloudinary from '../../../utils/cloudinary'
-import Request from '@/models/Request';
+import Account from '@/models/Account';
 
 export const config = {
   api: {
@@ -18,25 +17,23 @@ export default async function handler(req, res) {
     const decodedToken = jwt.verify(token, process.env.PUBLIC_NEXT_SECRET_KEY);
     const userId = decodedToken.userId;
     if (!userId) {
-      return res.status(401).json('Invalid token!');
+      return res.json('Invalid token!');
     }
-    const result = await cloudinary.uploader.upload(req.body.avatar, {
-      folder: "users",
-    })
-    const requestkey = new Request({
-      userid: userId,
-      username: req.body.username,
-      image: {
-        public_id: result.public_id,
-        url: result.secure_url
-      },
-    });
 
-    requestkey.save().then(
-      (user) => {
+    const newAc = new Account({
+      userid: userId,
+      account_name: req.body.account_name,
+      account_size: req.body.account_size,
+      currency: req.body.currency,
+      account_type: req.body.account_type,
+    });
+console.log(typeof(req.body.account_type))
+    newAc.save().then(
+      (newAc) => {
         return res.status(201).json({
           status: 201,
-          message: 'request to change raised!',
+          data: newAc,
+          message: 'Account Created successfully!',
           sucess: true,
         });
       }

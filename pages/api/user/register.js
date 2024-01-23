@@ -16,26 +16,34 @@ export default async function handler(req, res) {
       .hash(req.body.password, 10).then(
         async (hash) => {
           const user = new User({
-            username: "user",
+            username: req.body.username,
             email: req.body.email,
+            role: "user",
             password: hash,
           });
 
           user.save().then(
             (user) => {
-              return res.status(201).json({
+              let token = jwt.sign({
+                userId: user._id
+              }, process.env.PUBLIC_NEXT_SECRET_KEY, {
+                expiresIn: '24h'
+              })
+              res.status(201).json({
                 status: 201,
+                token,
                 message: 'User Created successfully!',
                 sucess: true,
+                token: token,
                 user: {
-                  email: req.body.email,
-                  password: req.body.password
+                  username: user.username,
+                  email: user.email,
                 }
               });
             }
           ).catch(
             (error) => {
-              return res.status(500).json({
+              res.status(500).json({
                 sucess: false,
                 statusCode: 500,
                 message: error._message,

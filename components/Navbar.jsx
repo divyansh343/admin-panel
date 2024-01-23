@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
       <>
         <div className="navbar-menu fixed top-0 left-0 bottom-0 w-full sm:max-w-xs z-50">
-          <div className="navbar-backdrop fixed inset-0 bg-gradient-to-br to-purple-200 from-white "></div>
+          <div className="navbar-backdrop fixed inset-0 bg-base-100"></div>
           <nav className="relative z-10 px-8 pt-8 -mt-0.5  h-full overflow-y-auto ">
             <div className="flex flex-wrap justify-between h-full">
               <div className="w-full">
@@ -21,14 +21,14 @@ const Navbar = () => {
                       <Image
                         height={60}
                         width={60}
-                        className="h-12 w-12 rounded-lg ring-2 ring-white mr-1"
+                        className="h-12 w-12 rounded-lg mr-1"
                         src={nomad}
                         alt=""
                       />
-                      <p>
-                        <span className="normal-case">Admin</span>{" "}
-                        <span className="normal-case text-primary -ml-1">
-                          Panel.
+                      <p className='text-secondary'> 
+                        <span className="normal-case">Trade</span>{" "}
+                        <span className="normal-case  -ml-1">
+                          OS
                         </span>
                       </p>
                     </div>
@@ -64,14 +64,14 @@ const Navbar = () => {
                 <div className="flex flex-wrap -m-2 text-base-100">
                   <Link
                     href="/auth/login"
-                    className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  bg-primary rounded-lg transition-all duration-300 focus:outline-none"
+                    className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  bg-secondary rounded-lg transition-all duration-300 focus:outline-none"
                   >
                     <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
                     <span>User Login</span>
                   </Link>
                   <Link
                     href="/admin/login"
-                    className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center mt-2 justify-center px-5 h-12 font-bold  bg-primary rounded-lg transition-all duration-300 focus:outline-none"
+                    className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center mt-2 justify-center px-5 h-12 font-bold  bg-secondary rounded-lg transition-all duration-300 focus:outline-none"
                   >
                     <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
                     <span>Admin Login</span>
@@ -94,8 +94,8 @@ const Navbar = () => {
             <div className="relative flex h-24 items-center">
               <Link href="/">
                 <div className="flex space-x-2 items-center text-xl font-bold md:text-2xl" href="#">
-                  <Image height={60} width={60} className="h-10 w-10 rounded-lg ring-2 ring-white mr-1" src={nomad} alt="" />
-                  <p><span className="normal-case">Admin </span> <span className="normal-case text-primary -ml-1">Panel</span></p>
+                  <Image height={60} width={60} className="h-12 w-12 rounded-lg  mr-1" src={nomad} alt="" />
+                  <p className='text-white'><span className="normal-case">Trade </span> <span className="normal-case -ml-1">OS</span></p>
                 </div>
               </Link>
 
@@ -103,7 +103,7 @@ const Navbar = () => {
               </button>
 
               <div className="hidden md:block ml-auto items-end">
-                {/* <a className="inline-block  hover:text-primary mr-10" href="#how-it-works">How it works</a><a className="inline-block  hover:text-primary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-primary mr-10" href="/blog">Blog</a> */}
+                {/* <a className="inline-block  hover:text-sebg-secondary mr-10" href="#how-it-works">How it works</a><a className="inline-block  hover:text-sebg-secondary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-sebg-secondary mr-10" href="/blog">Blog</a> */}
                 <Link className="inline-block  hover:text-primary" href="/auth/login">Login User</Link>
               </div>
 

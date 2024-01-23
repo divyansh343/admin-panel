@@ -3,7 +3,7 @@ import localFont from 'next/font/local'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 
-const myFont = localFont({ src: '../assets/fonts/gelion/Gelion Regular.ttf' })
+const myFont = localFont({ src: '../assets/fonts/Graphik-Font-Family/GraphikRegular.otf' })
 import { Nunito_Sans } from 'next/font/google'
 
 const openSans = Nunito_Sans({
@@ -12,10 +12,10 @@ const openSans = Nunito_Sans({
 })
 
 const Layout = ({ children }) => {
-  const [theme, settheme] = useState("light")
+  const [theme, settheme] = useState("ticker")
   return (
-    <div data-theme="coda" lang="en"
-      className={` bg-base-100  ${openSans.className}`}>
+    <div data-theme={theme} lang="en"
+      className={` bg-base-100  ${myFont.className}`}>
       <Navbar />
       <div className="">
         {children}

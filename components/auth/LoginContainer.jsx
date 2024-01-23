@@ -7,10 +7,10 @@ import ReactLoading from "react-loading";
 
 const LoginContainer = () => {
   const [isAuthenticated, setAuthenticated] = useState(false)
-  const [email, setEmail] = useState("akash@gmail.com")
-  const [password, setPass] = useState("passwordthy")
+  const [email, setEmail] = useState("ravish@gmail.com")
+  const [password, setPass] = useState("passworse")
   const [loading, setloading] = useState(false)
-  let router= useRouter()
+  let router = useRouter()
 
   const handleLogin = (e) => {
     e.preventDefault()
@@ -21,7 +21,7 @@ const LoginContainer = () => {
 
     var config = {
       method: 'post',
-      url: `${process.env.NEXT_PUBLIC_HOST}api/admin/login`,
+      url: `${process.env.NEXT_PUBLIC_HOST}api/user/login`,
       headers: {
         'Content-Type': 'application/json'
       },
@@ -31,8 +31,8 @@ const LoginContainer = () => {
     axios(config)
       .then(function (response) {
         setCookie(response.data.token)
-        toastify("admin logged in")
-        router.push('/admin')
+        toastify("user logged in")
+        router.push('/user')
         setloading(false)
       })
       .catch(function (error) {
@@ -51,48 +51,23 @@ const LoginContainer = () => {
     return (
       <>
         <div>
-          <div className=' mx-[20px] '>
-            <form onSubmit={handleLogin}>
-  
-              <div className='grid place-items-center '>
-                <p className='text-[28px] font-semibold tracking-wide'>Admin Login</p>
-                {/* <p className='text-[26px] -mt-2'>to get started</p> */}
-              </div>
-              <div className='grid place-items-center grid-flow-row gap-4 mt-10 '>
-                <input type="text"
-                  className="input input-bordered input-primary tracking-wide text-base input-md w-full max-w-xs"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  placeholder="Email Address"
-                />
-                <input
-                  className="input input-bordered input-primary tracking-wide text-base input-md w-full max-w-xs"
-                  value={password}
-                  onChange={e => setPass(e.target.value)}
-                  type="text"
-                  placeholder="Password"
-                />
-  
-              </div>
-  
-              <div className='mt-4 mx-[18px] grid place-items-center '>
-              {
-                  loading ?
-                    <button type='submit' className={`btn btn-wide btn-primary  tracking-wide btn-md`}>
-                      <ReactLoading type='spin' className='-mt-2 p-4' color="#fff" />
-                    </button>
-                    :
-                    <button type='submit' className={`btn btn-wide btn-primary tracking-wide btn-md`}>Sign In
-                    </button>
-                }
-              </div>
-            </form>
+
+          <div class="space-y-4">
+            <header class="mb-3 text-2xl font-bold">Log in</header>
+            <div class="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
+              <input value={email} onChange={e => setEmail(e.target.value)} type="text" placeholder="Email" class="my-3 w-full border-none bg-transparent outline-none text-primary focus:outline-none" />
+            </div>
+            <div class="flex w-full items-center space-x-2 rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
+              <input value={password} onChange={e => setPass(e.target.value)} type="text" placeholder="Password" class="my-3 w-full border-none bg-transparent text-primary outline-none" />
+              <a href="#" class="font-medium  hover:text-gray-500">FORGOT?</a>
+            </div>
+            <button onClick={handleLogin} class="w-full rounded-2xl border-b-4 border-b-blue-600 bg-blue-500 py-3 font-bold text-white hover:bg-blue-400 active:translate-y-[0.125rem] active:border-b-blue-400">LOG IN</button>
           </div>
         </div>
       </>
     )
   } else {
-    router.push('/admin')
+    router.push('/user')
   }
 }
 
