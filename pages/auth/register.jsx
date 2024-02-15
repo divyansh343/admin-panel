@@ -1,10 +1,11 @@
+import Wrapper from '@/components/Wrapper'
 import RegisterContainer from '@/components/auth/RegisterContainer'
 import Link from 'next/link'
 import React from 'react'
 
 const register = () => {
   return (
-    <div>
+    <Wrapper>
       <div class="p-6" x-data="app">
 
 
@@ -22,7 +23,7 @@ const register = () => {
 
         </div>
       </div>
-    </div>
+    </Wrapper>
   )
 }
 

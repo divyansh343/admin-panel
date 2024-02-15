@@ -4,13 +4,16 @@ import React, { useEffect, useState } from 'react'
 import { isAuth, setCookie, toastify } from '../../utils/handleCookies'
 import { useRouter } from 'next/router'
 import ReactLoading from "react-loading";
+import { useTradeStore } from '@/utils/appstore'
 
 const LoginContainer = () => {
   const [isAuthenticated, setAuthenticated] = useState(false)
-  const [email, setEmail] = useState("ravish@gmail.com")
+  const [email, setEmail] = useState("ravish402@gmail.com")
   const [password, setPass] = useState("passworse")
   const [loading, setloading] = useState(false)
   let router = useRouter()
+
+
 
   const handleLogin = (e) => {
     e.preventDefault()
@@ -18,7 +21,6 @@ const LoginContainer = () => {
       "email": email,
       "password": password
     });
-
     var config = {
       method: 'post',
       url: `${process.env.NEXT_PUBLIC_HOST}api/user/login`,
@@ -31,6 +33,7 @@ const LoginContainer = () => {
     axios(config)
       .then(function (response) {
         setCookie(response.data.token)
+        console.log(response.data.token)
         toastify("user logged in")
         router.push('/user')
         setloading(false)
