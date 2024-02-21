@@ -10,7 +10,7 @@ export const config = {
 
 export default async function handler(req, res) {
   mongoConnect()
-  if (req.method === 'GET') {
+  if (req.method === 'POST') {
     const token = req.headers.authorization.split(' ')[1];
     const decodedToken = jwt.verify(token, process.env.PUBLIC_NEXT_SECRET_KEY);
     const userId = decodedToken.userId;
@@ -21,6 +21,7 @@ export default async function handler(req, res) {
 
     Trade.find({accid : req.body.accid}).then(
       (data) => {
+        console.log(data)
         return res.status(200).json({
           status: 200,
           data : data,

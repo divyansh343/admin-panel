@@ -12,7 +12,7 @@ const openSans = Nunito_Sans({
 })
 
 const Layout = ({ children }) => {
-  const [theme, settheme] = useState("ticker")
+  const [theme, settheme] = useState("halloween")
   return (
     <div data-theme={theme} lang="en"
       className={` bg-base-100  ${myFont.className}`}>

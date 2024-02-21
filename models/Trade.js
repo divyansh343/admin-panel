@@ -27,13 +27,14 @@ const tradeSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
-  profit: {
+  pnl: {
     type: Number,
     default: 0
   },
-  loss: {
-    type: Number,
-    default: 0
+  profitable: {
+    type: String,
+    enum: ['profit', 'loss'],
+    required: true,
   },
   image: {
     type: String,

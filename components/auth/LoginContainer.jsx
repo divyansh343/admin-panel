@@ -8,8 +8,8 @@ import { useTradeStore } from '@/utils/appstore'
 
 const LoginContainer = () => {
   const [isAuthenticated, setAuthenticated] = useState(false)
-  const [email, setEmail] = useState("ravish402@gmail.com")
-  const [password, setPass] = useState("passworse")
+  const [email, setEmail] = useState("shreya@gmail.com")
+  const [password, setPass] = useState("passwordthy")
   const [loading, setloading] = useState(false)
   let router = useRouter()
 

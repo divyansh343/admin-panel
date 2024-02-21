@@ -1,76 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { MdArrowRightAlt } from "react-icons/md";
-import Wrapper from "../Wrapper";
-import axios from "axios";
-import { toastify } from "@/utils/handleCookies";
-import toast from "react-hot-toast";
-import { useRouter } from "next/router";
+import React from 'react'
+import Wrapper from '../Wrapper'
+import { MdArrowRightAlt } from 'react-icons/md'
 
-const CreateAcc = () => {
-  const [accountName, setAccountName] = useState('');
-  const [accountSize, setAccountSize] = useState();
-  const [accountType, setAccountType] = useState('forex');
-  const [currency, setCurrency] = useState('usd');
-
-  const handleAccountNameChange = (event) => {
-    setAccountName(event.target.value);
-  };
-
-  const handleAccountSizeChange = (event) => {
-    setAccountSize(event.target.value);
-  };
-
-  const handleAccountTypeChange = (event) => {
-    setAccountType(event.target.value);
-  };
-
-  const handleCurrencyChange = (event) => {
-    setCurrency(event.target.value);
-  };
-  let router = useRouter()
-  
-  const handleCreateAccount = () => {
-
-    if (!accountName || !accountSize || !accountType || !currency) {
-      // alert('All fields must be filled out.');
-      toast.error("OOPS, Some field are blank")
-      return;
-    }
-
-    let token = localStorage.getItem('token')
-    let data ={
-      "account_name": accountName,
-      "account_size": Number(accountSize),
-      "account_type": accountType,
-      "currency": currency,
-    }
-
-    let config = {
-      method: 'post',
-      url: `${process.env.NEXT_PUBLIC_HOST}api/acc/create`,
-      headers: {
-        'Authorization': `Bearer ${token}`
-      },
-      data: data
-    };
-
-    axios.request(config)
-      .then((response) => {
-        console.log(response.data);
-        router.push('/user')
-        toastify(` Account Created successfully!`)
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    // console.log("Account Name:", accountName);
-    // console.log("Account Size:", accountSize);
-    // console.log("Account Type:", accountType);
-    // console.log("Currency:", currency);
-  };
-
+const CreateTrd = () => {
   return (
-    <Wrapper >
+   <Wrapper >
       <div class="lg:w-2/3 text-center mx-auto">
         <div class="flex justify-center mb-8"></div>
         <h1 class=" font-bold text-5xl md:text-5xl xl:text-5xl">
@@ -146,16 +80,16 @@ const CreateAcc = () => {
             </button>
             <p class="text-sm"></p>
             {/* <div
-              class="border border-gray-400 rounded-lg px-2 py-2 mt-4 mb-4"
-            >
-              <p class="text-sm mb-1">
-                Generating Articles -
-                <span class="text-primary font-bold text-lg">0</span>/0
-              </p>
+            class="border border-gray-400 rounded-lg px-2 py-2 mt-4 mb-4"
+          >
+            <p class="text-sm mb-1">
+              Generating Articles -
+              <span class="text-primary font-bold text-lg">0</span>/0
+            </p>
 
-              <ul class="mt-1"></ul>
-              <div class="mt-auto"> </div>
-            </div> */}
+            <ul class="mt-1"></ul>
+            <div class="mt-auto"> </div>
+          </div> */}
             <div class="border-t border-gray-300 mt-2">
               <p class="text-sm text-gray-500 mt-4">
                 Output will come in markdown file format.
@@ -174,7 +108,8 @@ const CreateAcc = () => {
         </div>
       </div>
     </Wrapper>
-  );
-};
+   
+  )
+}
 
-export default CreateAcc;
+export default CreateTrd

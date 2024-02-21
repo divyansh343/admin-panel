@@ -25,8 +25,8 @@ const Navbar = () => {
                         src={nomad}
                         alt=""
                       />
-                      <p className='text-secondary'> 
-                        <span className="normal-case">Trade</span>{" "}
+                      <p className='text-accent'> 
+                        <span className="normal-case">Trade</span>
                         <span className="normal-case  -ml-1">
                           OS
                         </span>

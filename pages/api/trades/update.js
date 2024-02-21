@@ -27,8 +27,8 @@ export default async function handler(req, res) {
       position_type: req.body.position_type,
       margin: req.body.margin,
       leverage: req.body.leverage,
-      profit: req.body.profit,
-      loss: req.body.loss,
+      pnl: req.body.pnl,
+      profitable: req.body.profitable,
       image: req.body.image,
       description: req.body.description,
     }

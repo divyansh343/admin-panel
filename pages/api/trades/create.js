@@ -29,12 +29,12 @@ export default async function handler(req, res) {
       position_type: req.body.position_type,
       margin: req.body.margin,
       leverage: req.body.leverage,
-      profit: req.body.profit,
-      loss: req.body.loss,
+      pnl: req.body.pnl,
+      profitable: req.body.profitable,
       image: req.body.image,
       description: req.body.description,
     });
-    console.log(typeof (req.body.profit))
+    console.log(typeof (req.body.pnl))
     
     try {
       const savedTrade = await newtrd.save();
@@ -44,7 +44,7 @@ export default async function handler(req, res) {
         _id: req.body.accid
       }, {
         $inc: {
-          account_size: +req.body.profit,
+          account_size: +req.body.pnl,
         },
       });
 

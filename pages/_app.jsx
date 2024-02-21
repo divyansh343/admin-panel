@@ -21,8 +21,9 @@ function MyApp({ Component, pageProps }) {
             className: '',
             duration: 5000,
             style: {
-              background: '#363636',
+              background: '#00386e',
               color: '#fff',
+              opacity:'50'
             },
 
             // Default options for specific types
