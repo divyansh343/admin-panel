@@ -12,7 +12,7 @@ const TradeTable = ({ trades }) => {
   return (
     <Wrapper>
 
-      <div className="relative flex flex-col min-w-0 break-words border border-dashed bg-clip-border rounded-2xl border-stone-200 bg-light/30">
+      <div className="relative flex flex-col min-w-0 break-words border border-dashed bg-clip-border rounded-2xl border-primary bg-light/30">
 
         <div class="grid grid-cols-12 gap-4 xxl:gap-6 m-5 ">
 
@@ -20,14 +20,17 @@ const TradeTable = ({ trades }) => {
             <div class="flex justify-between items-center gap-4 flex-wrap bb-dashed mb-4 pb-4 lg:mb-6 lg:pb-6">
               <h4 class="h4">Trades</h4>
               <div class="flex items-center gap-4 flex-wrap grow sm:justify-end">
-              <div
-              class="bg-white text-black border border-gray-600 font-bold py-2 px-4 rounded-lg text-sm ml-2"
- 
-            >
-              <Link href={`/account/${router.query.accid}/record`}>Add New Trade</Link>
-              <FiPlus 
- className="inline-block ml-2 text-[#00386e] " />
-            </div>
+                <Link href={`/account/${router.query.accid}/record`}>
+                  <div
+                    class="bg-white text-black border border-gray-600 font-bold py-2 px-4 rounded-lg text-sm ml-2"
+
+                  >
+                    Add New Trade
+                    <FiPlus
+                      className="inline-block ml-2 text-[#00386e] " />
+
+                  </div>
+                </Link>
                 {/* <div class="flex items-center gap-3 whitespace-nowrap">
               <span>Sort By : </span>
               <select
@@ -63,7 +66,7 @@ const TradeTable = ({ trades }) => {
             </div>
             <div class="overflow-x-auto mb-4 lg:mb-6">
               <table class="w-full whitespace-nowrap">
-                <thead className="bg-gray-700">
+                <thead className="bg-primary/10">
                   <tr class="bg-secondary1/5 dark:bg-bg3">
                     <th class="text-center py-5 px-6 min-w-[200px] cursor-pointer">
                       <div class="flex items-center gap-1">Symbol</div>
@@ -96,22 +99,22 @@ const TradeTable = ({ trades }) => {
                 </thead>
                 <tbody>
                   {trades.map(item => (<>
-                    <tr class="hover:bg-primary/5 duration-300 border-b border-n30 ">
+                    <tr class="hover:bg-primary/5 cursor-pointer duration-300 border-b border-n30 ">
                       <td class="py-2 px-6">
                         <div class="flex items-center gap-3">
                           <div class="flex shrink-0">
                             {/* <img src="/images/euro-sm.png" width="32" height="32" class="rounded-full" alt="payment medium icon">
                         <img src="/images/usa-sm.png" width="32" height="32" class="rounded-full ltr:-ml-3 rtl:-mr-3" alt="payment medium icon"> */}
                           </div>
-                    
+
                           <Link href={`/account/${router.query.accid}/trade`} class=" uppercase hover:underline font-bold mb-1">{item.symbol}</Link>
                         </div>
                       </td>
                       <td class="py-4">
                         {/* <span class="block max-w-[100px] text-xs text-center rounded-[30px]  border border-n30 py-2 bg-primary/10 dark:bg-bg3 text-primary">
                         </span> */}
-                       {item.created_at}
-                        </td>
+                        {item.created_at}
+                      </td>
                       <td class="py-4 uppercase">{item.position_type}</td>
                       <td class="py-4">
                         {/* <div
@@ -133,20 +136,20 @@ const TradeTable = ({ trades }) => {
                       </td>
                       <td class="py-4">
                         {item.profitable === "loss" ? <> <span class="text-red-500 font-bold">{item.pnl}
-                      
+
 
                         </span></> : <> <span class="text-green-500 font-bold">{item.pnl}</span></>
                         }
                       </td>
                       <td class="py-4">
-                      {item.profitable === "loss" ? <> <span class="text-red-500 font-bold">Loss
-                        <FaArrowTrendDown className="inline-block text-2xl pl-1" />
+                        {item.profitable === "loss" ? <> <span class="text-red-500 font-bold">Loss
+                          <FaArrowTrendDown className="inline-block text-2xl pl-1" />
 
                         </span></> : <> <span class="text-green-500 font-bold">Profit<FaArrowTrendUp className="inline-block text-2xl pl-1" /></span></>
                         }
                       </td>
                       <td class="py-4 hover:underline">
-                      
+
                         <a href={item.image} target="_blank" rel="noreffrer" class="text-primary">view chart</a>
                       </td>
                       <td class="py-4">

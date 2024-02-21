@@ -1,8 +1,9 @@
+import Wrapper from '@/components/Wrapper'
 import React from 'react'
 
 const trade = () => {
   return (
-    <div>trade</div>
+    <Wrapper>trade</Wrapper>
   )  
 }
 

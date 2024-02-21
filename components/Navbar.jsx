@@ -95,7 +95,7 @@ const Navbar = () => {
               <Link href="/">
                 <div className="flex space-x-2 items-center text-xl font-bold md:text-2xl" href="#">
                   <Image height={60} width={60} className="h-12 w-12 rounded-lg  mr-1" src={nomad} alt="" />
-                  <p className='text-white'><span className="normal-case">Trade </span> <span className="normal-case -ml-1">OS</span></p>
+                  <p className=''><span className="normal-case">Trade </span> <span className="normal-case -ml-1">OS</span></p>
                 </div>
               </Link>
 

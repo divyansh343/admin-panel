@@ -44,7 +44,7 @@ const User = () => {
             <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-6">
 
               <Link href="/account/create">
-                <div class="border border-dashed bg-clip-border rounded-2xl border-stone-200 bg-light/30 drop-shadow-lg">
+                <div class="border border-dashed bg-clip-border rounded-2xl border-primary bg-light/30 drop-shadow-lg">
                   <div class="card-body">
                     <div class="flex justify-between items-center">
                       <div class="flex items-center gap-4">
@@ -73,7 +73,7 @@ const User = () => {
                 accounts.map(item => (
                   <>
                   <Link href={`account/${item._id}`}>
-                    <div class="border border-dashed bg-clip-border rounded-2xl border-stone-200 bg-light/30 drop-shadow-lg">
+                    <div class="border border-dashed bg-clip-border rounded-2xl border-primary bg-light/30 drop-shadow-lg">
                       <div class="card-body">
                         <div class="flex justify-between items-center">
                           <div class="flex items-center gap-4">

@@ -1,7 +1,9 @@
+import Wrapper from "@/components/Wrapper";
 
 export default function Home() {
   return (
-    <main className="">
-    </main>
+    <Wrapper className="">
+      index
+    </Wrapper>
   )
 }
