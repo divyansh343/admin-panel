@@ -107,7 +107,7 @@ const TradeTable = ({ trades }) => {
                         <img src="/images/usa-sm.png" width="32" height="32" class="rounded-full ltr:-ml-3 rtl:-mr-3" alt="payment medium icon"> */}
                           </div>
 
-                          <Link href={`/account/${router.query.accid}/trade`} class=" uppercase hover:underline font-bold mb-1">{item.symbol}</Link>
+                          <Link href={`/trade/${item._id}`} class=" uppercase hover:underline font-bold mb-1">{item.symbol}</Link>
                         </div>
                       </td>
                       <td class="py-4">
