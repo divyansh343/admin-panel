@@ -14,6 +14,9 @@ const accountSchema = new mongoose.Schema({
     type: Number,
     min: 10,
   },
+  initial_account_size: {
+    type: Number,
+  },
   currency: {
     type: String,
     enum: ['usdt', 'usd', 'eur'],

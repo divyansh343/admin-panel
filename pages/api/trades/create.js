@@ -30,6 +30,7 @@ export default async function handler(req, res) {
       margin: req.body.margin,
       leverage: req.body.leverage,
       pnl: req.body.pnl,
+      roi: req.body.roi,
       profitable: req.body.profitable,
       image: req.body.image,
       description: req.body.description,
@@ -44,7 +45,7 @@ export default async function handler(req, res) {
         _id: req.body.accid
       }, {
         $inc: {
-          account_size: +req.body.pnl,
+          account_size: req.body.profitable === 'profit' ? req.body.pnl : -req.body.pnl,
         },
       });
 

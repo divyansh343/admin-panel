@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       return res.json('Invalid token!');
     }
 
-    Trade.find({accid : req.body.accid}).then(
+    Trade.find({accid : req.body.accid}).sort({ createdAt: -1 }).then(
       (data) => {
         console.log(data)
         return res.status(200).json({

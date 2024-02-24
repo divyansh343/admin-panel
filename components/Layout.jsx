@@ -3,7 +3,7 @@ import localFont from 'next/font/local'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 
-const myFont = localFont({ src: '../assets/fonts/Graphik-Font-Family/GraphikRegular.otf' })
+const myFont = localFont({ src: '../assets/fonts/Figtree/Figtree-Regular.ttf' })
 import { Nunito_Sans } from 'next/font/google'
 
 const openSans = Nunito_Sans({

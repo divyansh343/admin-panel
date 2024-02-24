@@ -7,13 +7,13 @@ import { IoCopy } from "react-icons/io5";
 
 const Record = () => {
   const router = useRouter();
-  console.log(router.query.accid);
 
   const [tradingPair, setTradingPair] = useState("");
   const [positionType, setPositionType] = useState("long");
   const [positionSize, setPositionSize] = useState("");
   const [leverage, setLeverage] = useState("");
   const [pnl, setPnl] = useState("");
+  const [roi, setroi] = useState("");
   const [profitable, setProfitable] = useState("profit");
   const [chartUrl, setChartUrl] = useState("");
   const [description, setDescription] = useState("");
@@ -36,6 +36,7 @@ const Record = () => {
       !positionSize ||
       !leverage ||
       !pnl ||
+      !roi ||
       !chartUrl ||
       !description
     ) {
@@ -54,6 +55,7 @@ const Record = () => {
       margin: positionSize,
       leverage: leverage,
       pnl: pnl,
+      roi: roi,
       profitable: profitable,
       loss: 0,
       image: chartUrl,
@@ -100,6 +102,8 @@ const Record = () => {
                 onChange={(e) => setTradingPair(e.target.value)}
               />
             </div>
+            
+            <div class="grid lg:grid-cols-2 gap-2">
             <div class="flex flex-col sm:flex-row space-x-1">
               {/* ... (existing JSX) */}
               <div class="w-full sm:w-1/2 mb-4">
@@ -116,8 +120,8 @@ const Record = () => {
                   <option value="short">SHORT</option>
                 </select>
               </div>
+              
             </div>
-            <div class="grid lg:grid-cols-2 gap-2">
               <div class="mb-4">
                 <label
                   htmlFor="numArticles"
@@ -131,6 +135,21 @@ const Record = () => {
                   class="w-full p-2 border rounded-md text-sm text-primary"
                   value={positionSize}
                   onChange={(e) => setPositionSize(e.target.value)}
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  htmlFor="numArticles"
+                  class="block font-bold mb-1 text-sm"
+                >
+                  Return On Investment - ROI %
+                </label>
+                <input
+                  type="number"
+                  id="numArticles"
+                  class="w-full p-2 border rounded-md text-sm text-primary"
+                  value={roi}
+                  onChange={(e) => setroi(e.target.value)}
                 />
               </div>
               <div class="mb-4">

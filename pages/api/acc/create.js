@@ -27,6 +27,7 @@ export default async function handler(req, res) {
         userid: userId,
         account_name: req.body.account_name,
         account_size: req.body.account_size,
+        initial_account_size: req.body.account_size,
         currency: req.body.currency,
         account_type: req.body.account_type,
       });

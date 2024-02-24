@@ -31,6 +31,10 @@ const tradeSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+  roi: {
+    type: Number,
+    default: 0
+  },
   profitable: {
     type: String,
     enum: ['profit', 'loss'],

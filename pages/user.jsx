@@ -72,38 +72,39 @@ const User = () => {
               {
                 accounts.map(item => (
                   <>
-                  <Link href={`account/${item._id}`}>
-                    <div class="border border-dashed bg-clip-border rounded-2xl border-primary bg-light/30 drop-shadow-lg">
-                      <div class="card-body">
-                        <div class="flex justify-between items-center">
-                          <div class="flex items-center gap-4">
-                            <span class="avatar avatar-rounded text-2xl" data-avatar-size="55" >
-                              <span class="avatar-icon">
-                              {item.account_type === "forex" ? <BsCurrencyExchange /> :<PiCurrencyBtcFill />
+                    <Link href={`account/${item._id}`}>
+                      <div class="border border-dashed bg-clip-border rounded-2xl border-primary bg-light/30 drop-shadow-lg">
+                        <div class="card-body">
+                          <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-4">
+                              <span class="avatar avatar-rounded text-2xl" data-avatar-size="55" >
+                                <span class="avatar-icon">
+                                  {item.account_type === "forex" ? <BsCurrencyExchange /> : <PiCurrencyBtcFill />
 
-}
+                                  }
+                                </span>
                               </span>
-                            </span>
-                            <div>
-                              <span>{item.account_name}</span>
-                              <h3>
-                                <span>{item.account_size}</span>
-                              </h3>
+                              <div>
+                                <span>{item.account_name}</span>
+                                <h3>
+                                  <span>{item.account_size}</span>
+                                </h3>
+                              </div>
                             </div>
-                          </div>
-                          <div class="tag gap-1 font-bold border-0 text-emerald-600 dark:text-emerald-400 px-1 rounded-md bg-emerald-100 dark:bg-emerald-500/20">
-                            <span>
-                             
-                            </span>
-                            <span>{item.account_type === "forex" ? <>Forex</> : <>Crypto</>}</span>
+                            <div class="tag gap-1 font-bold border-0 text-emerald-600 dark:text-emerald-400 px-1 rounded-md bg-emerald-100 dark:bg-emerald-500/20">
+                              <span>
+
+                              </span>
+                              <span>{item.account_type === "forex" ? <>Forex</> : <>Crypto</>}</span>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </Link>
+                    </Link>
                   </>
                 ))
               }
+        
 
 
             </div>
