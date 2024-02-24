@@ -5,6 +5,8 @@ import axios from "axios";
 import { toastify } from "@/utils/handleCookies";
 import toast from "react-hot-toast";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import { IoIosArrowBack } from "react-icons/io";
 
 const CreateAcc = () => {
   const [accountName, setAccountName] = useState('');
@@ -71,6 +73,9 @@ const CreateAcc = () => {
 
   return (
     <Wrapper >
+      <Link href="/user" className="mx-4 mt-4">
+        <IoIosArrowBack className="inline-block ml-2" /> Back
+      </Link>
       <div class="lg:w-2/3 text-center mx-auto">
         <div class="flex justify-center mb-8"></div>
         <h1 class=" font-bold text-5xl md:text-5xl xl:text-5xl">

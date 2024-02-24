@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import nomad from "../assets/images/nomad.png"
-const Navbar = () => {
+import { BsFillSunFill, BsMoonFill } from 'react-icons/bs'
+const Navbar = ({ theme, settheme }) => {
   const [navON, setNav] = useState(false)
   const PhoneNav = () => {
     return (
@@ -25,7 +26,7 @@ const Navbar = () => {
                         src={nomad}
                         alt=""
                       />
-                      <p className='text-accent'> 
+                      <p className='text-accent'>
                         <span className="normal-case">Trade</span>
                         <span className="normal-case  -ml-1">
                           OS
@@ -34,6 +35,7 @@ const Navbar = () => {
                     </div>
                   </Link>
                   <div className="w-auto p-2 bg-accent">
+
                     <button
                       onClick={() => setNav(false)}
                       className="inline-block navbar-burger"
@@ -58,7 +60,7 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="flex flex-col justify-center py-8 w-full">
-              
+
               </div>
               <div className="flex flex-col justify-end w-full pb-8">
                 <div className="flex flex-wrap -m-2 text-base-100">
@@ -84,7 +86,7 @@ const Navbar = () => {
       </>
     );
   };
-  
+
 
   return (
     <>
@@ -98,12 +100,46 @@ const Navbar = () => {
                   <p className=''><span className="normal-case">Trade </span> <span className="normal-case -ml-1">OS</span></p>
                 </div>
               </Link>
+              {/* phone change */}
+              <div className="block md:hidden ml-auto items-end">
+                <div className="inline-block   hover:text-sebg-secondary mr-10" >
+                  <label className="swap swap-rotate ">
 
+                    <input onChange={theme === "lofi" ? () => settheme("sunset") : () => settheme("lofi")} type="checkbox" />
+                    <span className='swap-on text-xl text-primary'>
+                      <BsFillSunFill />
+                    </span>
+
+                    <span className='swap-off text-lg text-white'>
+                      <BsMoonFill />
+                    </span>
+                  </label>
+                </div>
+              </div>
+              {/* phone change */}
               <button onClick={() => setNav(true)} className="flex md:hidden navbar-burger  items-center justify-center h-10 w-10 ml-auto border border-teal-900 bg-accent bg-opacity-80 hover:bg-teal-700 rounded-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 12H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 19H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
               </button>
 
               <div className="hidden md:block ml-auto items-end">
                 {/* <a className="inline-block  hover:text-sebg-secondary mr-10" href="#how-it-works">How it works</a><a className="inline-block  hover:text-sebg-secondary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-sebg-secondary mr-10" href="/blog">Blog</a> */}
+
+              </div>
+
+              <div className="hidden md:block ml-auto items-end">
+                <div className="inline-block   hover:text-sebg-secondary mr-10" >
+                  <label className="swap swap-rotate ">
+
+                    <input className='pt-1' onChange={theme === "lofi" ? () => settheme("sunset") : () => settheme("lofi")} type="checkbox" />
+                    <span className='swap-on text-xl text-primary'>
+                      <BsFillSunFill />
+                    </span>
+
+                    <span className='swap-off text-lg text-white'>
+                      <BsMoonFill />
+                    </span>
+                  </label>
+                </div>
+                {/* <a className="inline-block  hover:text-sebg-secondary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-sebg-secondary mr-10" href="/blog">Blog</a> */}
                 <Link className="inline-block  hover:text-primary" href="/auth/login">Login User</Link>
               </div>
 

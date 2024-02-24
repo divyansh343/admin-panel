@@ -71,7 +71,7 @@ const TradeTable = ({ trades }) => {
 
 
   return (
-    <Wrapper>
+    <div>
 
       <div className="relative flex flex-col min-w-0 break-words rounded-2xl border-primary bg-light/30">
 
@@ -272,7 +272,7 @@ const TradeTable = ({ trades }) => {
         </div>
       </div>
 
-    </Wrapper>
+    </div>
   );
 };
 

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { IoIosArrowBack } from "react-icons/io";
 import { IoCopy } from "react-icons/io5";
 
 const Record = () => {
@@ -73,6 +74,7 @@ const Record = () => {
         console.log('Trade recorded successfully:', response.data);
         toast.success("trade recorded")
         emptyField()
+        router.back()
         // Handle any other logic or state updates you need
       })
       .catch((error) => {
@@ -84,9 +86,18 @@ const Record = () => {
 
   return (
     <Wrapper>
+      <div class="flex justify-start mb-8">
+
+        <button onClick={() => router.back()} className=" mt-1">
+          <IoIosArrowBack className="inline-block ml-2" /> Back
+        </button>
+      </div>
       <div class="lg:w-2/3 text-center mx-auto">
-        <div class="flex justify-center mb-8"></div>
-        <p class=" text-2xl">Record your trade</p>
+        <div class="flex justify-center mb-8">
+        <h1 class=" font-bold text-5xl md:text-4xl xl:text-4xl">
+          Record your trade<br />
+        </h1>
+        </div>
         <div class="my-8">
           <div class="p-4 w-5/5 md:w-4/5 mx-auto text-left border border-gray-400 rounded-2xl">
             <div class="mb-4 flex flex-col">
@@ -96,32 +107,32 @@ const Record = () => {
               <input
                 type="text"
                 id="account"
-                class="w-full p-2 uppercase border rounded-md text-sm text-primary"
+                class="w-full p-2 uppercase font-bold border rounded-md text-sm text-primary"
                 placeholder="E.g. BTCUSDT.P, EURUSD"
                 value={tradingPair}
                 onChange={(e) => setTradingPair(e.target.value)}
               />
             </div>
-            
+
             <div class="grid lg:grid-cols-2 gap-2">
-            <div class="flex flex-col sm:flex-row space-x-1">
-              {/* ... (existing JSX) */}
-              <div class="w-full sm:w-1/2 mb-4">
-                <label htmlFor="type" class="block font-bold mb-1 text-sm">
-                  Position Type
-                </label>
-                <select
-                  id="type"
-                  class="w-full p-2 border rounded-md text-sm text-primary"
-                  value={positionType}
-                  onChange={(e) => setPositionType(e.target.value)}
-                >
-                  <option value="long">LONG</option>
-                  <option value="short">SHORT</option>
-                </select>
+              <div class="flex flex-col sm:flex-row space-x-1">
+                {/* ... (existing JSX) */}
+                <div class="w-full sm:w-1/2 mb-4">
+                  <label htmlFor="type" class="block font-bold mb-1 text-sm">
+                    Position Type
+                  </label>
+                  <select
+                    id="type"
+                    class="w-full p-2 border rounded-md text-sm text-primary"
+                    value={positionType}
+                    onChange={(e) => setPositionType(e.target.value)}
+                  >
+                    <option value="long">LONG</option>
+                    <option value="short">SHORT</option>
+                  </select>
+                </div>
+
               </div>
-              
-            </div>
               <div class="mb-4">
                 <label
                   htmlFor="numArticles"

@@ -3,7 +3,7 @@ import localFont from 'next/font/local'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 
-const myFont = localFont({ src: '../assets/fonts/Figtree/Figtree-Regular.ttf' })
+const myFont = localFont({ src: '../assets/fonts/Inter/Inter-Regular.ttf' })
 import { Nunito_Sans } from 'next/font/google'
 
 const openSans = Nunito_Sans({
@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
   return (
     <div data-theme={theme} lang="en"
       className={` bg-base-100  ${myFont.className}`}>
-      <Navbar />
+      <Navbar theme={theme} settheme={settheme} />
       <div className="">
         {children}
       </div>

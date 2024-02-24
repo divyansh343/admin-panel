@@ -10,7 +10,7 @@ const Wrapper = ({children}) => {
       <div class="blur-[106px] h-56 bg-gradient-to-br to-purple-400 from-blue-700"></div>
       <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-indigo-600"></div>
     </div>
-    <div class="max-w-7xl mx-auto px-2 md:px-12 xl:px-6">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 xl:px-6">
       <div class="relative py-12 ml-auto">
       {children}
       </div>

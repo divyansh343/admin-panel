@@ -1,5 +1,6 @@
 import Wrapper from "@/components/Wrapper";
 import TradingViewWidget from "@/components/widgets/Ticker";
+import { toastify } from "@/utils/handleCookies";
 import axios from "axios";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -40,7 +41,33 @@ const Index = () => {
   }, [router]);
   // console.log(trade.created_at)
   const givenDate = new Date(trade.created_at);
-  console.log(givenDate)
+  
+  const delTrade = ()=> {
+    let token = localStorage.getItem("token");
+    console.log(token);
+    let data = {
+      trdid: router.query.trdid,
+    };
+    let config = {
+      method: "delete",
+      maxBodyLength: Infinity,
+      url: `${process.env.NEXT_PUBLIC_HOST}api/trades/delete`,
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      data: data,
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        toastify("trade record deleted")
+        router.back()
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   return (
     <Wrapper>
@@ -93,10 +120,10 @@ const Index = () => {
             </div>
           </div>
           <div class="grid grid-cols-1 gap-4 sm:col-span-2 sm:grid-cols-2 sm:gap-5 lg:gap-6">
-          <div class="card justify-center p-4.5">
+            <div class="card justify-center p-4.5">
               <div class="flex items-center justify-between">
                 <div>
-                  <a  href={trade.image} target="_blank" rel="noreffrer" class="text-base link font-semibold text-primary">
+                  <a href={trade.image} target="_blank" rel="noreffrer" class="text-base link font-semibold text-primary">
                     View Chart <MdCandlestickChart className="inline-block text-xl ml-1" />
 
                   </a>
@@ -118,15 +145,15 @@ const Index = () => {
                     ></path>
                   </svg>
                 </div>
-               
+
               </div>
-           
+
             </div>
             <div class="card justify-center p-4.5">
               <div class="flex items-center justify-between">
                 <div>
                   <p class="text-base font-semibold text-primary">
-                 {trade.margin}
+                    {trade.margin}
                   </p>
                   <p class="text-xs+ line-clamp-1">Margin</p>
                 </div>
@@ -147,7 +174,7 @@ const Index = () => {
                   </svg>
                 </div>
               </div>
-          
+
             </div>
             <div class="card justify-center p-4.5">
               <div class="flex items-center justify-between">
@@ -180,18 +207,18 @@ const Index = () => {
                   </svg>
                 </div>
               </div>
-            
+
             </div>
-           
+
             <div class="card justify-center p-4.5">
               <div class="flex items-center justify-between">
                 <div>
                   <p class="text-base font-semibold text-primary">
-                  {new Date(trade.created_at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", day:"2-digit", month:"short" })}
+                    {new Date(trade.created_at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "short" })}
                   </p>
                   <p class="text-xs+ line-clamp-1">Time</p>
                 </div>
-                
+
                 <div class="mask is-star flex size-10 shrink-0 items-center justify-center bg-info">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -212,9 +239,10 @@ const Index = () => {
 
             </div>
           </div>
+        <button onClick={delTrade} class="btn mt-5 h-10 w-full rounded-lg bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 ">
+         Delete Trade
+        </button>
         </div>
-        {/* <iframe src={trade.image}></iframe> */}
-
       </div>
     </Wrapper>
   );
