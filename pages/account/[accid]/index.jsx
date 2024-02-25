@@ -76,7 +76,7 @@ const Index = () => {
 
   return (
     <Wrapper>
-      <Link href="/user" className="mx-4 mb-4">
+      <Link href="/user" className="mx-4 py-10">
         <IoIosArrowBack className="inline-block ml-2" /> Back
       </Link>
 

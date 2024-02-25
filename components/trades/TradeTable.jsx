@@ -81,14 +81,9 @@ const TradeTable = ({ trades }) => {
 
             <div class="flex justify-between items-center gap-4 flex-wrap bb-dashed mb-4 pb-4 lg:mb-6 lg:pb-6">
               <h4 class="text-xl font-bold">Trades</h4>
-              <div class="flex items-center gap-2 flex-wrap grow sm:justify-end">
-                Download 
-              <button className="font-bold link" onClick={() => downloadPDF(trades)}>
-                  PDF
-                </button>
-                <button className="font-bold link" onClick={() => downloadExcel(trades)}>
-                  Excel
-                </button>
+              <div class="flex items-end gap-2 flex-wrap -pl-20 grow sm:justify-end">
+             
+             
              
                 <Link href={`/account/${router.query.accid}/record`}>
                   <div
@@ -237,8 +232,16 @@ const TradeTable = ({ trades }) => {
                 </tbody>
               </table>
             </div>
-            {/* <div class="flex col-span-12 gap-4 sm:justify-between justify-center items-center flex-wrap">
-              <p>Showing 1 to 8 of 18 entries</p>
+            <div class="flex col-span-12 gap-4 sm:justify-between justify-center items-center flex-wrap">
+              <div className="grid grid-flow-col gap-5">
+
+            <button className="font-bold link" onClick={() => downloadPDF(trades)}>
+                 Download as PDF
+                </button>
+                <button className="font-bold link" onClick={() => downloadExcel(trades)}>
+                Download as Excel
+                </button>
+              </div>
 
               <ul class="flex gap-2 md:gap-3 flex-wrap md:font-semibold items-center">
                 <li>
@@ -267,7 +270,7 @@ const TradeTable = ({ trades }) => {
                   </button>
                 </li>
               </ul>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

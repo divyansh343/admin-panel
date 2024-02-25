@@ -15,7 +15,7 @@ const Index = () => {
   const router = useRouter();
   useEffect(() => {
     let token = localStorage.getItem("token");
-    console.log(token);
+    // console.log(token);
     let data = {
       trdid: router.query.trdid,
     };
@@ -44,9 +44,12 @@ const Index = () => {
   
   const delTrade = ()=> {
     let token = localStorage.getItem("token");
-    console.log(token);
+    // console.log(token);
     let data = {
-      trdid: router.query.trdid,
+      tradid: router.query.trdid,
+      accid: trade.accid,
+      profitable: trade.profitable,
+      pnl: trade.pnl
     };
     let config = {
       method: "delete",
@@ -62,6 +65,7 @@ const Index = () => {
       .request(config)
       .then((response) => {
         toastify("trade record deleted")
+        console.log(response)
         router.back()
       })
       .catch((error) => {

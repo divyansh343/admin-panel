@@ -110,7 +110,7 @@ const Navbar = ({ theme, settheme }) => {
                       <BsFillSunFill />
                     </span>
 
-                    <span className='swap-off text-lg text-white'>
+                    <span className='swap-off text-lg text-primary'>
                       <BsMoonFill />
                     </span>
                   </label>
@@ -134,7 +134,7 @@ const Navbar = ({ theme, settheme }) => {
                       <BsFillSunFill />
                     </span>
 
-                    <span className='swap-off text-lg text-white'>
+                    <span className='swap-off text-lg text-primary'>
                       <BsMoonFill />
                     </span>
                   </label>
