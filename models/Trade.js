@@ -40,6 +40,11 @@ const tradeSchema = new mongoose.Schema({
     enum: ['profit', 'loss'],
     required: true,
   },
+  status: {
+    type: String,
+    enum: ['running', 'tp', 'sl', 'closed'],
+    required: true,
+  },
   image: {
     type: String,
   },

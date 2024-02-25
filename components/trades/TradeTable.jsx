@@ -46,11 +46,12 @@ const TradeTable = ({ trades }) => {
 
     pdf.text("Trades", 10, 10);
 
-    const columns = ["Symbol", "Date", "Position", "Pnl", "Status", "Margin", "Leverage", "Description", "Image"];
+    const columns = ["Symbol", "Status", "Date", "Position", "Pnl", "Status", "Margin", "Leverage", "Description", "Image"];
     const rows = data.map(item => [
       item.symbol.toUpperCase(),
+      item.status.toUpperCase(),
       new Date(item.created_at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "short" }),
-      item.position_type,
+      item.position_type.toUpperCase(),
       item.pnl,
       item.profitable === "loss" ? "Loss" : "Profit",
       item.margin,
@@ -136,6 +137,9 @@ const TradeTable = ({ trades }) => {
                     <th class="text-center py-5 px-6 min-w-[150px] cursor-pointer">
                       <div class="flex items-center gap-1">Symbol</div>
                     </th>
+                    <th class="text-center py-5 min-w-[100px] cursor-pointer">
+                      <div class="flex items-center gap-1">Status🔺</div>
+                    </th>
                     <th class="text-center py-5 min-w-[200px] cursor-pointer">
                       <div class="flex items-center gap-1">Date</div>
                     </th>
@@ -146,7 +150,7 @@ const TradeTable = ({ trades }) => {
                       <div class="flex items-center gap-1">Pnl</div>
                     </th>
                     <th class="text-center py-5 min-w-[120px] cursor-pointer">
-                      <div class="flex items-center gap-1">Status</div>
+                      <div class="flex items-center gap-1">Profit</div>
                     </th>
                     <th class="text-center py-5 min-w-[100px] cursor-pointer">
                       <div class="flex items-center gap-1">Margin</div>
@@ -158,9 +162,9 @@ const TradeTable = ({ trades }) => {
                     <th class="text-center py-5 min-w-[130px] cursor-pointer">
                       <div class="flex items-center gap-1">Chart</div>
                     </th>
-                    <th class="text-center py-5 min-w-[130px] cursor-pointer">
+                    {/* <th class="text-center py-5 min-w-[130px] cursor-pointer">
                       <div class="flex items-center gap-1">Description</div>
-                    </th>
+                    </th> */}
                   </tr>
                 </thead>
                 <tbody>
@@ -176,6 +180,8 @@ const TradeTable = ({ trades }) => {
                           <Link href={`/trade/${item._id}`} class=" uppercase hover:underline font-bold mb-1">{item.symbol}</Link>
                         </div>
                       </td>
+                      <td class="py-4 uppercase"><span class="bg-red-500 rounded-full text-white px-3 py-1 text-xs uppercase font-medium">{item.status}</span>
+</td>
                       <td class="py-4 items-start">
                         {/* <span class="block max-w-[100px] text-xs text-center rounded-[30px]  border border-n30 py-2 bg-primary/10 dark:bg-bg3 text-primary">
                         </span> */}
@@ -219,13 +225,13 @@ const TradeTable = ({ trades }) => {
 
                         <a href={item.image} target="_blank" rel="noreffrer" class="text-primary">view chart</a>
                       </td>
-                      <td class="py-4">
+                      {/* <td class="py-4">
 
                         <Link className="link link-hover" href={`/trade/${item._id}`}>
                           open <MdArrowRight className="inline-block" />
                         </Link>
 
-                      </td>
+                      </td> */}
                     </tr>
                   </>))}
 

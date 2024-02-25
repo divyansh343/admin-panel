@@ -12,6 +12,7 @@ const Record = () => {
   const [tradingPair, setTradingPair] = useState("");
   const [positionType, setPositionType] = useState("long");
   const [positionSize, setPositionSize] = useState("");
+  const [statusid, setStatus] = useState("running");
   const [leverage, setLeverage] = useState("");
   const [pnl, setPnl] = useState("");
   const [roi, setroi] = useState("");
@@ -35,6 +36,7 @@ const Record = () => {
       !tradingPair ||
       !positionType ||
       !positionSize ||
+      !statusid ||
       !leverage ||
       !pnl ||
       !roi ||
@@ -53,6 +55,7 @@ const Record = () => {
       accid: router.query.accid,
       symbol: tradingPair,
       position_type: positionType,
+      status: statusid,
       margin: positionSize,
       leverage: leverage,
       pnl: pnl,
@@ -100,6 +103,7 @@ const Record = () => {
         </div>
         <div class="my-8">
           <div class="p-4 w-5/5 md:w-4/5 mx-auto text-left border border-gray-400 rounded-2xl">
+
             <div class="mb-4 flex flex-col">
               <label htmlFor="account" class="font-bold mb-1 text-sm">
                 Trading Pair
@@ -113,11 +117,30 @@ const Record = () => {
                 onChange={(e) => setTradingPair(e.target.value)}
               />
             </div>
+            <div class="flex flex-col sm:flex-row space-x-1">
+                {/* ... (existing JSX) */}
+                <div class="w-full mb-4">
+                  <label htmlFor="type" class="block font-bold mb-1 text-sm">
+                    Status
+                  </label>
+                  <select
+                    id="type"
+                    class="w-full p-2 border rounded-md text-sm text-primary"
+                    value={statusid}
+                    onChange={(e) => setStatus(e.target.value)}
+                  >
+                    <option value="running">Running</option>
+                    <option value="tp">TP</option>
+                    <option value="sl">SL</option>
+                    <option value="closed">Closed</option>
+                  </select>
+                </div>
 
+              </div>
             <div class="grid lg:grid-cols-2 gap-2">
               <div class="flex flex-col sm:flex-row space-x-1">
                 {/* ... (existing JSX) */}
-                <div class="w-full sm:w-1/2 mb-4">
+                <div class="w-full  mb-4">
                   <label htmlFor="type" class="block font-bold mb-1 text-sm">
                     Position Type
                   </label>
@@ -133,6 +156,8 @@ const Record = () => {
                 </div>
 
               </div>
+              
+          
               <div class="mb-4">
                 <label
                   htmlFor="numArticles"

@@ -24,7 +24,7 @@ export default async function handler(req, res) {
         console.log(data)
         return res.status(200).json({
           status: 200,
-          data : data,
+          data : data.reverse(),
           sucess: true,
           message: `all trades`,
         });
