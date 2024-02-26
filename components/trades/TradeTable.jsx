@@ -238,7 +238,7 @@ const TradeTable = ({ trades }) => {
                 </tbody>
               </table>
             </div>
-            <div class="flex col-span-12 gap-4 sm:justify-between justify-center items-center flex-wrap">
+            <div class="flex col-span-12 pt-20 gap-4 sm:justify-between justify-center items-center flex-wrap">
               <div className="grid grid-flow-col gap-5">
 
             <button className="font-bold link" onClick={() => downloadPDF(trades)}>
@@ -249,7 +249,7 @@ const TradeTable = ({ trades }) => {
                 </button>
               </div>
 
-              <ul class="flex gap-2 md:gap-3 flex-wrap md:font-semibold items-center">
+              {/* <ul class="flex gap-2 md:gap-3 flex-wrap md:font-semibold items-center">
                 <li>
                   <button class="hover:bg-primary text-primary rtl:rotate-180 hover:text-n0 border md:w-10 duration-300 md:h-10 w-8 h-8 flex items-center rounded-full justify-center border-primary">
                     <i class="las la-angle-left text-lg"></i>
@@ -275,7 +275,7 @@ const TradeTable = ({ trades }) => {
                     <i class="las la-angle-right text-lg"></i>
                   </button>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>

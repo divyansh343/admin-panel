@@ -105,7 +105,7 @@ const Navbar = ({ theme, settheme }) => {
                 <div className="inline-block   hover:text-sebg-secondary mr-10" >
                   <label className="swap swap-rotate ">
 
-                    <input onChange={theme === "lofi" ? () => settheme("sunset") : () => settheme("lofi")} type="checkbox" />
+                    <input onChange={theme === "lofi" ? () => settheme("dim") : () => settheme("lofi")} type="checkbox" />
                     <span className='swap-on text-xl text-primary'>
                       <BsFillSunFill />
                     </span>
@@ -129,7 +129,7 @@ const Navbar = ({ theme, settheme }) => {
                 <div className="inline-block   hover:text-sebg-secondary mr-10" >
                   <label className="swap swap-rotate ">
 
-                    <input className='pt-1' onChange={theme === "lofi" ? () => settheme("sunset") : () => settheme("lofi")} type="checkbox" />
+                    <input className='pt-1' onChange={theme === "lofi" ? () => settheme("dim") : () => settheme("lofi")} type="checkbox" />
                     <span className='swap-on text-xl text-primary'>
                       <BsFillSunFill />
                     </span>

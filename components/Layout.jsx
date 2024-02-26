@@ -6,9 +6,9 @@ import Footer from "./Footer"
 const myFont = localFont({ src: '../assets/fonts/Graphik-Font-Family/GraphikRegular.otf' })
 // const myFont = localFont({ src: '../assets/fonts/gelion/Gelion Regular.ttf' })
 // const myFont = localFont({ src: '../assets/fonts/Inter/Inter-Regular.ttf' })
-import { Nunito_Sans } from 'next/font/google'
+import { Roboto_Serif } from 'next/font/google'
 
-const openSans = Nunito_Sans({
+const openSans = Roboto_Serif({
   subsets: ['latin'],
   display: 'swap',
 })
@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
   return (
     <div data-theme={theme} lang="en"
       className={` bg-base-100  ${myFont.className}`}>
+      {/* className={` bg-base-100  ${openSans.className}`}> */}
       <Navbar theme={theme} settheme={settheme} />
       <div className="">
         {children}
