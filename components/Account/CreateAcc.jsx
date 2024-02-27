@@ -83,7 +83,7 @@ const CreateAcc = () => {
         </h1>
         <p class="mt-8  text-lg">
           Crypto / Forex
-          <span class="font-bold text-primary underline">AI</span>
+          {/* <span class="font-bold text-primary underline">AI</span> */}
         </p>
         <div class="my-8">
           <div class="p-4 w-5/5 md:w-4/5 mx-auto text-left border border-gray-400 rounded-2xl">

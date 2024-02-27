@@ -177,7 +177,7 @@ const TradeTable = ({ trades }) => {
                         <img src="/images/usa-sm.png" width="32" height="32" class="rounded-full ltr:-ml-3 rtl:-mr-3" alt="payment medium icon"> */}
                           </div>
 
-                          <Link href={`/trade/${item._id}`} class=" uppercase hover:underline font-bold mb-1">{item.symbol}</Link>
+                          <Link href={`/trade/${item._id}`} class=" uppercase hover:underline mb-1 tracking-wide">{item.symbol}</Link>
                         </div>
                       </td>
                       <td class="py-4 uppercase"><span class="bg-red-500 rounded-full text-white px-3 py-1 text-xs uppercase font-medium">{item.status}</span>
@@ -241,10 +241,10 @@ const TradeTable = ({ trades }) => {
             <div class="flex col-span-12 pt-20 gap-4 sm:justify-between justify-center items-center flex-wrap">
               <div className="grid grid-flow-col gap-5">
 
-            <button className="font-bold link" onClick={() => downloadPDF(trades)}>
+            <button className=" link" onClick={() => downloadPDF(trades)}>
                  Download as PDF
                 </button>
-                <button className="font-bold link" onClick={() => downloadExcel(trades)}>
+                <button className=" link" onClick={() => downloadExcel(trades)}>
                 Download as Excel
                 </button>
               </div>
