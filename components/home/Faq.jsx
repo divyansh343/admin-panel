@@ -3,7 +3,7 @@ import React from "react";
 const Faq = () => {
   return (
     <div>
-      <section className="relative pt-12 pb-12 lg:pb-0 md:pt-24 ">
+      <section className="relative pt-12 mb-12 lg:pb-0 md:py-24 ">
         <div className="max-w-sm md:max-w-7xl px-4 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="w-full mb-20 lg:mb-0 lg:pb-64">

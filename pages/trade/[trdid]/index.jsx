@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { FcCandleSticks } from "react-icons/fc";
+import { IoIosArrowBack } from "react-icons/io";
 
 import { IoTrendingDownSharp, IoTrendingUpSharp } from "react-icons/io5";
 import { MdCandlestickChart } from "react-icons/md";
@@ -41,8 +42,8 @@ const Index = () => {
   }, [router]);
   // console.log(trade.created_at)
   const givenDate = new Date(trade.created_at);
-  
-  const delTrade = ()=> {
+
+  const delTrade = () => {
     let token = localStorage.getItem("token");
     // console.log(token);
     let data = {
@@ -75,7 +76,9 @@ const Index = () => {
 
   return (
     <Wrapper>
-
+      <button onClick={() => router.back()} className=" mb-5">
+        <IoIosArrowBack className="inline-block ml-2" /> Back
+      </button>
       <div class="col-span-12 space-y-4 sm:space-y-5 lg:col-span-8 lg:space-y-6">
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5 lg:gap-6">
           <div class="card h-56 bg-gradient-to-br to-purple-400 from-blue-700 px-5 pb-5">
@@ -243,9 +246,9 @@ const Index = () => {
 
             </div>
           </div>
-        <button onClick={delTrade} class="btn mt-5 h-10 w-full rounded-lg bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 ">
-         Delete Trade
-        </button>
+          <button onClick={delTrade} class="btn mt-5 h-10 w-full rounded-lg bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 ">
+            Delete Trade
+          </button>
         </div>
       </div>
     </Wrapper>

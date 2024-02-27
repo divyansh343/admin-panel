@@ -1,44 +1,45 @@
 import Image from "next/image";
 import React from "react";
 import header from "../../assets/brand_header.png";
+import Wrapper from "../Wrapper";
 
 const Hero = () => {
   return (
-    <div>
+    <Wrapper>
       <section className=" pb-24">
-      
+
         <div className="relative pt-12 md:pt-24">
           <div className="container px-4 mx-auto">
-            <div className="relative max-w-lg md:max-w-3xl mx-auto text-center">
-              <h1 className="tracking-tight text-4xl xs:text-5xl md:text-7xl lg:text-8xl font-bold text-primary mb-6">
-                <span className="leading-none">Content writing,</span>
-                <span className="text-gray-400">
+            <div className="relative py-40 lg:pt-0 max-w-lg md:max-w-3xl mx-auto text-center">
+              <h1 className="tracking-normal text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6">
+                <span className="leading-none">Record Your Trades</span>
+                <span className="text-xl md:text-3xl">
                   <br />
-                  with a <span className="underline">twist</span>.
-                </span>
+                  Discover your edge
+                  </span>
               </h1>
-              <p className="md:max-w-md lg:max-w-lg mx-auto text-lg text-gray-400 mb-10">
+              <p className="md:max-w-md lg:max-w-lg mx-auto text-lg  mb-10">
                 We hired the top 1% of writers so you don&apos;t have to. Get
                 high quality articles &amp; posts in just 3 days.
               </p>
               <div className="xs:flex items-center max-w-md mx-auto mb-6">
-                <input
-                  className="w-full h-12 mb-3 xs:mb-0 xs:mr-3 p-3 text-gray-400 placeholder-gray-500 bg-gray-800 outline-none ring ring-transparent focus:ring-yellowGreen-700 rounded-lg"
+                {/* <input
+                  className="w-full h-12 mb-3 xs:mb-0 xs:mr-3 p-3  placeholder-gray-500 bg-gray-800 outline-none ring ring-transparent focus:ring-yellowGreen-700 rounded-lg"
                   type="email"
                   placeholder="Your email"
                   id="email"
-                />
+                /> */}
 
                 <button
-                  className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold text-gray-900 bg-primary rounded-lg transition-all duration-300 focus:outline-none"
+                  className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  rounded-lg transition-all duration-300 focus:outline-"
                   type="submit"
                 >
-                  <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
+                  <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-primary animate-pulse group-hover:ring-0 transition duration-300"></div>
                   <span>Get Started</span>
                 </button>
               </div>
               <div className="flex flex-col xs:flex-row items-center justify-center">
-                <span className="block text-sm text-gray-400 opacity-50">
+                <span className="block text-sm  opacity-50">
                   7-day money-back guarantee
                 </span>
                 <span className="inline-block my-4 xs:my-0 mx-auto xs:mx-4">
@@ -72,17 +73,17 @@ const Hero = () => {
                     </g>
                   </svg>
                 </span>
-                <span className="block text-sm text-gray-400 opacity-50">
+                <span className="block text-sm  opacity-50">
                   Unlimited revisions
                 </span>
               </div>
             </div>
 
-            <Image height={600} width={1100} className="block mx-auto mt-12 md:mt-28 xl:-6" src={header} alt="" />
+            <Image height={600} width={1100} className="hidden md:block rounded-xl mx-auto mt-12 md:mt-28 xl:-6" src={header} alt="" />
           </div>
         </div>
       </section>
-    </div>
+    </Wrapper>
   );
 };
 
