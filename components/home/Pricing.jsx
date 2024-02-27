@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Pricing = () => {
@@ -111,44 +112,23 @@ const Pricing = () => {
 
                       {/* <span className=" font-medium">No-risk&nbsp;</span> */}
                   </div>
-                  <a
+                  <Link
                     className="group flex justify-center w-full h-12 p-1 text-center text-base  font-semibold rounded-lg"
-                    href="https://app.Tokyo.com"
+                    href="/auth/login"
                   >
-                    <div className="inline-flex items-stretch w-full h-12 p-0.5 rounded-lg bg-gradient-to-b from-gray-500 via-gray-700 to-gray-700 hover:to-gray-800">
-                      <div className="flex w-full items-center justify-center px-4 bg-gray-700 group-hover:bg-opacity-40 rounded-md transition duration-300">
-                        <span>Get Started</span>
-                      </div>
+                    <div className="inline-flex items-stretch w-full h-12 p-0.5 rounded-lg  hover:to-gray-800">
+                    <Link
+                  className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  rounded-lg transition-all duration-300 focus:outline-"
+                  href="/auth/login"
+                >
+                  <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-primary animate-pulse group-hover:ring-2 hover:ring-inset transition duration-300"></div>
+                  <span>Get Started</span>
+                </Link>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <div className="flex mb-10 items-start">
-                    <span className="flex-shrink-0 inline-flex w-5 h-5 items-center justify-center bg-gray-800 rounded-full">
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2.91699 7.58337L5.25033 9.91671L11.0837 4.08337"
-                          stroke="white"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </span>
-                    <div className="ml-4">
-                      <p className="text-sm">
-                        <span className="font-semibold ">
-                          Free for beta users
-                        </span>
-                      </p>
-                    </div>
-                  </div>
+                 
                 </div>
               </div>
            

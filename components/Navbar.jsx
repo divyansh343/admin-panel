@@ -140,7 +140,7 @@ const Navbar = ({ theme, settheme }) => {
                   </label>
                 </div>
                 {/* <a className="inline-block  hover:text-sebg-secondary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-sebg-secondary mr-10" href="/blog">Blog</a> */}
-                <Link className="inline-block  hover:text-primary" href="/auth/login">Login User</Link>
+                {/* <Link className="inline-block  hover:text-primary" href="/auth/login">Login User</Link> */}
               </div>
 
               {/* <div className="hidden md:block ml-auto items-end">
@@ -149,9 +149,9 @@ const Navbar = ({ theme, settheme }) => {
               </div> */}
 
               <div className="hidden md:flex ml-24 md:ml-12">
-                <Link className="group inline-block justify-center ml-4 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/admin/login">
-                  <div className="inline-flex items-stretch h-10 p-0.5 text-white rounded-lg bg-primary">
-                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Login admin</span>
+                <Link className="group inline-block justify-center ml-4 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/auth/login">
+                  <div className="inline-flex items-stretch h-10 p-0.5 text-primary-content rounded-lg bg-primary">
+                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Login user</span>
                     </div>
                   </div>
                 </Link>

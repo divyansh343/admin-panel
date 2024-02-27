@@ -2,11 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import nomad from "../assets/images/nomad.png"
+import Wrapper from './Wrapper'
 
 const Footer = () => {
   return (
 
-    <footer className="bg-base-100 border-t border-base-content/10">
+    <Wrapper className="bg-base-100 border-t border-base-content/10">
       <div className="max-w-7xl mx-auto px-8 py-24">
         <div className=" flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-80 max-w-full flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
@@ -17,7 +18,7 @@ const Footer = () => {
                 <p className='text-secondary'><span className="normal-case">Trade</span> <span className="normal-case -ml-1">OS</span></p>
 
               </div>
-            </Link><p className="mt-3 text-base text-base-content/80 leading-relaxed">Record your data in seconds, not weeks<br />Copyright © 2024 - All rights reserved</p>
+            </Link><p className="mt-3 text-base text-base-content/80 leading-relaxed">Your Free Companion for Smarter Trading<br />Copyright © 2024 - All rights reserved</p>
 
 
 
@@ -25,7 +26,7 @@ const Footer = () => {
           </div>
         
         </div>
-      </div></footer>
+      </div></Wrapper>
 
   )
 }

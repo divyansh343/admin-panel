@@ -21,11 +21,9 @@ const Faq = () => {
                 <button className="group flex mb-3 items-center justify-between text-left w-full px-6 py-5 bg-base-200 rounded-xl border border-transparent hover:border-yellowGreen-800 ring ring-transparent hover:ring-yellowGreen-800 focus:outline-none">
                   <div className="pr-4">
                     <h6 className="font-semibold text-primary">
-                      What is Landing Pages?
-                    </h6>
+                    How does Trade OS simplify trade tracking?                    </h6>
                     <p className="hidden group-hover:block mt-2 text-sm text-base-content">
-                      Were a network of handpicked, high-quality writers and
-                      editors that work on-demand for your convenience.
+                    Journaling and monitoring trades easy and free.
                     </p>
                   </div>
                   <div className="flex-shrink-0 flex w-7 h-7 items-center justify-center bg-gray-700 rounded-full">
@@ -65,12 +63,9 @@ const Faq = () => {
                 </button>
                 <button className="group flex mb-3 items-center justify-between text-left w-full px-6 py-5 bg-base-200 rounded-xl border border-transparent hover:border-yellowGreen-800 ring ring-transparent hover:ring-yellowGreen-800 focus:outline-none">
                   <div className="pr-4">
-                    <h6 className="font-semibold text-primary">How does it work?</h6>
+                    <h6 className="font-semibold text-primary"> Can I manage multiple accounts with Trade OS?</h6>
                     <p className="hidden group-hover:block mt-2 text-sm text-base-content">
-                      Its easy - just enter a few details about your business,
-                      add a title &amp; a couple of keywords, and our
-                      world-class writers will whip up a high quality piece in
-                      under three business days.
+                    Yes, multiple trading accounts on one platform.
                     </p>
                   </div>
                   <div className="flex-shrink-0 flex w-7 h-7 items-center justify-center bg-gray-700 rounded-full">
@@ -111,11 +106,10 @@ const Faq = () => {
                 <button className="group flex mb-3 items-center justify-between text-left w-full px-6 py-5 bg-base-200 rounded-xl border border-transparent hover:border-yellowGreen-800 ring ring-transparent hover:ring-yellowGreen-800 focus:outline-none">
                   <div className="pr-4">
                     <h6 className="font-semibold text-primary">
-                      How much does it cost?
+                    Does Trade OS provide performance insights?
                     </h6>
                     <p className="hidden group-hover:block mt-2 text-sm text-base-content">
-                      We charge a simple, flat fee: $0.09/word. You can buy
-                      additional words in the app as needed.
+                    tracking performance, helps you assess and improve your trading strategies.
                     </p>
                   </div>
                   <div className="flex-shrink-0 flex w-7 h-7 items-center justify-center bg-gray-700 rounded-full">
@@ -155,10 +149,9 @@ const Faq = () => {
                 </button>
                 <button className="group flex mb-3 items-center justify-between text-left w-full px-6 py-5 bg-base-200 rounded-xl border border-transparent hover:border-yellowGreen-800 ring ring-transparent hover:ring-yellowGreen-800 focus:outline-none">
                   <div className="pr-4">
-                    <h6 className="font-semibold text-primary">Is there any risk?</h6>
+                    <h6 className="font-semibold text-primary">Export options does Trade OS offer?</h6>
                     <p className="hidden group-hover:block mt-2 text-sm text-base-content">
-                      Not at all! If youre not in love with your content in the
-                      first week, let us know and well give you a 100% refund.
+                    export your trade records in both PDF and Excel formats
                     </p>
                   </div>
                   <div className="flex-shrink-0 flex w-7 h-7 items-center justify-center bg-gray-700 rounded-full">
@@ -199,11 +192,10 @@ const Faq = () => {
                 <button className="group flex items-center justify-between text-left w-full px-6 py-5 bg-base-200 rounded-xl border border-transparent hover:border-yellowGreen-800 ring ring-transparent hover:ring-yellowGreen-800 focus:outline-none">
                   <div className="pr-4">
                     <h6 className="font-semibold text-primary">
-                      How is the content delivered?
+                    Is my data secure on Trade OS?
                     </h6>
                     <p className="hidden group-hover:block mt-2 text-sm text-base-content">
-                      Orders are delivered via Google Doc link with global
-                      sharing access.
+                    Yes, ensuring your sensitive trading information is protected.
                     </p>
                   </div>
                   <div className="flex-shrink-0 flex w-7 h-7 items-center justify-center bg-gray-700 rounded-full">

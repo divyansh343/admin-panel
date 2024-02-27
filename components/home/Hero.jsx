@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import header from "../../assets/brand_header.png";
 import Wrapper from "../Wrapper";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -19,8 +20,7 @@ const Hero = () => {
                   </span>
               </h1>
               <p className="md:max-w-md lg:max-w-lg mx-auto text-lg  mb-10">
-                We hired the top 1% of writers so you don&apos;t have to. Get
-                high quality articles &amp; posts in just 3 days.
+              Simplify Your Trades with Easy Journaling, Embedded Charts, and Multi-Account Management.
               </p>
               <div className="xs:flex items-center max-w-md mx-auto mb-6">
                 {/* <input
@@ -30,17 +30,17 @@ const Hero = () => {
                   id="email"
                 /> */}
 
-                <button
+                <Link
                   className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  rounded-lg transition-all duration-300 focus:outline-"
-                  type="submit"
+                  href="/auth/login"
                 >
-                  <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-primary animate-pulse group-hover:ring-0 transition duration-300"></div>
+                  <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-primary animate-pulse group-hover:ring-2 hover:ring-inset transition duration-300"></div>
                   <span>Get Started</span>
-                </button>
+                </Link>
               </div>
               <div className="flex flex-col xs:flex-row items-center justify-center">
                 <span className="block text-sm  opacity-50">
-                  7-day money-back guarantee
+                Your Free Companion for Smarter Trading
                 </span>
                 <span className="inline-block my-4 xs:my-0 mx-auto xs:mx-4">
                   <svg

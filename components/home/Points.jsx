@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import right from "../../assets/right-dark.png";
+import Wrapper from "../Wrapper";
 
 
 const Points = () => {
@@ -10,11 +11,9 @@ const Points = () => {
         <div className="container bg-base-100 px-4 mx-auto">
           <div className="max-w-2xl mx-auto text-center mb-24">
             <span className="inline-flex items-center h-6 mb-4 px-2 text-xs uppercase font-medium text-primary bg-base-200 rounded-full">
-              HOW IT WORKS
-            </span>
+            Simplify Your Trading            </span>
             <h1 className=" tracking-tight text-4xl sm:text-5xl font-bold text-primary">
-              Replace expensive in-house teams &amp; unreliable freelancers with
-              a flat monthly fee
+            Easy Journaling 
             </h1>
           </div>
           <div className="max-w-lg lg:max-w-5xl xl:max-w-7xl mx-auto">
@@ -30,11 +29,10 @@ const Points = () => {
                       </div>
                       <div className="block">
                         <p className="text-primary font-bold text-md">
-                          No more hiring, managing, or dealing with writers
+                        Multiple Accounts support
                         </p>
                         <p className="text-gray-400 text-sm mt-2">
-                          We take care of all of the comms &amp; busywork for
-                          you.
+                        manage and monitor multiple trading accounts with Trade Os
                         </p>
                       </div>
                     </button>
@@ -45,11 +43,10 @@ const Points = () => {
                       </div>
                       <div className="block">
                         <p className="text-primary font-bold text-md">
-                          Extraordinarily simple to use
+                        Performance Analytics
                         </p>
                         <p className="text-gray-400 text-sm mt-2">
-                          Add your style guide and keyword(s) &amp; well take
-                          care of the rest.
+                        track performance, assess strategies, make data-driven decisions, to a strategic approach to trading.
                         </p>
                       </div>
                     </button>
@@ -60,11 +57,9 @@ const Points = () => {
                       </div>
                       <div className="block">
                         <p className="text-primary font-bold text-md">
-                          Completely risk free with unlimited revisions
-                        </p>
+                        Flexible Data Export Options                        </p>
                         <p className="text-gray-400 text-sm mt-2">
-                          Dont love your content? Well rewrite it until you do.
-                        </p>
+                        Users can conveniently export their trade records in both PDF and Excel formats.                        </p>
                       </div>
                     </button>
                   </div>

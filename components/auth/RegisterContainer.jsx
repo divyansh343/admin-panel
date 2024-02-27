@@ -58,13 +58,13 @@ const RegisterContainer = () => {
                     <input type="text" placeholder="Age" class="my-3 w-full border-none bg-transparent outline-none focus:outline-none" />
                 </div> */}
             <div class="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
-              <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} class="my-3 w-full border-none bg-transparent  text-primary  outline-none focus:outline-none" />
+              <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} class="my-3 w-full border-none bg-transparent  text-gray-700  outline-none focus:outline-none" />
             </div>
             <div class="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
-              <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" class="my-3 w-full border-none bg-transparent  text-primary  outline-none focus:outline-none" />
+              <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" class="my-3 w-full border-none bg-transparent  text-gray-700  outline-none focus:outline-none" />
             </div>
             <div class="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
-              <input type="text" value={password} onChange={e => setPass(e.target.value)} placeholder="Password" class="my-3 w-full border-none bg-transparent outline-none  text-primary focus:outline-none" />
+              <input type="text" value={password} onChange={e => setPass(e.target.value)} placeholder="Password" class="my-3 w-full border-none bg-transparent outline-none  text-gray-700 focus:outline-none" />
             </div>
             <button onClick={handleRegister} class="w-full rounded-2xl border-b-4 border-b-blue-600 bg-blue-500 py-3 font-bold text-white hover:bg-blue-400 active:translate-y-[0.125rem] active:border-b-blue-400">CREATE ACCOUNT</button>
           </div>
