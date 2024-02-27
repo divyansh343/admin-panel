@@ -1,22 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import nomad from "../assets/images/nomad.png"
 import { BsFillSunFill, BsMoonFill } from 'react-icons/bs'
 const Navbar = ({ theme, settheme }) => {
-const [btnstate, setbtnstate] = useState(0)
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-
-    if (token) {
-      // router.push('/');
-      // toast.error("You're not authorized. Please log in.");
-      setbtnstate(1)
-      return;
-    }
-  }, [])
-  
-
   const [navON, setNav] = useState(false)
   const PhoneNav = () => {
     return (
@@ -118,7 +105,7 @@ const [btnstate, setbtnstate] = useState(0)
                 <div className="inline-block   hover:text-sebg-secondary mr-10" >
                   <label className="swap swap-rotate ">
 
-                    <input onChange={theme === "lofi" ? () => settheme("sunset") : () => settheme("lofi")} type="checkbox" />
+                    <input onChange={theme === "lofi" ? () => settheme("dim") : () => settheme("lofi")} type="checkbox" />
                     <span className='swap-on text-xl text-primary'>
                       <BsFillSunFill />
                     </span>
@@ -142,7 +129,7 @@ const [btnstate, setbtnstate] = useState(0)
                 <div className="inline-block   hover:text-sebg-secondary mr-10" >
                   <label className="swap swap-rotate ">
 
-                    <input className='pt-1' onChange={theme === "lofi" ? () => settheme("sunset") : () => settheme("lofi")} type="checkbox" />
+                    <input className='pt-1' onChange={theme === "lofi" ? () => settheme("dim") : () => settheme("lofi")} type="checkbox" />
                     <span className='swap-on text-xl text-primary'>
                       <BsFillSunFill />
                     </span>
@@ -153,16 +140,7 @@ const [btnstate, setbtnstate] = useState(0)
                   </label>
                 </div>
                 {/* <a className="inline-block  hover:text-sebg-secondary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-sebg-secondary mr-10" href="/blog">Blog</a> */}
-                {
-                  btnstate === 1 ? <><Link className="inline-block  hover:text-primary">Sign Out</Link></>: <> <Link className="group inline-block justify-center ml-4 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/auth/login">
-                  <div className="inline-flex items-stretch h-10 p-0.5 text-white rounded-lg bg-primary">
-                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Login User</span>
-                    </div>
-                  </div>
-                </Link></>
-                }
-                
-                
+                <Link className="inline-block  hover:text-primary" href="/auth/login">Login User</Link>
               </div>
 
               {/* <div className="hidden md:block ml-auto items-end">
@@ -171,12 +149,12 @@ const [btnstate, setbtnstate] = useState(0)
               </div> */}
 
               <div className="hidden md:flex ml-24 md:ml-12">
-                {/* <Link className="group inline-block justify-center ml-4 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/admin/login">
+                <Link className="group inline-block justify-center ml-4 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/admin/login">
                   <div className="inline-flex items-stretch h-10 p-0.5 text-white rounded-lg bg-primary">
                     <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Login admin</span>
                     </div>
                   </div>
-                </Link> */}
+                </Link>
               </div>
             </div>
           </div>
