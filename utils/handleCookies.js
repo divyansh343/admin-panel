@@ -7,7 +7,7 @@ export const toastify = (msg) => {
 }
 export const setCookie = (value) => {
   localStorage.setItem('token', value)
-  console.log('token set as cookie!!')
+  // console.log('token set as cookie!!')
 }
 
 export const getCookie = () => {

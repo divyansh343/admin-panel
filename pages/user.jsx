@@ -13,7 +13,7 @@ const User = () => {
 
   useEffect(() => {
     let token = localStorage.getItem('token')
-    console.log(token)
+    // console.log(token)
     let config = {
       method: 'get',
       maxBodyLength: Infinity,
@@ -25,32 +25,32 @@ const User = () => {
 
     axios.request(config)
       .then((response) => {
-        console.log(response.data.data)
+        // console.log(response.data.data)
         setAccounts(response.data.data)
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
 
   }, [])
 
   return (
     <Wrapper >
-      <main class="">
-        <div class="page-container relative mt-10 h-full flex flex-auto flex-col px-4 sm:px-2 md:px-8 py-4 sm:py-6">
-          <div class="container mx-auto">
-            <div class=" mb-4">
+      <main className="">
+        <div className="page-container relative mt-10 h-full flex flex-auto flex-col px-4 sm:px-2 md:px-8 py-4 sm:py-6">
+          <div className="container mx-auto">
+            <div className=" mb-4">
               <button onClick={signOut}>sign out</button>
             </div>
-            {/* <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-6">
+            {/* <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-6">
 
               <Link href="/account/create">
-                <div class="border border-dashed bg-clip-border rounded-2xl border-primary bg-light/30 drop-shadow-lg">
-                  <div class="card-body">
-                    <div class="flex justify-between items-center">
-                      <div class="flex items-center gap-4">
-                        <span class="avatar avatar-rounded text-2xl" data-avatar-size="55" >
-                          <span class="avatar-icon">
+                <div className="border border-dashed bg-clip-border rounded-2xl border-primary bg-light/30 drop-shadow-lg">
+                  <div className="card-body">
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center gap-4">
+                        <span className="avatar avatar-rounded text-2xl" data-avatar-size="55" >
+                          <span className="avatar-icon">
                             <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
                               </path>
@@ -62,7 +62,7 @@ const User = () => {
 
                         </div>
                       </div>
-                      <div class="tag gap-1 font-bold border-0 rounded-md text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-500/20">
+                      <div className="tag gap-1 font-bold border-0 rounded-md text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-500/20">
 
                         <span className='p-1'>Crypto / Forex</span>
                       </div>
@@ -74,12 +74,12 @@ const User = () => {
                 accounts.map(item => (
                   <>
                     <Link href={`account/${item._id}`}>
-                      <div class="border border-dashed bg-clip-border rounded-2xl border-primary bg-light/30 drop-shadow-lg">
-                        <div class="card-body">
-                          <div class="flex justify-between items-center">
-                            <div class="flex items-center gap-4">
-                              <span class="avatar avatar-rounded text-2xl" data-avatar-size="55" >
-                                <span class="avatar-icon">
+                      <div className="border border-dashed bg-clip-border rounded-2xl border-primary bg-light/30 drop-shadow-lg">
+                        <div className="card-body">
+                          <div className="flex justify-between items-center">
+                            <div className="flex items-center gap-4">
+                              <span className="avatar avatar-rounded text-2xl" data-avatar-size="55" >
+                                <span className="avatar-icon">
                                   {item.account_type === "forex" ? <BsCurrencyExchange /> : <PiCurrencyBtcFill />
 
                                   }
@@ -92,7 +92,7 @@ const User = () => {
                                 </h3>
                               </div>
                             </div>
-                            <div class="tag gap-1 font-bold border-0 text-emerald-600 dark:text-emerald-400 px-1 rounded-md bg-emerald-100 dark:bg-emerald-500/20">
+                            <div className="tag gap-1 font-bold border-0 text-emerald-600 dark:text-emerald-400 px-1 rounded-md bg-emerald-100 dark:bg-emerald-500/20">
                               <span>
 
                               </span>
@@ -106,13 +106,13 @@ const User = () => {
                 ))
               }
             </div> */}
-            <div class="flex flex-col">
-              <h2 class="mb-4 text-2xl font-bold">Active Accounts</h2>
+            <div className="flex flex-col">
+              <h2 className="mb-4 text-2xl font-bold">Active Accounts</h2>
 
-              <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 <Link href="/account/create">
-                  <div class="flex items-start rounded-xl bg-base-100 p-4 shadow-lg">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-full border border-blue-100 bg-blue-50">
+                  <div className="flex items-start rounded-xl bg-base-100 p-4 shadow-lg">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-blue-100 bg-blue-50">
                     <svg width="199px" height="199px" viewBox="0 -0.5 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                               <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -124,9 +124,9 @@ const User = () => {
                             </svg>
                     </div>
 
-                    <div class="ml-4">
-                      <h2 class="font-semibold">Add New Account</h2>
-                      <p class="mt-2 text-sm text-gray-500">Last opened 4 days ago</p>
+                    <div className="ml-4">
+                      <h2 className="font-semibold">Add New Account</h2>
+                      <p className="mt-2 text-sm text-gray-500">Last opened 4 days ago</p>
                     </div>
                   </div>
                 </Link>
@@ -135,8 +135,8 @@ const User = () => {
                   accounts.map(item => (
                     <>
                       <Link href={`account/${item._id}`}>
-                        <div class="flex items-start rounded-xl bg-base-100 p-4 shadow-lg">
-                          <div class="flex h-12 w-12 items-center justify-center rounded-full border border-blue-100 bg-blue-50">
+                        <div className="flex items-start rounded-xl bg-base-100 p-4 shadow-lg">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-blue-100 bg-blue-50">
 
                             {item.account_type === "forex" ? <BsCurrencyExchange /> : <svg width="199px" height="199px" viewBox="0 -0.5 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -151,9 +151,9 @@ const User = () => {
                             }
                           </div>
 
-                          <div class="ml-4">
-                            <h2 class="font-semibold">{item.account_name}</h2>
-                            <p class="mt-2 text-sm text-gray-500">{item.account_size}</p>
+                          <div className="ml-4">
+                            <h2 className="font-semibold">{item.account_name}</h2>
+                            <p className="mt-2 text-sm text-gray-500">{item.account_size}</p>
                           </div>
                         </div>
                       </Link>

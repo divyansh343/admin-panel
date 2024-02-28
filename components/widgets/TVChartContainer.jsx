@@ -43,7 +43,7 @@ export const TVChartContainer = props => {
             title: "Notification",
             body: "TradingView Charting Library API works correctly",
             callback: () => {
-              console.log("Noticed!")
+              // console.log("Noticed!")
             }
           })
         )

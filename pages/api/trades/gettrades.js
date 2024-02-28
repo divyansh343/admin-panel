@@ -21,7 +21,7 @@ export default async function handler(req, res) {
 
     Trade.find({accid : req.body.accid}).sort({ createdAt: -1 }).then(
       (data) => {
-        console.log(data)
+        // console.log(data)
         return res.status(200).json({
           status: 200,
           data : data.reverse(),
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
           sucess: false,
           error: error
         });
-        console.log(error);
+        // console.log(error);
       }
     );
   } else {

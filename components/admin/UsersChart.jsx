@@ -16,11 +16,11 @@ const UsersChart = () => {
 
     axios.request(config)
       .then((response) => {
-        setusers(response.data.data)
-        console.log(response.data.data);
+        // setusers(response.data.data)
+        // console.log(response.data.data);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
 
   }, [update])
@@ -42,12 +42,12 @@ const UsersChart = () => {
 
     axios.request(config)
       .then((response) => {
-        console.log(JSON.stringify(response.data));
+        // console.log(JSON.stringify(response.data));
         toastify("user deleted")
         setup(update += 1)
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
 
   }

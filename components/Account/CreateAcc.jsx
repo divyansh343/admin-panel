@@ -58,12 +58,12 @@ const CreateAcc = () => {
 
     axios.request(config)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         router.push('/user')
         toastify(` Account Created successfully!`)
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
     // console.log("Account Name:", accountName);
     // console.log("Account Size:", accountSize);
@@ -76,51 +76,51 @@ const CreateAcc = () => {
       <Link href="/user" className="mx-4 mt-4">
         <IoIosArrowBack className="inline-block ml-2" /> Back
       </Link>
-      <div class="lg:w-2/3 text-center mx-auto">
-        <div class="flex justify-center mb-8"></div>
-        <h1 class=" font-bold text-5xl md:text-5xl xl:text-5xl">
+      <div className="lg:w-2/3 text-center mx-auto">
+        <div className="flex justify-center mb-8"></div>
+        <h1 className=" font-bold text-5xl md:text-5xl xl:text-5xl">
           Setup trading account<br />
         </h1>
-        <p class="mt-8  text-lg">
+        <p className="mt-8  text-lg">
           Crypto / Forex
-          {/* <span class="font-bold text-primary underline">AI</span> */}
+          {/* <span className="font-bold text-primary underline">AI</span> */}
         </p>
-        <div class="my-8">
-          <div class="p-4 w-5/5 md:w-4/5 mx-auto text-left border border-gray-400 rounded-2xl">
-            <div class="mb-4 flex flex-col">
-              <label htmlFor="account" class="font-bold mb-1 text-sm">
+        <div className="my-8">
+          <div className="p-4 w-5/5 md:w-4/5 mx-auto text-left border border-gray-400 rounded-2xl">
+            <div className="mb-4 flex flex-col">
+              <label htmlFor="account" className="font-bold mb-1 text-sm">
                 Account Name
               </label>
               <input
                 type="text"
                 id="account"
-                class="w-full p-2 border rounded-md text-sm text-primary"
+                className="w-full p-2 border rounded-md text-sm text-primary"
                 placeholder="E.g. Forex 1"
                 value={accountName}
                 onChange={handleAccountNameChange}
               />
             </div>
-            <div class="mb-4">
-              <label htmlFor="numArticles" class="block font-bold mb-1 text-sm">
+            <div className="mb-4">
+              <label htmlFor="numArticles" className="block font-bold mb-1 text-sm">
                 Account Size
               </label>
               <input
                 type="number"
                 id="numArticles"
-                class="w-full p-2 border rounded-md text-sm text-primary"
+                className="w-full p-2 border rounded-md text-sm text-primary"
                 value={accountSize}
                 onChange={handleAccountSizeChange}
               />
             </div>
-            <div class="flex flex-col sm:flex-row space-x-1">
+            <div className="flex flex-col sm:flex-row space-x-1">
               {/* ... (existing JSX) */}
-              <div class="w-full sm:w-1/2 mb-4">
-                <label htmlFor="type" class="block font-bold mb-1 text-sm">
+              <div className="w-full sm:w-1/2 mb-4">
+                <label htmlFor="type" className="block font-bold mb-1 text-sm">
                   Account Type
                 </label>
                 <select
                   id="type"
-                  class="w-full p-2 border rounded-md text-sm text-primary"
+                  className="w-full p-2 border rounded-md text-sm text-primary"
                   value={accountType}
                   onChange={handleAccountTypeChange}
                 >
@@ -128,13 +128,13 @@ const CreateAcc = () => {
                   <option value="forex">forex</option>
                 </select>
               </div>
-              <div class="w-full sm:w-1/2 mb-4">
-                <label htmlFor="task" class="block font-bold mb-1 text-sm">
+              <div className="w-full sm:w-1/2 mb-4">
+                <label htmlFor="task" className="block font-bold mb-1 text-sm">
                   Currency
                 </label>
                 <select
                   id="task"
-                  class="w-full p-2 border rounded-md text-sm text-primary"
+                  className="w-full p-2 border rounded-md text-sm text-primary"
                   value={currency}
                   onChange={handleCurrencyChange}
                 >
@@ -144,32 +144,32 @@ const CreateAcc = () => {
               </div>
             </div>
             <button
-              class="bg-white text-black border border-gray-600 font-bold py-2 px-4 rounded-lg text-sm ml-2"
+              className="bg-white text-black border border-gray-600 font-bold py-2 px-4 rounded-lg text-sm ml-2"
               onClick={handleCreateAccount}
             >
               Create Account <MdArrowRightAlt className="inline-block text-xl" />
             </button>
-            <p class="text-sm"></p>
+            <p className="text-sm"></p>
             {/* <div
-              class="border border-gray-400 rounded-lg px-2 py-2 mt-4 mb-4"
+              className="border border-gray-400 rounded-lg px-2 py-2 mt-4 mb-4"
             >
-              <p class="text-sm mb-1">
+              <p className="text-sm mb-1">
                 Generating Articles -
-                <span class="text-primary font-bold text-lg">0</span>/0
+                <span className="text-primary font-bold text-lg">0</span>/0
               </p>
 
-              <ul class="mt-1"></ul>
-              <div class="mt-auto"> </div>
+              <ul className="mt-1"></ul>
+              <div className="mt-auto"> </div>
             </div> */}
-            <div class="border-t border-gray-300 mt-2">
-              <p class="text-sm text-gray-500 mt-4">
+            <div className="border-t border-gray-300 mt-2">
+              <p className="text-sm text-gray-500 mt-4">
                 Output will come in markdown file format.
                 <br />
                 You can import these files direcly to Notion or your blog
                 websites.
                 <br />
                 Or use Blog boilerplate code from
-                <span class="underline">
+                <span className="underline">
 
                 </span>
                 to host your blog.

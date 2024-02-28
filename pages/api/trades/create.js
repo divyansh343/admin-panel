@@ -36,7 +36,7 @@ export default async function handler(req, res) {
       image: req.body.image,
       description: req.body.description,
     });
-    console.log(typeof (req.body.pnl))
+    // console.log(typeof (req.body.pnl))
     
     try {
       const savedTrade = await newtrd.save();

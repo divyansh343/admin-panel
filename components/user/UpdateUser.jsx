@@ -55,14 +55,14 @@ const UpdateUser = () => {
 
     axios(config)
       .then(function (response) {
-        console.log(response.data);
+        // console.log(response.data);
         toastify(response.data.message)
         setusername("")
         setImage([])
       })
       .catch(function (error) {
         toastify("Try again")
-        console.log(error);
+        // console.log(error);
       });
   }
 

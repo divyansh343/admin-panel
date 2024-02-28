@@ -41,7 +41,7 @@ const LoginContainer = () => {
       })
       .catch(function (error) {
         toast.error("invalid details");
-        console.log(error);
+        // console.log(error);
 
         setloading(false)
       });
@@ -56,16 +56,16 @@ const LoginContainer = () => {
       <>
         <div>
 
-          <div class="space-y-4">
-            <header class="mb-3 text-2xl font-bold">Log in</header>
-            <div class="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
-              <input value={email} onChange={e => setEmail(e.target.value)} type="text" placeholder="Email" class="my-3 w-full border-none bg-transparent outline-none text-gray-700 focus:outline-none" />
+          <div className="space-y-4">
+            <header className="mb-3 text-2xl font-bold">Log in</header>
+            <div className="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
+              <input value={email} onChange={e => setEmail(e.target.value)} type="text" placeholder="Email" className="my-3 w-full border-none bg-transparent outline-none text-gray-700 focus:outline-none" />
             </div>
-            <div class="flex w-full items-center space-x-2 rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
-              <input value={password} onChange={e => setPass(e.target.value)} type="text" placeholder="Password" class="my-3 w-full border-none bg-transparent text-gray-700 outline-none" />
-              <a href="#" class="font-medium  hover:text-gray-500">FORGOT?</a>
+            <div className="flex w-full items-center space-x-2 rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
+              <input value={password} onChange={e => setPass(e.target.value)} type="text" placeholder="Password" className="my-3 w-full border-none bg-transparent text-gray-700 outline-none" />
+              <a href="#" className="font-medium  hover:text-gray-500">FORGOT?</a>
             </div>
-            <button onClick={handleLogin} class="w-full rounded-2xl border-b-4 border-b-blue-600 bg-blue-500 py-3 font-bold text-white hover:bg-blue-400 active:translate-y-[0.125rem] active:border-b-blue-400">LOG IN</button>
+            <button onClick={handleLogin} className="w-full rounded-2xl border-b-4 border-b-blue-600 bg-blue-500 py-3 font-bold text-white hover:bg-blue-400 active:translate-y-[0.125rem] active:border-b-blue-400">LOG IN</button>
           </div>
         </div>
       </>

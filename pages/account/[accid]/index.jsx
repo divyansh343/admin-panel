@@ -43,13 +43,13 @@ const Index = () => {
         setTrades(response.data.data);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   }, [router]);
 
   const delTrade = () => {
     let token = localStorage.getItem("token");
-    console.log(token);
+    // console.log(token);
     let data = {
       accid: router.query.accid,
     };
@@ -70,7 +70,7 @@ const Index = () => {
         router.push("/user")
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   }
 
@@ -82,7 +82,7 @@ const Index = () => {
 
       <TradeTable trades={trades} />
 
-      <button onClick={delTrade} class="btn mt-5 h-10  rounded-lg bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 ">
+      <button onClick={delTrade} className="btn mt-5 h-10  rounded-lg bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 ">
         Delete Account
       </button>
     </Wrapper>

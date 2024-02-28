@@ -20,7 +20,7 @@ const ForexSessionApp = () => {
         );
 
         // Process the response data here
-        console.log(response.data);
+        // console.log(response.data);
 
         setForexData(response.data);
       } catch (error) {

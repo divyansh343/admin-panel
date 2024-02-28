@@ -37,7 +37,7 @@ export default async function handler(req, res) {
           sucess: false,
           error: error
         });
-        console.log(error);
+        // console.log(error);
       }
     );
   } else {

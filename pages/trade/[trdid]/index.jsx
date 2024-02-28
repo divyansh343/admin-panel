@@ -66,11 +66,11 @@ const Index = () => {
       .request(config)
       .then((response) => {
         toastify("trade record deleted")
-        console.log(response)
+        // console.log(response)
         router.back()
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   }
 
@@ -79,19 +79,19 @@ const Index = () => {
       <button onClick={() => router.back()} className=" mb-5">
         <IoIosArrowBack className="inline-block ml-2" /> Back
       </button>
-      <div class="col-span-12 space-y-4 sm:space-y-5 lg:col-span-8 lg:space-y-6">
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5 lg:gap-6">
-          <div class="card h-56 bg-gradient-to-br to-purple-400 from-blue-700 px-5 pb-5">
+      <div className="col-span-12 space-y-4 sm:space-y-5 lg:col-span-8 lg:space-y-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5 lg:gap-6">
+          <div className="card h-56 bg-gradient-to-br to-purple-400 from-blue-700 px-5 pb-5">
             <div>
-              <div class="ax-transparent-gridline mt-5 w-1/2">
+              <div className="ax-transparent-gridline mt-5 w-1/2">
                 <div>
                   {/* <IoTrendingUpSharp className="text-5xl text-secondary" /> */}
                   {/* <IoTrendingDownSharp className="text-5xl text-secondary" /> */}
-                  {/* <div class="badge mt-2 space-x-1 bg-success/10 py-3 px-1.5 ">
+                  {/* <div className="badge mt-2 space-x-1 bg-success/10 py-3 px-1.5 ">
                     <span className="text-xl">{trade.roi}%</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="size-5"
+                      className="size-5"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -104,15 +104,15 @@ const Index = () => {
                   </div> */}
                 </div>
               </div>
-              <p class="mt-3 text-2xl font-bold tracking-wide uppercase text-indigo-100">
+              <p className="mt-3 text-2xl font-bold tracking-wide uppercase text-indigo-100">
                 {trade.symbol}
               </p>
-              <p class="mt-4 font-inter text-2xl font-semibold">
-                <span class="text-indigo-100">$</span>
-                <span class="text-white">{trade.pnl}</span>
+              <p className="mt-4 font-inter text-2xl font-semibold">
+                <span className="text-indigo-100">$</span>
+                <span className="text-white">{trade.pnl}</span>
 
               </p>
-              <div class="badge mt-2 uppercase rounded-full bg-black/20 text-indigo-50">
+              <div className="badge mt-2 uppercase rounded-full bg-black/20 text-indigo-50">
                 {trade.position_type}
               </div>
             </div>
@@ -121,25 +121,25 @@ const Index = () => {
                 {trade.description}
               </p>
             </div>
-            <div class="absolute bottom-0 right-0 overflow-hidden rounded-lg">
-              {/* <Image width={200} height={50} class="w-24 translate-x-1/4 translate-y-1/4 opacity-50" src={trade.image} alt="image" /> */}
+            <div className="absolute bottom-0 right-0 overflow-hidden rounded-lg">
+              {/* <Image width={200} height={50} className="w-24 translate-x-1/4 translate-y-1/4 opacity-50" src={trade.image} alt="image" /> */}
 
             </div>
           </div>
-          <div class="grid grid-cols-1 gap-4 sm:col-span-2 sm:grid-cols-2 sm:gap-5 lg:gap-6">
-            <div class="card justify-center p-4.5">
-              <div class="flex items-center justify-between">
+          <div className="grid grid-cols-1 gap-4 sm:col-span-2 sm:grid-cols-2 sm:gap-5 lg:gap-6">
+            <div className="card justify-center p-4.5">
+              <div className="flex items-center justify-between">
                 <div>
-                  <a href={trade.image} target="_blank" rel="noreffrer" class="text-base link font-semibold text-primary">
+                  <a href={trade.image} target="_blank" rel="noreffrer" className="text-base link font-semibold text-primary">
                     View Chart <MdCandlestickChart className="inline-block text-xl ml-1" />
 
                   </a>
-                  <p class="text-xs+ line-clamp-1">Trading view chart</p>
+                  <p className="text-xs+ line-clamp-1">Trading view chart</p>
                 </div>
-                <div class="mask is-star flex size-10 shrink-0 items-center justify-center bg-success">
+                <div className="mask is-star flex size-10 shrink-0 items-center justify-center bg-success">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="size-5 text-white"
+                    className="size-5 text-white"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -156,18 +156,18 @@ const Index = () => {
               </div>
 
             </div>
-            <div class="card justify-center p-4.5">
-              <div class="flex items-center justify-between">
+            <div className="card justify-center p-4.5">
+              <div className="flex items-center justify-between">
                 <div>
-                  <p class="text-base font-semibold text-primary">
+                  <p className="text-base font-semibold text-primary">
                     {trade.margin}
                   </p>
-                  <p class="text-xs+ line-clamp-1">Margin</p>
+                  <p className="text-xs+ line-clamp-1">Margin</p>
                 </div>
-                <div class="mask is-star flex size-10 shrink-0 items-center justify-center bg-secondary">
+                <div className="mask is-star flex size-10 shrink-0 items-center justify-center bg-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="size-5 text-white"
+                    className="size-5 text-white"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -183,17 +183,17 @@ const Index = () => {
               </div>
 
             </div>
-            <div class="card justify-center p-4.5">
-              <div class="flex items-center justify-between">
+            <div className="card justify-center p-4.5">
+              <div className="flex items-center justify-between">
                 <div>
-                  <p class="text-base font-semibold text-primary">
+                  <p className="text-base font-semibold text-primary">
                     {trade.leverage}X
                   </p>
-                  <p class="text-xs+ line-clamp-1">Leverage</p>
+                  <p className="text-xs+ line-clamp-1">Leverage</p>
                 </div>
-                <div class="mask is-star flex size-10 shrink-0 items-center justify-center bg-warning">
+                <div className="mask is-star flex size-10 shrink-0 items-center justify-center bg-warning">
                   <svg
-                    class="size-5 text-white"
+                    className="size-5 text-white"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -217,19 +217,19 @@ const Index = () => {
 
             </div>
 
-            <div class="card justify-center p-4.5">
-              <div class="flex items-center justify-between">
+            <div className="card justify-center p-4.5">
+              <div className="flex items-center justify-between">
                 <div>
-                  <p class="text-base font-semibold text-primary">
+                  <p className="text-base font-semibold text-primary">
                     {new Date(trade.created_at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "short" })}
                   </p>
-                  <p class="text-xs+ line-clamp-1">Time</p>
+                  <p className="text-xs+ line-clamp-1">Time</p>
                 </div>
 
-                <div class="mask is-star flex size-10 shrink-0 items-center justify-center bg-info">
+                <div className="mask is-star flex size-10 shrink-0 items-center justify-center bg-info">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="size-5 text-white"
+                    className="size-5 text-white"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -246,7 +246,7 @@ const Index = () => {
 
             </div>
           </div>
-          <button onClick={delTrade} class="btn mt-5 h-10 w-full rounded-lg bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 ">
+          <button onClick={delTrade} className="btn mt-5 h-10 w-full rounded-lg bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 ">
             Delete Trade
           </button>
         </div>

@@ -37,8 +37,8 @@ const RegisterContainer = () => {
         setloading(false)
       })
       .catch(function (error) {
-        console.log("invalid details");
-        console.log(error);
+        // console.log("invalid details");
+        // console.log(error);
 
         setloading(false)
       });
@@ -52,21 +52,21 @@ const RegisterContainer = () => {
     return (
       <>
         <div>
-          <div x-show="isLoginPage" class="space-y-4">
-            <header class="mb-3 text-2xl font-bold">Create your profile</header>
-            {/* <div class="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
-                    <input type="text" placeholder="Age" class="my-3 w-full border-none bg-transparent outline-none focus:outline-none" />
+          <div x-show="isLoginPage" className="space-y-4">
+            <header className="mb-3 text-2xl font-bold">Create your profile</header>
+            {/* <div className="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
+                    <input type="text" placeholder="Age" className="my-3 w-full border-none bg-transparent outline-none focus:outline-none" />
                 </div> */}
-            <div class="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
-              <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} class="my-3 w-full border-none bg-transparent  text-gray-700  outline-none focus:outline-none" />
+            <div className="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
+              <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} className="my-3 w-full border-none bg-transparent  text-gray-700  outline-none focus:outline-none" />
             </div>
-            <div class="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
-              <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" class="my-3 w-full border-none bg-transparent  text-gray-700  outline-none focus:outline-none" />
+            <div className="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
+              <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" className="my-3 w-full border-none bg-transparent  text-gray-700  outline-none focus:outline-none" />
             </div>
-            <div class="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
-              <input type="text" value={password} onChange={e => setPass(e.target.value)} placeholder="Password" class="my-3 w-full border-none bg-transparent outline-none  text-gray-700 focus:outline-none" />
+            <div className="w-full rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
+              <input type="text" value={password} onChange={e => setPass(e.target.value)} placeholder="Password" className="my-3 w-full border-none bg-transparent outline-none  text-gray-700 focus:outline-none" />
             </div>
-            <button onClick={handleRegister} class="w-full rounded-2xl border-b-4 border-b-blue-600 bg-blue-500 py-3 font-bold text-white hover:bg-blue-400 active:translate-y-[0.125rem] active:border-b-blue-400">CREATE ACCOUNT</button>
+            <button onClick={handleRegister} className="w-full rounded-2xl border-b-4 border-b-blue-600 bg-blue-500 py-3 font-bold text-white hover:bg-blue-400 active:translate-y-[0.125rem] active:border-b-blue-400">CREATE ACCOUNT</button>
           </div>
         </div>
       </>

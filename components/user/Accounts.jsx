@@ -14,10 +14,10 @@ const Accounts = () => {
 
   axios.request(config)
     .then((response) => {
-      console.log(JSON.stringify(response.data));
+      // console.log(JSON.stringify(response.data));
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
 
   return (
