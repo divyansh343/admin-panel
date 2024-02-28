@@ -9,8 +9,8 @@ import toast from 'react-hot-toast'
 
 const LoginContainer = () => {
   const [isAuthenticated, setAuthenticated] = useState(false)
-  const [email, setEmail] = useState("shreya@gmail.com")
-  const [password, setPass] = useState("passwordthy")
+  const [email, setEmail] = useState("")
+  const [password, setPass] = useState("")
   const [loading, setloading] = useState(false)
   let router = useRouter()
 

@@ -73,9 +73,9 @@ const Hero = () => {
                     </g>
                   </svg>
                 </span>
-                <span className="block text-sm  opacity-80">
+                {/* <span className="block text-sm  opacity-80">
                   Project by <a href="https://twitter.com/divyansPal" target="_blank" rel="noreferrer" className="link">Divyansh</a> 
-                </span>
+                </span> */}
               </div>
             </div>
 
