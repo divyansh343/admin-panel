@@ -39,7 +39,7 @@ const Hero = () => {
                 </Link>
               </div>
               <div className="flex flex-col xs:flex-row items-center justify-center">
-                <span className="block text-sm  opacity-50">
+                <span className="block text-sm  opacity-70">
                 Your Free Companion for Smarter Trading
                 </span>
                 <span className="inline-block my-4 xs:my-0 mx-auto xs:mx-4">
@@ -73,8 +73,8 @@ const Hero = () => {
                     </g>
                   </svg>
                 </span>
-                <span className="block text-sm  opacity-50">
-                  Unlimited revisions
+                <span className="block text-sm  opacity-80">
+                  Project by <a href="https://twitter.com/divyansPal" target="_blank" rel="noreferrer" className="link">Divyansh</a> 
                 </span>
               </div>
             </div>

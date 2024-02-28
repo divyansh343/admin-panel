@@ -84,7 +84,7 @@ const Pricing = () => {
                   </div>
                   <div className="flex items-end mb-4">
                     <span className="mr-2 text-5xl font-semibold  tracking-tighter">
-                      $0 
+                      $0
                     </span>
                     <span className="inline-block pb-2 text-2xl ">
                       /Free
@@ -110,28 +110,25 @@ const Pricing = () => {
                       </span>
                     </div>
 
-                      {/* <span className=" font-medium">No-risk&nbsp;</span> */}
+                    {/* <span className=" font-medium">No-risk&nbsp;</span> */}
                   </div>
-                  <Link
-                    className="group flex justify-center w-full h-12 p-1 text-center text-base  font-semibold rounded-lg"
-                    href="/auth/login"
-                  >
+          
                     <div className="inline-flex items-stretch w-full h-12 p-0.5 rounded-lg  hover:to-gray-800">
-                    <Link
-                  className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  rounded-lg transition-all duration-300 focus:outline-"
-                  href="/auth/login"
-                >
-                  <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-primary animate-pulse group-hover:ring-2 hover:ring-inset transition duration-300"></div>
-                  <span>Get Started</span>
-                </Link>
+                      <Link
+                        className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  rounded-lg transition-all duration-300 focus:outline-"
+                        href="/auth/login"
+                      >
+                        <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-primary animate-pulse group-hover:ring-2 hover:ring-inset transition duration-300"></div>
+                        <span>Get Started</span>
+                      </Link>
                     </div>
-                  </Link>
+               
                 </div>
                 <div>
-                 
+
                 </div>
               </div>
-           
+
             </div>
           </div>
         </div>

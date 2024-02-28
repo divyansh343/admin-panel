@@ -101,7 +101,7 @@ const Navbar = ({ theme, settheme }) => {
                 </div>
               </Link>
               {/* phone change */}
-              <div className="block md:hidden ml-auto items-end">
+              {/* <div className="block md:hidden ml-auto items-end">
                 <div className="inline-block   hover:text-sebg-secondary mr-10" >
                   <label className="swap swap-rotate ">
 
@@ -115,7 +115,7 @@ const Navbar = ({ theme, settheme }) => {
                     </span>
                   </label>
                 </div>
-              </div>
+              </div> */}
               {/* phone change */}
               <button onClick={() => setNav(true)} className="flex md:hidden navbar-burger  items-center justify-center h-10 w-10 ml-auto border border-teal-900 bg-accent bg-opacity-80 hover:bg-teal-700 rounded-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 12H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3 19H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
               </button>
@@ -126,7 +126,7 @@ const Navbar = ({ theme, settheme }) => {
               </div>
 
               <div className="hidden md:block ml-auto items-end">
-                <div className="inline-block   hover:text-sebg-secondary mr-10" >
+                {/* <div className="inline-block   hover:text-sebg-secondary mr-10" >
                   <label className="swap swap-rotate ">
 
                     <input className='pt-1' onChange={theme === "lofi" ? () => settheme("dim") : () => settheme("lofi")} type="checkbox" />
@@ -138,7 +138,7 @@ const Navbar = ({ theme, settheme }) => {
                       <BsMoonFill />
                     </span>
                   </label>
-                </div>
+                </div> */}
                 {/* <a className="inline-block  hover:text-sebg-secondary mr-10" href="#pricing">Pricing</a><a className="inline-block  hover:text-sebg-secondary mr-10" href="/blog">Blog</a> */}
                 {/* <Link className="inline-block  hover:text-primary" href="/auth/login">Login User</Link> */}
               </div>
