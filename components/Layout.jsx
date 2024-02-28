@@ -3,9 +3,9 @@ import localFont from 'next/font/local'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 
-const myFont = localFont({ src: '../assets/fonts/Graphik-Font-Family/GraphikRegular.otf' })
+// const myFont = localFont({ src: '../assets/fonts/Graphik-Font-Family/GraphikRegular.otf' })
 // const myFont = localFont({ src: '../assets/fonts/gelion/Gelion Regular.ttf' })
-// const myFont = localFont({ src: '../assets/fonts/Inter/Inter-Regular.ttf' })
+const myFont = localFont({ src: '../assets/fonts/Inter/Inter-Regular.ttf' })
 import { Roboto_Serif } from 'next/font/google'
 
 const openSans = Roboto_Serif({
