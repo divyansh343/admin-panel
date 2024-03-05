@@ -69,14 +69,14 @@ const Navbar = ({ theme, settheme }) => {
                     className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center justify-center px-5 h-12 font-bold  bg-secondary rounded-lg transition-all duration-300 focus:outline-none"
                   >
                     <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
-                    <span>User Login</span>
+                    <span>Login</span>
                   </Link>
                   <Link
-                    href="/admin/login"
+                    href="/auth/register"
                     className="xs:flex-shrink-0 group relative flex xs:inline-flex w-full xs:w-auto items-center mt-2 justify-center px-5 h-12 font-bold  bg-secondary rounded-lg transition-all duration-300 focus:outline-none"
                   >
                     <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-yellowGreen-900 animate-pulse group-hover:ring-0 transition duration-300"></div>
-                    <span>Admin Login</span>
+                    <span>Create Account</span>
                   </Link>
                 </div>
               </div>
@@ -151,7 +151,7 @@ const Navbar = ({ theme, settheme }) => {
               <div className="hidden md:flex ml-24 md:ml-12">
                 <Link className="group inline-block justify-center ml-4 md:ml-0 p-1 text-center text-sm  font-text-primary" href="/auth/login">
                   <div className="inline-flex items-stretch h-10 p-0.5 text-primary-content rounded-lg bg-primary">
-                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span> Login user</span>
+                    <div className="flex items-center px-4  group-hover:bg-opacity-40 rounded-md "><span>Start</span>
                     </div>
                   </div>
                 </Link>

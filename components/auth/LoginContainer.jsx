@@ -15,7 +15,15 @@ const LoginContainer = () => {
   let router = useRouter()
 
 
-
+  const handleDemo = () => {
+    setEmail("demo@gmail.com")
+    setPass("demopass")
+    toast("Click to login")
+  }
+  const handleClear = () => {
+    setEmail("")
+    setPass("")
+  }
   const handleLogin = (e) => {
     e.preventDefault()
     var data = JSON.stringify({
@@ -63,9 +71,10 @@ const LoginContainer = () => {
             </div>
             <div className="flex w-full items-center space-x-2 rounded-2xl bg-gray-50 px-4 ring-2 ring-gray-200 focus-within:ring-blue-400">
               <input value={password} onChange={e => setPass(e.target.value)} type="text" placeholder="Password" className="my-3 w-full border-none bg-transparent text-gray-700 outline-none" />
-              <a href="#" className="font-medium  hover:text-gray-500">FORGOT?</a>
+              <p onClick={handleClear} className="font-medium  hover:text-gray-500">Clear</p>
             </div>
             <button onClick={handleLogin} className="w-full rounded-2xl border-b-4 border-b-blue-600 bg-blue-500 py-3 font-bold text-white hover:bg-blue-400 active:translate-y-[0.125rem] active:border-b-blue-400">LOG IN</button>
+            <button onClick={handleDemo} className="w-full rounded-2xl border-b-4 border-b-blue-600 bg-blue-400 py-1 font-bold text-white hover:bg-blue-400 active:translate-y-[0.125rem] active:border-b-blue-400">Demo login</button>
           </div>
         </div>
       </>

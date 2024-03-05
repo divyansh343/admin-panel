@@ -81,7 +81,7 @@ const Index = () => {
       </button>
       <div className="col-span-12 space-y-4 sm:space-y-5 lg:col-span-8 lg:space-y-6">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5 lg:gap-6">
-          <div className="card h-56 bg-gradient-to-br to-purple-400 from-blue-700 px-5 pb-5">
+          <div className="card h-56 bg-gradient-to-r from-blue-500 to-blue-600 px-5 pb-5">
             <div>
               <div className="ax-transparent-gridline mt-5 w-1/2">
                 <div>
@@ -117,7 +117,7 @@ const Index = () => {
               </div>
             </div>
             <div className="mt-4">
-              <p>
+              <p className="text-indigo-50">
                 {trade.description}
               </p>
             </div>
