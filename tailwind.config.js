@@ -86,11 +86,11 @@ module.exports = {
           "error": "#f77064",
         },
         coda: {
-          "primary": "#0d51ff",
+          "primary": "#9cb3c9",
           "secondary": "#f3f4f6",
           "accent": "#000000",
           "neutral": "#171926",
-          "base-100": "#ffffff",
+          "base-100": "#0e2439",
           "info": "#768ed6",
           "success": "#31c484",
           "warning": "#f4992a",

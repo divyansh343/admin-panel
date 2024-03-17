@@ -14,7 +14,7 @@ const openSans = Roboto_Serif({
 })
 
 const Layout = ({ children }) => {
-  const [theme, settheme] = useState("lofi")
+  const [theme, settheme] = useState("coda")
   return (
     <div data-theme={theme} lang="en"
       className={` bg-base-100  ${myFont.className}`}>
